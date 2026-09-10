@@ -1,0 +1,57 @@
+# Pack 209 Leaders
+# This data file contains information about all pack leaders
+# Format:
+#   - name: Leader's name (use first name and last initial, or just "TBD" for vacant positions)
+#     role: Leadership role
+#     image: Path to profile image
+#     ring_color: Tailwind color for the ring around the image
+
+- name: Charlie Stern
+  role: Cubmaster
+  image: /assets/images/blankleader.png
+  ring_color: yellow-400
+
+- name: Carter Tellinghuisen
+  role: Committee Chair
+  image: /assets/images/blankleader.png
+  ring_color: slate-400
+
+- name: Bill Scanlin
+  role: Chartered Organization Representative
+  image: /assets/images/blankleader.png
+  ring_color: slate-500
+
+- name: Amanda Zigmond
+  role: Treasurer, Den Leader (Wolves)
+  image: /assets/images/blankleader.png
+  ring_color: yellow-700
+
+- name: John McCauley
+  role: Den Leader (Lions)
+  image: /assets/images/blankleader.png
+  ring_color: yellow-400
+
+- name: Alex Roark
+  role: Den Leader (Wolves)
+  image: /assets/images/blankleader.png
+  ring_color: slate-400
+
+- name: Lane Goodman
+  role: Den Leader (Bears), Webmaster
+  image: /assets/images/blankleader.png
+  ring_color: stone-800
+
+- name: Matt Townley
+  role: Den Leader (Tigers)
+  image: /assets/images/blankleader.png
+  ring_color: stone-800
+
+- name: Pat S.
+  role: Den Leader (Webelos)
+  image: /assets/images/blankleader.png
+  ring_color: slate-500
+
+- name: You?
+  role: ""
+  image: /assets/images/blankleader.png
+  ring_color: yellow-700

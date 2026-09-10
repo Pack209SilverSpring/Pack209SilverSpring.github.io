@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+/* Tailwind v4: define reusable design tokens here */
+@theme {
+  --font-sans: "Work Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI",
+               Arial, "Noto Sans", "Liberation Sans", "Helvetica Neue",
+               sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+               "Segoe UI Symbol", "Noto Color Emoji";
+
+  /* Headings: Sora, a geometric grotesk sans -- bold and confident,
+     replacing the earlier Fraunces serif treatment. */
+  --font-heading: "Sora", ui-sans-serif, system-ui, -apple-system, "Segoe UI",
+               Arial, "Noto Sans", "Liberation Sans", "Helvetica Neue",
+               sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+               "Segoe UI Symbol", "Noto Color Emoji";
+
+  /* colors */
+  --color-cub-gold: #FDC116;  /* Cub Scouting Gold */
+  --color-scout-blue: #003F87; /* Scouting Blue */
+  --color-forest: #2F5233;     /* Forest green accent */
+  --color-forest-tint: #EEF2E9; /* Very light forest tint for section backgrounds */
+
+  /* Alias: cub-blue = scout-blue */
+  --color-cub-blue: var(--color-scout-blue);
+}
+
+/* Optional: set defaults */
+@layer base {
+  body {
+    @apply font-sans;
+    /* Subtle site-wide topographic contour-line texture, echoing a map/nature motif. */
+    background-color: #f8fafc; /* slate-50 */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240' viewBox='0 0 240 240'%3E%3Cg fill='none' stroke='%232F5233' stroke-width='1' stroke-opacity='0.07'%3E%3Cpath d='M-20 30 Q 40 0, 100 30 T 260 30'/%3E%3Cpath d='M-20 70 Q 40 40, 100 70 T 260 70'/%3E%3Cpath d='M-20 110 Q 40 80, 100 110 T 260 110'/%3E%3Cpath d='M-20 150 Q 40 120, 100 150 T 260 150'/%3E%3Cpath d='M-20 190 Q 40 160, 100 190 T 260 190'/%3E%3Cpath d='M-20 230 Q 40 200, 100 230 T 260 230'/%3E%3C/g%3E%3C/svg%3E");
+    background-repeat: repeat;
+    background-size: 240px 240px;
+  }
+  /* Headings = Sora. Weight steps down the hierarchy: extrabold h1,
+     bold h2/h3, medium for h4-h6. */
+  h1 { @apply font-heading font-extrabold; }
+  h2, h3 { @apply font-heading font-bold; }
+  h4, h5, h6 { @apply font-heading font-medium; }
+}
+
+@layer components {
+  .prose h1 {
+    @apply text-4xl font-extrabold text-cub-gold mt-8;
+  }
+  .prose h2 {
+    @apply text-3xl font-bold text-cub-blue mt-6 mb-4;
+  }
+  .prose h3 {
+    @apply text-2xl font-bold text-cub-gold mt-6 mb-2;
+  }
+}

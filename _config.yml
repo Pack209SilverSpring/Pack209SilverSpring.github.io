@@ -1,0 +1,101 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+title: Pack 209
+email: webmaster@cubscoutpack209.org
+cubmaster_email: cubmaster@cubscoutpack209.org
+description: >- # this means to ignore newlines until "baseurl:"
+  Cub Scout Pack 209 of Silver Spring, Maryland. We provide fun, character-building adventures
+  for K-5th grade youth through outdoor activities, STEM projects, and community service.
+  Join us for camping, Pinewood Derby races, and much more!
+baseurl: "" # the subpath of your site, e.g. /blog -- empty because we're using an org root site (Pack209SilverSpring.github.io)
+url: "https://pack209silverspring.github.io" # update if you switch repo names or add a custom domain later
+twitter_username: jekyllrb
+github_username:  jekyll
+
+# Build settings
+markdown: kramdown
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-tailwindcss
+  # - jekyll-google-calendar  # TODO: re-enable once you've set up your own Google Cloud service account + calendars (see README)
+
+# --- Google Calendar config, disabled for now. Re-enable the plugin above and uncomment
+# this block once you have your own Google Cloud service account + calendar IDs. ---
+# gcalendar:
+#   key_file: ./gcalendar-key.json
+#   calendars:
+#     - name: 🐾 Pack 209
+#       id: c_dbd8c6d9e13e75097d2a4bb1e980c580cc9f07d2407f004db14eb0cfe5037bae@group.calendar.google.com
+#       directory: events
+#       layout: event-public
+#       date_format: "%Y-%m-%d"
+#       look_ahead: 365
+#     - name: 🦁 Lion Den
+#       id: c_23bf39238bebf6e1676802f8aed5c2f2e31fb28ec8c9428d08f2a3cf653fba91@group.calendar.google.com
+#       directory: events
+#       layout: event-private
+#       date_format: "%Y-%m-%d"
+#       look_ahead: 365
+#     - name: 🐯 Tiger Den
+#       id: c_87e6640306451b91fd0e46b0611cc26768b64a586815bba5b5d956c60bbd544b@group.calendar.google.com
+#       directory: events
+#       layout: event-private
+#       date_format: "%Y-%m-%d"
+#       look_ahead: 365
+#     - name: 🐺 Wolf Den
+#       id: c_14f61c66ad0267f311c1ade24dd6d365960f801dd6b9bf55943bade450015fed@group.calendar.google.com
+#       directory: events
+#       layout: event-private
+#       date_format: "%Y-%m-%d"
+#       look_ahead: 365
+#     - name: 🐻 Bear Den
+#       id: c_914f7f15618f89b7095afab3acc7d1faca4277828d63c7c5d07d780a6ff9097e@group.calendar.google.com
+#       directory: events
+#       layout: event-private
+#       date_format: "%Y-%m-%d"
+#       look_ahead: 365
+#     - name: ⚜️ Webelos Den
+#       id: c_14dddfe86bf386af69d9cf03b888462ed7afd7be37ae0620a76b44171e7e091b@group.calendar.google.com
+#       directory: events
+#       layout: event-private
+#       date_format: "%Y-%m-%d"
+#       look_ahead: 365
+#     - name: 🏹 AoL Den
+#       id: c_a232daa2e44b80eb4e2b86787c7d06b3b833d3a1f2d514faf4e3eccf71e9012f@group.calendar.google.com
+#       directory: events
+#       layout: event-private
+#       date_format: "%Y-%m-%d"
+#       look_ahead: 365
+
+
+# Exclude from processing.
+# Jekyll's built-in defaults exclude Gemfile, Gemfile.lock, node_modules,
+# and vendor/. Anything listed here is added on top of those.
+exclude:
+  - gcalendar-key.json  # Google service account key — must NOT be published
+  - CLAUDE.md           # Claude Code project instructions
+  - README.md           # repo README
+  - LICENSE
+  - mise.toml
+  - script/             # build/deploy helper scripts
+  - docs/               # internal design specs and planning docs
+  - .claude/
+  - .github/
+  - .ruby-lsp/
+  - .ruby-version
+  - .sass-cache/
+  - .jekyll-cache/

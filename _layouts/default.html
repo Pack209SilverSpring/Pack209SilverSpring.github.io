@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="{{ page.lang | default: site.lang | default: 'en' }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>
+    {% if page.title %}{{ page.title }} · {% endif %}{{ site.title | default: "Cub Scout Pack" }}
+  </title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Work+Sans:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="{{ 'assets/css/styles.css' | relative_url }}">
+  <meta name="description" content="{{ page.excerpt | default: site.description | default: 'Scouting adventures, friends, and fun.' | strip_html }}">
+</head>
+<body class="flex flex-col min-h-screen overflow-x-hidden bg-slate-50 text-slate-800">
+  <!-- Top bar -->
+  <header id="site-header" class="group border-b-4 transition-colors duration-300 {% if page.hero_header %}fixed inset-x-0 top-0 z-50 is-transparent bg-transparent border-transparent [&.scrolled]:bg-white [&.scrolled]:border-cub-gold [&.scrolled]:shadow-sm{% else %}relative bg-white border-cub-gold{% endif %}">
+  <div class="max-w-6xl px-4 mx-auto">
+  <div class="flex items-center justify-between h-20">
+      <!-- Brand logo -->
+      <a href="{{ '/' | relative_url }}" class="flex items-center gap-3 ">
+        <img src="{{ '/assets/images/pack209-logo.png' | relative_url }}" alt="Pack 209"
+             class="w-auto h-12">
+             <p class="text-white text-sm font-semibold leading-none [&.scrolled]:text-forest">Cub Scout <br />Pack 209</p>
+      </a>
+
+      <!-- Desktop nav -->
+      {% assign nav_link_class = "font-medium transition-colors duration-300 " %}
+      {% if page.hero_header %}
+        {% assign nav_link_class = nav_link_class | append: "text-white/90 hover:text-white group-[.scrolled]:text-slate-700 group-[.scrolled]:hover:text-cub-blue" %}
+      {% else %}
+        {% assign nav_link_class = nav_link_class | append: "text-slate-700 hover:text-cub-blue" %}
+      {% endif %}
+      <nav class="items-center hidden gap-8 md:flex">
+      <a class="{{ nav_link_class }}" href="{{ '/about/' | relative_url }}">About</a>
+      <a class="{{ nav_link_class }}" href="{{ '/calendar/' | relative_url }}">Calendar</a>
+      <a class="{{ nav_link_class }}" href="{{ '/resources/' | relative_url }}">Resources</a>
+      <a class="{{ nav_link_class }}" href="{{ '/register/' | relative_url }}">Register</a>
+      <a class="px-4 py-2 font-semibold text-white transition rounded-[5px] shadow-sm bg-cub-blue hover:bg-blue-900"
+          href="/join">Join</a>
+      </nav>
+
+      <!-- Mobile menu button -->
+      <button id="mobile-menu-button" class="inline-flex items-center justify-center p-3 transition-colors duration-300 rounded-[5px] md:hidden focus:outline-none {% if page.hero_header %}text-white hover:bg-white/10 group-[.scrolled]:text-cub-blue group-[.scrolled]:hover:bg-slate-100{% else %}text-cub-blue hover:bg-slate-100{% endif %}"
+              aria-label="Open menu" aria-expanded="false">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+  </div>
+  </div>
+
+  <!-- Mobile menu (hidden by default) -->
+  <div id="mobile-menu" class="hidden w-full px-4 pb-4 bg-white border-t border-slate-100 md:hidden">
+    <nav class="flex flex-col mt-2 space-y-1">
+      <a class="px-4 py-2 font-medium rounded text-slate-700 hover:bg-slate-50 hover:text-cub-blue" href="{{ '/about/' | relative_url }}">About</a>
+      <a class="px-4 py-2 font-medium rounded text-slate-700 hover:bg-slate-50 hover:text-cub-blue" href="{{ '/calendar/' | relative_url }}">Calendar</a>
+      <a class="px-4 py-2 font-medium rounded text-slate-700 hover:bg-slate-50 hover:text-cub-blue" href="{{ '/resources/' | relative_url }}">Resources</a>
+      <a class="px-4 py-2 font-medium rounded text-slate-700 hover:bg-slate-50 hover:text-cub-blue" href="{{ '/register/' | relative_url }}">Register</a>
+      <a class="px-4 py-2 font-bold text-center text-white rounded-[5px] bg-cub-blue hover:bg-blue-900" href="{{ '/join/' | relative_url }}">Join</a>
+    </nav>
+  </div>
+  </header>
+
+  <!-- Page content -->
+  <main id="content" class="container flex-1 max-w-6xl px-4 mx-auto {% if page.hero_header %}pt-0 pb-10{% else %}py-10{% endif %}">
+    {% unless page.hideTitle %}
+      {% if page.title or page.subtitle %}
+        <div class="flex flex-col border-b border-gray-300 min-h-14">
+          {% if page.title %}
+            <h1 class="text-4xl font-extrabold text-forest my-auto">{{ page.title }}</h1>
+          {% endif %}
+          {% if page.subtitle %}
+            <h2 class="my-auto mb-2 text-3xl font-bold text-forest">{{ page.subtitle }}</h2>
+          {% endif %}
+        </div>
+      {% endif %}
+    {% endunless %}
+    <div class="prose">
+      {{ content }}
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="mt-16 border-t bg-cub-blue border-cub-gold text-gray-50">
+    <div class="grid max-w-6xl gap-8 px-4 py-8 mx-auto md:grid-cols-3">
+      <div class="text-2xl font-bold tracking-wide text-center uppercase">
+        Do Your Best™
+        </div>
+      <div>
+        <div class="font-semibold">Contacts</div>
+        <p class="mt-2 text-sm">
+          <a class="text-white underline decoration-cub-gold decoration-2 underline-offset-2 hover:text-cub-gold" href="mailto:{{ site.cubmaster_email | default: 'info@example.org' }}">
+            {{ site.cubmaster_email | default: 'info@example.org' }}
+          </a>
+        </p>
+      </div>
+      <div>
+        <div class="font-semibold">Links</div>
+        <ul class="mt-2 space-y-1 text-sm">
+          <li><a class="text-white underline decoration-cub-gold decoration-2 underline-offset-2 hover:text-cub-gold" href="{{ '/join/' | relative_url }}">Join the Pack</a></li>
+          <li><a class="text-white underline decoration-cub-gold decoration-2 underline-offset-2 hover:text-cub-gold" href="{{ '/calendar/' | relative_url }}">Pack Calendar</a></li>
+          <li><a class="text-white underline decoration-cub-gold decoration-2 underline-offset-2 hover:text-cub-gold" href="https://www.scouting.org/">Scouting.org</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="py-4 text-xs text-center border-t border-cub-gold text-gray-50 bg-cub-blue">
+      <p class="font-bold">© {{ "now" | date: "%Y" }} Friends of Pack 209</p>
+      <p>Some phrases and logos used on this site are <a class="underline hover:text-cub-gold" href="https://licensingbsa.org/trademarks">trademarks of Scouting America</a></p>
+    </div>
+  </footer>
+  <!-- Mobile menu JavaScript -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const mobileMenuButton = document.getElementById('mobile-menu-button');
+      const mobileMenu = document.getElementById('mobile-menu');
+
+      // Simple toggle function for mobile menu
+      function toggleMenu() {
+        const isOpen = mobileMenu.classList.toggle('hidden');
+        mobileMenuButton.setAttribute('aria-expanded', !isOpen);
+      }
+
+      // Toggle on button click
+      mobileMenuButton.addEventListener('click', function(event) {
+        event.stopPropagation();
+        toggleMenu();
+      });
+
+      // Close when clicking elsewhere on the page
+      document.addEventListener('click', function(event) {
+        if (!mobileMenu.classList.contains('hidden') &&
+            !mobileMenu.contains(event.target) &&
+            !mobileMenuButton.contains(event.target)) {
+          mobileMenu.classList.add('hidden');
+          mobileMenuButton.setAttribute('aria-expanded', 'false');
+        }
+      });
+
+      // Transparent-over-hero header: swap to a solid header once the
+      // page scrolls past the hero. Only active on pages that opt in
+      // via the `is-transparent` marker class (page.hero_header: true).
+      var siteHeader = document.getElementById('site-header');
+      if (siteHeader && siteHeader.classList.contains('is-transparent')) {
+        var scrollThreshold = 40;
+        var updateHeaderState = function() {
+          if (window.scrollY > scrollThreshold) {
+            siteHeader.classList.add('scrolled');
+          } else {
+            siteHeader.classList.remove('scrolled');
+          }
+        };
+        updateHeaderState();
+        window.addEventListener('scroll', updateHeaderState, { passive: true });
+      }
+    });
+  </script>
+</body>
+</html>
