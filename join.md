@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Join Pack 209
+permalink: /join/
 hideTitle: true
 ---
 

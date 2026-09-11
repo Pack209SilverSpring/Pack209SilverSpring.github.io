@@ -28,10 +28,8 @@ permalink: /about/
         <h2 class="text-2xl font-bold text-forest">Our pack</h2>
         <p class="mt-4 text-lg leading-7">
             We are a Cub Scout Pack based in Silver Spring, Maryland, open to boys and girls in
-            kindergarten through fifth grade (we're launching new Lion (K) and Tiger (1st grade) dens this
-            fall!). We foster an open, non-discriminatory, and diverse community. While many of our Scouts
-            attend Woodlin Elementary, the Pack includes families from a variety of area schools and
-            neighborhoods.
+            kindergarten through fifth grade (we're launching a new Lion (K) den this
+            fall!). We foster an open, non-discriminatory, and diverse community. While many of our Scouts attend Woodlin Elementary, the Pack includes families from a variety of area schools and neighborhoods.
         </p>
         <p class="mt-4 text-lg leading-7">
             Everything we do ties back to the Scout Oath and Law. Being trustworthy, helpful, and

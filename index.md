@@ -170,7 +170,7 @@ hero_header: true
   <div>
     <h2 class="text-3xl font-bold sm:text-4xl text-forest">Why Cub Scouting?</h2>
     <p class="mt-4 text-lg leading-7">
-      Pack 209 meets in Silver Spring, MD, and is open to any kid in kindergartn through fifth grade who
+      Pack 209 meets in Silver Spring, MD, and is open to any kid in kindergarten through fifth grade who
       want to get outside, learn new skills, and make new friends. Here's what a
       typical year looks like:
     </p>
@@ -202,7 +202,7 @@ hero_header: true
       <img src="{{ '/assets/images/209_campfire.jpg' | relative_url }}" alt="Pack 209 Cub Scouts camping trip" class="object-cover w-full h-40">
       <div class="p-4 pt-2">
         <h3 class="font-bold text-cub-blue mt-1">Family Camping</h3>
-        <p class="mt-1 text-sm text-slate-600">Our pack goes on a fall and spring family camping trip out in nature. Its one giant playdate outside with all of your scout's friends</p>
+        <p class="mt-1 text-sm text-slate-600">Our pack goes on a fall and spring family camping trip out in nature. It's one giant playdate outside with all of your scout's friends</p>
       </div>
     </div>
     <div class="overflow-hidden bg-white rounded-[5px] ring-1 ring-slate-200">
