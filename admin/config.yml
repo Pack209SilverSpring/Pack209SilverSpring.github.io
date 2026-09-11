@@ -1,16 +1,15 @@
 # Decap CMS configuration for the Pack 209 site.
 # Docs: https://decapcms.org/docs/intro/
 #
-# SETUP TODO (see chat for full walkthrough):
-#   1. Replace `repo:` below with your actual "owner/repo-name" on GitHub.
-#   2. Deploy a small GitHub OAuth relay (GitHub Pages can't host OAuth
-#      itself) and replace `base_url:` with that relay's URL.
+# Auth is handled by a small Cloudflare Worker OAuth relay, since GitHub
+# Pages can't run OAuth itself:
+#   https://github.com/Pack209SilverSpring/decap-cms-github-oauth-provider-cloudflare
 
 backend:
   name: github
-  repo: OWNER/REPO # TODO: e.g. Pack209SilverSpring/Pack209SilverSpring.github.io
+  repo: Pack209SilverSpring/Pack209SilverSpring.github.io
   branch: main
-  base_url: https://YOUR-OAUTH-WORKER.example.workers.dev # TODO: set after deploying the OAuth relay
+  base_url: https://decap-cms-github-oauth-api.pack209.workers.dev
 
 publish_mode: simple
 
@@ -86,7 +85,8 @@ collections:
           - label: "Announcement text"
             name: "announcement_text"
             widget: "string"
-            hint: "Shown after the 📣 emoji, before the 'Learn more' link. Keep it short."
+            required: false
+            hint: "Shown after the 📣 emoji, before the 'Learn more' link. Keep it short. Only needs a value when the banner above is turned on."
           - label: "Page layout (do not edit — controls the rest of the homepage)"
             name: "body"
             widget: "code"
