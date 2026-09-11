@@ -37,7 +37,7 @@ permalink: /register/
           Pay Pack 209 dues
         </h3>
         <p class="mt-3 text-slate-600">
-          <!-- TODO: set your actual Pack 209 dues amount --> $[XXX] covers awards, the handbook, recognition items, craft supplies, meeting space, and special events.
+          $115 covers Fall and Spring campouts, Pack t-shirts, Pinewood Derby car kits, awards (belt loops, pins, and badges), and other Pack and Den activity costs.
         </p>
         <dl class="mt-5 text-sm text-slate-500 space-y-1">
           <div class="flex gap-2"><dt class="font-semibold text-cub-blue/80 min-w-24">Where:</dt><dd>Online (card) or check in person</dd></div>
@@ -48,14 +48,14 @@ permalink: /register/
              target="_blank" rel="noopener"
              class="flex items-baseline justify-between gap-4 px-5 py-4 transition font-heading rounded-[5px] bg-cub-blue ring-1 ring-cub-blue hover:bg-blue-900">
             <span class="text-xs font-semibold tracking-[0.2em] uppercase text-white/90">Pay Pack Dues</span>
-            <span class="text-xl font-extrabold text-white">$[XXX]</span>
+            <span class="text-xl font-extrabold text-white">$115</span>
           </a>
           <!-- TODO -->
           <a href="#TODO-add-your-own-payment-link-with-donation-option"
              target="_blank" rel="noopener"
              class="flex items-baseline justify-between gap-4 px-5 py-4 transition font-heading rounded-[5px] bg-cub-blue ring-1 ring-cub-blue hover:bg-blue-900">
             <span class="text-xs font-semibold tracking-[0.2em] uppercase text-white/90">Pay Pack Dues <span class="text-white">+ optional donation</span></span>
-            <span class="text-xl font-extrabold text-white">$[XXX]</span>
+            <span class="text-xl font-extrabold text-white">$115+</span>
           </a>
         </div>
         <p class="mt-3 text-xs text-slate-500 italic">
@@ -72,7 +72,7 @@ permalink: /register/
           Pay Scouting America dues
         </h3>
         <p class="mt-3 text-slate-600">
-          <!-- TODO: confirm current fees at my.scouting.org --> $[XXX] to Scouting America covers national and National Capital Area Council registration. Add $15 for an optional year of <em>Scout Life</em> magazine. Important: when prompted, choose <strong class="text-cub-blue">Cub Scout Pack 209</strong>, chartered through Cissel-Saxon American Legion Post 41, so your scout lands in the right pack.
+          $170 to Scouting America covers national and National Capital Area Council registration ($85 BSA registration fee, $80 council participation fee, and a ~$5 processing fee). Add $15 for an optional year of <em>Scout Life</em> magazine. Important: when prompted, choose <strong class="text-cub-blue">Cub Scout Pack 209</strong>, chartered through Cissel-Saxon American Legion Post 41, so your scout lands in the right pack.
         </p>
         <p class="mt-3 text-sm text-slate-500">
           <strong class="text-cub-blue">Returning scouts:</strong> Scouting America bills 12 months from your last registration, so you may not owe anything yet. When the renewal does come due, paying it is required to stay in the program.
@@ -86,7 +86,7 @@ permalink: /register/
              target="_blank" rel="noopener"
              class="flex items-baseline justify-between gap-4 px-5 py-4 transition font-heading rounded-[5px] bg-cub-blue ring-1 ring-cub-blue hover:bg-blue-900">
             <span class="text-xs font-semibold tracking-[0.2em] uppercase text-white/90">Pay Scouting America Dues</span>
-            <span class="text-xl font-extrabold text-white">$[XXX]</span>
+            <span class="text-xl font-extrabold text-white">$170</span>
           </a>
         </div>
       </article>

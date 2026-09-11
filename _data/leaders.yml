@@ -11,6 +11,11 @@
   image: /assets/images/denchief.png
   ring_color: yellow-400
 
+- name: Josh Helfinsiegel
+  role: Assistant Cubmaster
+  image: /assets/images/blankleader.png
+  ring_color: yellow-400
+
 - name: Carter Tellinghuisen
   role: Committee Chair
   image: /assets/images/blankleader.png
@@ -56,7 +61,32 @@
   image: /assets/images/arrowoflightleader.png
   ring_color: stone-800
 
-- name: You?
-  role: ""
+- name: Peter Wadeson
+  role: Campout Coordinator
+  image: /assets/images/blankleader.png
+  ring_color: slate-400
+
+- name: Joel Iams
+  role: Hikemaster
+  image: /assets/images/blankleader.png
+  ring_color: slate-500
+
+- name: Tom Haslett
+  role: Pinewood Derby Co-Lead
+  image: /assets/images/blankleader.png
+  ring_color: stone-800
+
+- name: Brock Read
+  role: Pinewood Derby Co-Lead
+  image: /assets/images/blankleader.png
+  ring_color: slate-400
+
+- name: Mareena Snowden
+  role: Scouting for Food Lead
   image: /assets/images/blankleader.png
   ring_color: yellow-700
+
+- name: Chris Roach
+  role: Sweep the Creek Lead
+  image: /assets/images/blankleader.png
+  ring_color: slate-500

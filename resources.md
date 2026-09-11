@@ -96,6 +96,14 @@ permalink: /resources/
     fun safely and we respect our host, Silver Spring United Methodist Church.
   </p>
 
+  <h2 class="mt-12 text-2xl font-bold text-forest">Health & Safety</h2>
+  <ul class="mt-4 space-y-3 leading-7 list-disc list-outside pl-5">
+    <li>Please notify Pack and Den leadership of any medical requirements or allergies. Annual health/medical forms are required for campouts.</li>
+    <li>Youth Protection Training is required of all adult leaders, and Pack events follow BSA's "two-deep" leadership rule &mdash; at least two trained adults present at every activity.</li>
+    <li>Several rank Adventures are personal-safety themed, so Scouts build these skills as part of the regular program.</li>
+    <li>Please follow site-specific guidelines at campouts and events, and be courteous of other families' needs and comfort levels.</li>
+  </ul>
+
   <h2 class="mt-12 text-2xl font-bold text-forest">Uniforms & Where to Buy</h2>
   <p class="mt-4 leading-7">
     Cub Scouts wear two uniforms. <strong>"Class A"</strong> is the traditional blue Cub Scout shirt with

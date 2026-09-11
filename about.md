@@ -52,6 +52,22 @@ permalink: /about/
 
 </div>
 
+<div class="mt-16 px-8">
+    <h2 class="text-2xl font-bold text-forest">Our Story</h2>
+    <p class="mt-4 text-lg leading-7">
+        Scouting has deep roots in our community. The Boy Scouts of America was founded in 1910
+        ("Be Prepared" is still the Scout motto for older youth), and our own Troop 209 was
+        chartered back in 1918 as one of Montgomery County's oldest scouting units. Cub Scouting
+        for younger kids came along in 1930, built around a simpler idea: "Do Your Best."
+    </p>
+    <p class="mt-4 text-lg leading-7">
+        Pack 209 serves the Woodside neighborhoods north of downtown Silver Spring, and is part of
+        Scouting America's National Capital Area Council, Potomac District. We're a family
+        Pack where girls and boys scout side by side, and we don't do fundraisers. Annual dues
+        cover our costs, so families can focus on the fun instead of selling popcorn.
+    </p>
+</div>
+
 <div class="px-8 py-10 mt-12 text-white shadow-lg rounded-[5px] bg-scout-blue">
   <h2 class="m-0 text-3xl font-bold tracking-tight text-center text-white">
     Our Hosts and Leaders
