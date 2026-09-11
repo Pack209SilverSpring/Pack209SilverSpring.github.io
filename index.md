@@ -5,6 +5,12 @@
 layout: default
 navbarText: Silver Spring, MD
 hero_header: true
+
+# Homepage announcement banner — edit from the CMS (/admin) or right here.
+# Turn announcement_visible off (rather than deleting the text) to hide the
+# banner after an event passes, so it's easy to bring back next time.
+announcement_visible: true
+announcement_text: "Come to our Join Scouting event on 9/15!"
 ---
 
 <!-- HERO: full-bleed, breaks out of the max-w-6xl main container. Parallax: bg-fixed keeps the photo in place while the page scrolls over it (same technique as the "Ready to Explore" CTA below). -->
@@ -33,10 +39,12 @@ hero_header: true
   </div>
 </section>
 
-<!-- ANNOUNCEMENT BANNER: pulled from the live cubscoutpack209.org site on 2026-09-09 — this is time-sensitive, update or remove after the event passes! -->
+<!-- ANNOUNCEMENT BANNER: text is a CMS-editable frontmatter field (announcement_text) so leaders can update it without touching code. Set announcement_visible: false in front matter (or via /admin) to hide it. -->
+{% if page.announcement_visible %}
 <section class="px-4 py-3 text-sm font-medium text-center text-forest bg-yellow-100 relative left-1/2 right-1/2 w-screen -ml-[50vw] -mr-[50vw]">
-  📣 Come to our Join Scouting event on 9/15! <a href="/join" class="underline hover:no-underline">Learn more</a> or <a href="mailto:leaders@cubscoutpack209.org" class="underline hover:no-underline">contact us</a>.
+  📣 {{ page.announcement_text }} <a href="/join" class="underline hover:no-underline">Learn more</a> or <a href="mailto:leaders@cubscoutpack209.org" class="underline hover:no-underline">contact us</a>.
 </section>
+{% endif %}
 
 <!-- TODO: program overview PDF -->
 
@@ -242,30 +250,12 @@ hero_header: true
       <p class="mt-3">Meetings tailored to grade/age. New families welcome—jump in anytime. Pack meetings are
       hosted at Silver Spring United Methodist Church (8900 Georgia Ave), in Fellowship Hall.</p>
       <div class="mt-6 divide-y divide-slate-200">
+        {% for den in site.data.dens.dens %}
         <div class="flex items-baseline justify-between py-3">
-          <p class="font-semibold">Lions (Kindergarten)</p>
-          <p class="text-sm text-slate-600">Meeting day TBD</p>
+          <p class="font-semibold">{{ den.name }} ({{ den.grade }})</p>
+          <p class="text-sm text-slate-600">{{ den.meeting_day }}</p>
         </div>
-        <div class="flex items-baseline justify-between py-3">
-          <p class="font-semibold">Tigers (1st Grade)</p>
-          <p class="text-sm text-slate-600">Meeting day TBD</p>
-        </div>
-        <div class="flex items-baseline justify-between py-3">
-          <p class="font-semibold">Wolves (2nd Grade)</p>
-          <p class="text-sm text-slate-600">Meeting day TBD</p>
-        </div>
-        <div class="flex items-baseline justify-between py-3">
-          <p class="font-semibold">Bears (3rd Grade)</p>
-          <p class="text-sm text-slate-600">Meeting day TBD</p>
-        </div>
-        <div class="flex items-baseline justify-between py-3">
-          <p class="font-semibold">Webelos (4th Grade)</p>
-          <p class="text-sm text-slate-600">Meeting day TBD</p>
-        </div>
-        <div class="flex items-baseline justify-between py-3">
-          <p class="font-semibold">Arrow of Light (5th Grade)</p>
-          <p class="text-sm text-slate-600">Meeting day TBD</p>
-        </div>
+        {% endfor %}
       </div>
       <div class="mt-6">
         <a href="mailto:leaders@cubscoutpack209.org?subject=Question%20about%20Pack%20209"

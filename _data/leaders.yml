@@ -6,87 +6,88 @@
 #     image: Path to profile image
 #     ring_color: Tailwind color for the ring around the image
 
-- name: Charlie Stern
-  role: Cubmaster
-  image: /assets/images/denchief.png
-  ring_color: yellow-400
+leaders:
+  - name: Charlie Stern
+    role: Cubmaster
+    image: /assets/images/denchief.png
+    ring_color: yellow-400
 
-- name: Josh Helfinsiegel
-  role: Assistant Cubmaster
-  image: /assets/images/blankleader.png
-  ring_color: yellow-400
+  - name: Josh Helfinsiegel
+    role: Assistant Cubmaster
+    image: /assets/images/blankleader.png
+    ring_color: yellow-400
 
-- name: Carter Tellinghuisen
-  role: Committee Chair
-  image: /assets/images/blankleader.png
-  ring_color: slate-400
+  - name: Carter Tellinghuisen
+    role: Committee Chair
+    image: /assets/images/blankleader.png
+    ring_color: slate-400
 
-- name: Bill Scanlin
-  role: Chartered Organization Representative
-  image: /assets/images/blankleader.png
-  ring_color: slate-500
+  - name: Bill Scanlin
+    role: Chartered Organization Representative
+    image: /assets/images/blankleader.png
+    ring_color: slate-500
 
-- name: John McCauley
-  role: Den Leader - Lions
-  image: /assets/images/lionleader.png
-  ring_color: yellow-400
+  - name: John McCauley
+    role: Den Leader - Lions
+    image: /assets/images/lionleader.png
+    ring_color: yellow-400
 
-- name: Matt Townley
-  role: Den Leader - Tigers
-  image: /assets/images/tigerleader.png
-  ring_color: stone-800
+  - name: Matt Townley
+    role: Den Leader - Tigers
+    image: /assets/images/tigerleader.png
+    ring_color: stone-800
 
-- name: Alex Roark
-  role: Den Leader - Wolves
-  image: /assets/images/wolfleader.png
-  ring_color: slate-400
+  - name: Alex Roark
+    role: Den Leader - Wolves
+    image: /assets/images/wolfleader.png
+    ring_color: slate-400
 
-- name: Amanda Zigmond
-  role: Den Leader - Wolves, Treasurer
-  image: /assets/images/wolfleader.png
-  ring_color: yellow-700
+  - name: Amanda Zigmond
+    role: Den Leader - Wolves, Treasurer
+    image: /assets/images/wolfleader.png
+    ring_color: yellow-700
 
-- name: Lane Goodman
-  role: Den Leader - Bears, Webmaster
-  image: /assets/images/bearleader.png
-  ring_color: stone-800
+  - name: Lane Goodman
+    role: Den Leader - Bears, Webmaster
+    image: /assets/images/bearleader.png
+    ring_color: stone-800
 
-- name: Amy Haslett
-  role: Den Leader - Webelos
-  image: /assets/images/webelosleader.png
-  ring_color: slate-500
+  - name: Amy Haslett
+    role: Den Leader - Webelos
+    image: /assets/images/webelosleader.png
+    ring_color: slate-500
 
-- name: Helen Zaitsev
-  role: Den Leader - Arrow of Light
-  image: /assets/images/arrowoflightleader.png
-  ring_color: stone-800
+  - name: Helen Zaitsev
+    role: Den Leader - Arrow of Light
+    image: /assets/images/arrowoflightleader.png
+    ring_color: stone-800
 
-- name: Peter Wadeson
-  role: Campout Coordinator
-  image: /assets/images/blankleader.png
-  ring_color: slate-400
+  - name: Peter Wadeson
+    role: Campout Coordinator
+    image: /assets/images/blankleader.png
+    ring_color: slate-400
 
-- name: Joel Iams
-  role: Hikemaster
-  image: /assets/images/blankleader.png
-  ring_color: slate-500
+  - name: Joel Iams
+    role: Hikemaster
+    image: /assets/images/blankleader.png
+    ring_color: slate-500
 
-- name: Tom Haslett
-  role: Pinewood Derby Co-Lead
-  image: /assets/images/blankleader.png
-  ring_color: stone-800
+  - name: Tom Haslett
+    role: Pinewood Derby Co-Lead
+    image: /assets/images/blankleader.png
+    ring_color: stone-800
 
-- name: Brock Read
-  role: Pinewood Derby Co-Lead
-  image: /assets/images/blankleader.png
-  ring_color: slate-400
+  - name: Brock Read
+    role: Pinewood Derby Co-Lead
+    image: /assets/images/blankleader.png
+    ring_color: slate-400
 
-- name: Mareena Snowden
-  role: Scouting for Food Lead
-  image: /assets/images/blankleader.png
-  ring_color: yellow-700
+  - name: Mareena Snowden
+    role: Scouting for Food Lead
+    image: /assets/images/blankleader.png
+    ring_color: yellow-700
 
-- name: Chris Roach
-  role: Sweep the Creek Lead
-  image: /assets/images/blankleader.png
-  ring_color: slate-500
+  - name: Chris Roach
+    role: Sweep the Creek Lead
+    image: /assets/images/blankleader.png
+    ring_color: slate-500

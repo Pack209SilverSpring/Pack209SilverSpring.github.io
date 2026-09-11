@@ -1,0 +1,105 @@
+# Decap CMS configuration for the Pack 209 site.
+# Docs: https://decapcms.org/docs/intro/
+#
+# SETUP TODO (see chat for full walkthrough):
+#   1. Replace `repo:` below with your actual "owner/repo-name" on GitHub.
+#   2. Deploy a small GitHub OAuth relay (GitHub Pages can't host OAuth
+#      itself) and replace `base_url:` with that relay's URL.
+
+backend:
+  name: github
+  repo: OWNER/REPO # TODO: e.g. Pack209SilverSpring/Pack209SilverSpring.github.io
+  branch: main
+  base_url: https://YOUR-OAUTH-WORKER.example.workers.dev # TODO: set after deploying the OAuth relay
+
+publish_mode: simple
+
+# Jekyll pages are full of Liquid ({{ }} / {% %}) that Decap's live preview
+# would render as literal text (it doesn't know Liquid), so previews are
+# disabled site-wide below on each collection instead of trying to fake it.
+
+media_folder: "assets/images"
+public_folder: "/assets/images"
+
+collections:
+  - name: "leaders"
+    label: "Pack Leaders"
+    files:
+      - label: "Leader Roster"
+        name: "leaders"
+        file: "_data/leaders.yml"
+        editor:
+          preview: false
+        fields:
+          - label: "Leaders"
+            name: "leaders"
+            widget: "list"
+            summary: "{{name}} — {{role}}"
+            fields:
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "Role", name: "role", widget: "string" }
+              - label: "Photo"
+                name: "image"
+                widget: "image"
+                default: "/assets/images/blankleader.png"
+                media_library:
+                  config:
+                    multiple: false
+              - label: "Ring Color"
+                name: "ring_color"
+                widget: "string"
+                default: "slate-400"
+                hint: "Tailwind color name for the ring around the photo, e.g. yellow-400, slate-500, stone-800"
+
+  - name: "dens"
+    label: "Dens & Meeting Times"
+    files:
+      - label: "Den Schedule"
+        name: "dens"
+        file: "_data/dens.yml"
+        editor:
+          preview: false
+        fields:
+          - label: "Dens"
+            name: "dens"
+            widget: "list"
+            summary: "{{name}} ({{grade}}) — {{meeting_day}}"
+            fields:
+              - { label: "Den Name", name: "name", widget: "string" }
+              - { label: "Grade", name: "grade", widget: "string" }
+              - { label: "Meeting Day / Time", name: "meeting_day", widget: "string", default: "Meeting day TBD" }
+
+  - name: "pages"
+    label: "Site Pages"
+    files:
+      - label: "Homepage Announcement Banner"
+        name: "home_announcement"
+        file: "index.md"
+        editor:
+          preview: false
+        fields:
+          - label: "Show the announcement banner"
+            name: "announcement_visible"
+            widget: "boolean"
+            default: true
+            hint: "Turn off to hide the yellow banner without losing the text underneath."
+          - label: "Announcement text"
+            name: "announcement_text"
+            widget: "string"
+            hint: "Shown after the 📣 emoji, before the 'Learn more' link. Keep it short."
+          - label: "Page layout (do not edit — controls the rest of the homepage)"
+            name: "body"
+            widget: "code"
+            default_language: "html"
+            output_code_only: true
+            allow_language_selection: false
+            required: false
+
+      - label: "Contact Page"
+        name: "contact"
+        file: "contact.md"
+        editor:
+          preview: false
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Message", name: "body", widget: "markdown" }
