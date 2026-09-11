@@ -117,7 +117,7 @@ permalink: /resources/
   </p>
 
   <div class="pt-8 mt-12 border-t border-slate-200">
-    <a href="mailto:leaders@cubscoutpack209.org" class="inline-flex items-center px-5 py-3 font-semibold text-white transition rounded-[5px] bg-cub-blue hover:bg-blue-900">
+    <a href="mailto:leaders@cubscoutpack209.org" class="inline-flex items-center px-5 py-3 font-semibold font-heading text-white transition rounded-[5px] bg-cub-blue hover:bg-blue-900">
       Questions? Email leaders@cubscoutpack209.org
     </a>
   </div>

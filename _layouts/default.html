@@ -13,6 +13,10 @@
     rel="stylesheet"
   />
   <link rel="stylesheet" href="{{ 'assets/css/styles.css' | relative_url }}">
+  <link rel="icon" href="{{ '/favicon.ico' | relative_url }}" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ '/assets/icons/favicon-32x32.png' | relative_url }}">
+  <link rel="icon" type="image/png" sizes="16x16" href="{{ '/assets/icons/favicon-16x16.png' | relative_url }}">
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ '/assets/icons/apple-touch-icon.png' | relative_url }}">
   <meta name="description" content="{{ page.excerpt | default: site.description | default: 'Scouting adventures, friends, and fun.' | strip_html }}">
 </head>
 <body class="flex flex-col min-h-screen overflow-x-hidden bg-slate-50 text-slate-800">
@@ -24,22 +28,26 @@
       <a href="{{ '/' | relative_url }}" class="flex items-center gap-3 ">
         <img src="{{ '/assets/images/pack209-logo.png' | relative_url }}" alt="Pack 209"
              class="w-auto h-12">
-             <p class="text-white text-sm font-semibold leading-none [&.scrolled]:text-forest">Cub Scout <br />Pack 209</p>
+        {% if page.hero_header %}
+          <p class="text-md font-heading font-semibold leading-none text-white transition-colors duration-300 group-[.scrolled]:text-cub-blue">Cub Scout <br />Pack 209</p>
+        {% else %}
+          <p class="text-md font-heading font-semibold leading-none text-cub-blue">Cub Scout <br />Pack 209</p>
+        {% endif %}
       </a>
 
       <!-- Desktop nav -->
       {% assign nav_link_class = "font-medium transition-colors duration-300 " %}
       {% if page.hero_header %}
-        {% assign nav_link_class = nav_link_class | append: "text-white/90 hover:text-white group-[.scrolled]:text-slate-700 group-[.scrolled]:hover:text-cub-blue" %}
+        {% assign nav_link_class = nav_link_class | append: "text-white/90 font-heading hover:text-white group-[.scrolled]:text-cub-blue group-[.scrolled]:hover:text-blue-600" %}
       {% else %}
-        {% assign nav_link_class = nav_link_class | append: "text-slate-700 hover:text-cub-blue" %}
+        {% assign nav_link_class = nav_link_class | append: "text-cub-blue font-heading hover:text-cub-blue" %}
       {% endif %}
       <nav class="items-center hidden gap-8 md:flex">
       <a class="{{ nav_link_class }}" href="{{ '/about/' | relative_url }}">About</a>
       <a class="{{ nav_link_class }}" href="{{ '/calendar/' | relative_url }}">Calendar</a>
       <a class="{{ nav_link_class }}" href="{{ '/resources/' | relative_url }}">Resources</a>
       <a class="{{ nav_link_class }}" href="{{ '/register/' | relative_url }}">Register</a>
-      <a class="px-4 py-2 font-semibold text-white transition rounded-[5px] shadow-sm bg-cub-blue hover:bg-blue-900"
+      <a class="px-4 py-2 font-semibold font-heading text-white transition rounded-[5px] shadow-sm bg-cub-blue hover:bg-blue-900"
           href="/join">Join</a>
       </nav>
 
@@ -60,7 +68,7 @@
       <a class="px-4 py-2 font-medium rounded text-slate-700 hover:bg-slate-50 hover:text-cub-blue" href="{{ '/calendar/' | relative_url }}">Calendar</a>
       <a class="px-4 py-2 font-medium rounded text-slate-700 hover:bg-slate-50 hover:text-cub-blue" href="{{ '/resources/' | relative_url }}">Resources</a>
       <a class="px-4 py-2 font-medium rounded text-slate-700 hover:bg-slate-50 hover:text-cub-blue" href="{{ '/register/' | relative_url }}">Register</a>
-      <a class="px-4 py-2 font-bold text-center text-white rounded-[5px] bg-cub-blue hover:bg-blue-900" href="{{ '/join/' | relative_url }}">Join</a>
+      <a class="px-4 py-2 font-bold font-heading text-center text-white rounded-[5px] bg-cub-blue hover:bg-blue-900" href="{{ '/join/' | relative_url }}">Join</a>
     </nav>
   </div>
   </header>

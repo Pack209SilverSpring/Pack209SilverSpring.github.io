@@ -46,14 +46,14 @@ permalink: /register/
         <div class="flex flex-col mt-6 gap-3">
           <a href="#TODO-add-your-own-payment-link"
              target="_blank" rel="noopener"
-             class="flex items-baseline justify-between gap-4 px-5 py-4 transition rounded-[5px] bg-cub-blue ring-1 ring-cub-blue hover:bg-blue-900">
+             class="flex items-baseline justify-between gap-4 px-5 py-4 transition font-heading rounded-[5px] bg-cub-blue ring-1 ring-cub-blue hover:bg-blue-900">
             <span class="text-xs font-semibold tracking-[0.2em] uppercase text-white/90">Pay Pack Dues</span>
             <span class="text-xl font-extrabold text-white">$[XXX]</span>
           </a>
           <!-- TODO -->
           <a href="#TODO-add-your-own-payment-link-with-donation-option"
              target="_blank" rel="noopener"
-             class="flex items-baseline justify-between gap-4 px-5 py-4 transition rounded-[5px] bg-cub-blue ring-1 ring-cub-blue hover:bg-blue-900">
+             class="flex items-baseline justify-between gap-4 px-5 py-4 transition font-heading rounded-[5px] bg-cub-blue ring-1 ring-cub-blue hover:bg-blue-900">
             <span class="text-xs font-semibold tracking-[0.2em] uppercase text-white/90">Pay Pack Dues <span class="text-white">+ optional donation</span></span>
             <span class="text-xl font-extrabold text-white">$[XXX]</span>
           </a>
@@ -84,7 +84,7 @@ permalink: /register/
         <div class="flex flex-col mt-6 gap-3">
           <a href="https://my.scouting.org/"
              target="_blank" rel="noopener"
-             class="flex items-baseline justify-between gap-4 px-5 py-4 transition rounded-[5px] bg-cub-blue ring-1 ring-cub-blue hover:bg-blue-900">
+             class="flex items-baseline justify-between gap-4 px-5 py-4 transition font-heading rounded-[5px] bg-cub-blue ring-1 ring-cub-blue hover:bg-blue-900">
             <span class="text-xs font-semibold tracking-[0.2em] uppercase text-white/90">Pay Scouting America Dues</span>
             <span class="text-xl font-extrabold text-white">$[XXX]</span>
           </a>
@@ -109,7 +109,7 @@ permalink: /register/
         </dl>
         <a href="#TODO-add-your-own-annual-info-form"
            target="_blank" rel="noopener"
-           class="flex items-baseline justify-between gap-4 px-5 py-4 mt-6 transition rounded-[5px] bg-cub-blue ring-1 ring-cub-blue hover:bg-blue-900">
+           class="flex items-baseline justify-between gap-4 px-5 py-4 mt-6 transition font-heading rounded-[5px] bg-cub-blue ring-1 ring-cub-blue hover:bg-blue-900">
           <span class="text-xs font-semibold tracking-[0.2em] uppercase text-white/90">Open the Annual Information Form</span>
           <span class="text-cub-gold" aria-hidden="true">→</span>
         </a>
@@ -147,7 +147,7 @@ permalink: /register/
       </p>
       <div class="mt-8">
         <a href="mailto:leaders@cubscoutpack209.org?subject=Registration%20help"
-           class="inline-flex items-center justify-center px-7 py-3.5 font-bold transition bg-cub-gold rounded-[5px] text-cub-blue hover:bg-yellow-300">
+           class="inline-flex items-center justify-center px-7 py-3.5 font-bold font-heading transition bg-cub-gold rounded-[5px] text-cub-blue hover:bg-yellow-300">
           Email leaders@cubscoutpack209.org
         </a>
       </div>

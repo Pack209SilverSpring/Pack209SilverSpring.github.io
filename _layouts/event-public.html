@@ -36,7 +36,7 @@ hideTitle: true
 </div>
 
 <div class="mt-8 flex gap-4">
-  <a href="/calendar/" class="inline-flex items-center rounded-[5px] px-4 py-2 bg-cub-blue text-white font-semibold hover:bg-blue-900 transition">&larr; Back to Calendar</a>
+  <a href="/calendar/" class="inline-flex items-center rounded-[5px] px-4 py-2 bg-cub-blue text-white font-semibold font-heading hover:bg-blue-900 transition">&larr; Back to Calendar</a>
 
   {% if end_epoch > now_epoch %}
   {% if page.event.start.dateTime %}
@@ -45,7 +45,7 @@ hideTitle: true
   {% assign location = page.event.location | url_encode %}
   {% assign details = page.event.description | url_encode %}
 
-  <a href="https://www.google.com/calendar/render?action=TEMPLATE&text={{ page.title | url_encode }}&dates={{ start_time }}/{{ end_time }}&details={{ details }}&location={{ location }}&sf=true&output=xml" target="_blank" rel="noopener noreferrer" class="inline-flex items-center rounded-[5px] px-4 py-2 bg-cub-blue text-white font-semibold hover:bg-cub-blue/90 transition">
+  <a href="https://www.google.com/calendar/render?action=TEMPLATE&text={{ page.title | url_encode }}&dates={{ start_time }}/{{ end_time }}&details={{ details }}&location={{ location }}&sf=true&output=xml" target="_blank" rel="noopener noreferrer" class="inline-flex items-center rounded-[5px] px-4 py-2 bg-cub-blue text-white font-semibold font-heading hover:bg-cub-blue/90 transition">
     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
     </svg>
@@ -55,7 +55,7 @@ hideTitle: true
 
   {% capture ics_raw %}{% include event-ics.ics ev=page.event %}{% endcapture %}
   {% assign ics_encoded = ics_raw | uri_escape %}
-  <a download="{{ page.event.id }}.ics" href="data:text/calendar;charset=utf-8,{{ ics_encoded }}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center rounded-[5px] px-4 py-2 bg-cub-blue text-white font-semibold hover:bg-cub-blue/90 transition">
+  <a download="{{ page.event.id }}.ics" href="data:text/calendar;charset=utf-8,{{ ics_encoded }}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center rounded-[5px] px-4 py-2 bg-cub-blue text-white font-semibold font-heading hover:bg-cub-blue/90 transition">
     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
     </svg>
@@ -64,7 +64,7 @@ hideTitle: true
   {% endif %}
 
   {% if page.calendar_id %}
-  <a href="https://calendar.google.com/calendar/render?cid={{ page.calendar_id | url_encode }}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center rounded-[5px] px-4 py-2 bg-cub-blue text-white font-semibold hover:bg-blue-900 transition">
+  <a href="https://calendar.google.com/calendar/render?cid={{ page.calendar_id | url_encode }}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center rounded-[5px] px-4 py-2 bg-cub-blue text-white font-semibold font-heading hover:bg-blue-900 transition">
     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
     </svg>

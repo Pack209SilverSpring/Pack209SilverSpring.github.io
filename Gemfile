@@ -21,7 +21,9 @@ gem "minima", "~> 2.0"
 group :jekyll_plugins do
   gem "jekyll-feed", "~> 0.6"
   gem "jekyll-tailwindcss", "~> 0.7.0"
-  # gem "jekyll-google-calendar"  # TODO: re-enable once you've set up your own Google Cloud service account + calendars
+  gem "jekyll-google-calendar"
+  gem "multi_json"  # representable (a google-api-client dependency) requires this directly; Bundler
+                    # blocks the require unless it is declared here, even though it is present transitively.
 end
 
 # Windows and JRuby does not include zoneinfo files, so bundle the tzinfo-data gem

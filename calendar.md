@@ -33,7 +33,7 @@ hideTitle: true
         {% if cal.name and cal.layout == 'event-public' %}
         <a href="https://calendar.google.com/calendar/render?cid={{ cal.id | url_encode }}"
            target="_blank" rel="noopener noreferrer"
-           class="inline-flex items-center rounded-[5px] px-3 py-2 text-sm font-medium ring-1 ring-slate-300 bg-white hover:bg-slate-50">
+           class="inline-flex items-center rounded-[5px] px-3 py-2 text-sm font-medium font-heading ring-1 ring-slate-300 bg-white hover:bg-slate-50">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
           </svg>
@@ -49,7 +49,7 @@ hideTitle: true
         {% if cal.name and cal.layout == 'event-private' %}
         <a href="https://calendar.google.com/calendar/render?cid={{ cal.id | url_encode }}"
            target="_blank" rel="noopener noreferrer"
-           class="inline-flex items-center rounded-[5px] px-3 py-2 text-sm font-medium ring-1 ring-slate-300 bg-white hover:bg-slate-50">
+           class="inline-flex items-center rounded-[5px] px-3 py-2 text-sm font-medium font-heading ring-1 ring-slate-300 bg-white hover:bg-slate-50">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
           </svg>

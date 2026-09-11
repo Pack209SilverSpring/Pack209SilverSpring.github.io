@@ -31,55 +31,56 @@ theme: minima
 plugins:
   - jekyll-feed
   - jekyll-tailwindcss
-  # - jekyll-google-calendar  # TODO: re-enable once you've set up your own Google Cloud service account + calendars (see README)
+  - jekyll-google-calendar
 
-# --- Google Calendar config, disabled for now. Re-enable the plugin above and uncomment
-# this block once you have your own Google Cloud service account + calendar IDs. ---
-# gcalendar:
-#   key_file: ./gcalendar-key.json
-#   calendars:
-#     - name: 🐾 Pack 209
-#       id: c_dbd8c6d9e13e75097d2a4bb1e980c580cc9f07d2407f004db14eb0cfe5037bae@group.calendar.google.com
-#       directory: events
-#       layout: event-public
-#       date_format: "%Y-%m-%d"
-#       look_ahead: 365
-#     - name: 🦁 Lion Den
-#       id: c_23bf39238bebf6e1676802f8aed5c2f2e31fb28ec8c9428d08f2a3cf653fba91@group.calendar.google.com
-#       directory: events
-#       layout: event-private
-#       date_format: "%Y-%m-%d"
-#       look_ahead: 365
-#     - name: 🐯 Tiger Den
-#       id: c_87e6640306451b91fd0e46b0611cc26768b64a586815bba5b5d956c60bbd544b@group.calendar.google.com
-#       directory: events
-#       layout: event-private
-#       date_format: "%Y-%m-%d"
-#       look_ahead: 365
-#     - name: 🐺 Wolf Den
-#       id: c_14f61c66ad0267f311c1ade24dd6d365960f801dd6b9bf55943bade450015fed@group.calendar.google.com
-#       directory: events
-#       layout: event-private
-#       date_format: "%Y-%m-%d"
-#       look_ahead: 365
-#     - name: 🐻 Bear Den
-#       id: c_914f7f15618f89b7095afab3acc7d1faca4277828d63c7c5d07d780a6ff9097e@group.calendar.google.com
-#       directory: events
-#       layout: event-private
-#       date_format: "%Y-%m-%d"
-#       look_ahead: 365
-#     - name: ⚜️ Webelos Den
-#       id: c_14dddfe86bf386af69d9cf03b888462ed7afd7be37ae0620a76b44171e7e091b@group.calendar.google.com
-#       directory: events
-#       layout: event-private
-#       date_format: "%Y-%m-%d"
-#       look_ahead: 365
-#     - name: 🏹 AoL Den
-#       id: c_a232daa2e44b80eb4e2b86787c7d06b3b833d3a1f2d514faf4e3eccf71e9012f@group.calendar.google.com
-#       directory: events
-#       layout: event-private
-#       date_format: "%Y-%m-%d"
-#       look_ahead: 365
+# Google Calendar config. The GCALENDAR_KEY_JSON GitHub Actions secret is
+# written out to gcalendar-key.json at build time (see .github/workflows/pages.yml).
+gcalendar:
+  key_file: ./gcalendar-key.json
+  calendars:
+    - name: 🐾 Pack 209
+      id: cubscoutpack209.org_t8ogqcp85ek4enb4qm6ociaicg@group.calendar.google.com
+      directory: events
+      layout: event-public
+      date_format: "%Y-%m-%d"
+      look_ahead: 365
+    # TODO: add each Den calendar ID
+    # - name: 🦁 Lion Den
+    #   id: REPLACE-WITH-REAL-LION-DEN-CALENDAR-ID@group.calendar.google.com
+    #   directory: events
+    #   layout: event-private
+    #   date_format: "%Y-%m-%d"
+    #   look_ahead: 365
+    # - name: 🐯 Tiger Den
+    #   id: REPLACE-WITH-REAL-TIGER-DEN-CALENDAR-ID@group.calendar.google.com
+    #   directory: events
+    #   layout: event-private
+    #   date_format: "%Y-%m-%d"
+    #   look_ahead: 365
+    # - name: 🐺 Wolf Den
+    #   id: REPLACE-WITH-REAL-WOLF-DEN-CALENDAR-ID@group.calendar.google.com
+    #   directory: events
+    #   layout: event-private
+    #   date_format: "%Y-%m-%d"
+    #   look_ahead: 365
+    # - name: 🐻 Bear Den
+    #   id: REPLACE-WITH-REAL-BEAR-DEN-CALENDAR-ID@group.calendar.google.com
+    #   directory: events
+    #   layout: event-private
+    #   date_format: "%Y-%m-%d"
+    #   look_ahead: 365
+    # - name: ⚜️ Webelos Den
+    #   id: REPLACE-WITH-REAL-WEBELOS-DEN-CALENDAR-ID@group.calendar.google.com
+    #   directory: events
+    #   layout: event-private
+    #   date_format: "%Y-%m-%d"
+    #   look_ahead: 365
+    # - name: 🏹 AoL Den
+    #   id: REPLACE-WITH-REAL-AOL-DEN-CALENDAR-ID@group.calendar.google.com
+    #   directory: events
+    #   layout: event-private
+    #   date_format: "%Y-%m-%d"
+    #   look_ahead: 365
 
 
 # Exclude from processing.

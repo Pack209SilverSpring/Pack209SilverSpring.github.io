@@ -21,10 +21,10 @@ hero_header: true
           A Scouting America pack for all youth in <span class="font-semibold">kindergarten through 5th grade</span> in Silver Spring, MD. New families are always welcome.
         </p>
         <div class="flex flex-wrap gap-4 mt-8">
-          <a href="/join" class="inline-flex items-center px-6 py-3 font-bold transition bg-yellow-400 rounded-[5px] text-blue-900 hover:bg-yellow-600">
+          <a href="/join" class="inline-flex items-center px-6 py-3 font-bold font-heading transition bg-yellow-400 rounded-[5px] text-blue-900 hover:bg-yellow-600">
             Join Now
           </a>
-          <a href="/calendar" class="inline-flex items-center px-6 py-3 font-semibold text-white transition rounded-[5px] bg-cub-blue ring-1 ring-cub-blue hover:bg-blue-900">
+          <a href="/calendar" class="inline-flex items-center px-6 py-3 font-semibold font-heading text-white transition rounded-[5px] bg-cub-blue ring-1 ring-cub-blue hover:bg-blue-900">
             Upcoming Events
           </a>
         </div>
@@ -152,7 +152,7 @@ hero_header: true
     {%- endif -%}
 
     <div class="mt-8 text-center">
-      <a href="/calendar/" class="inline-flex items-center px-5 py-3 font-semibold text-white transition rounded-[5px] bg-cub-blue hover:bg-blue-900">
+      <a href="/calendar/" class="inline-flex items-center px-5 py-3 font-semibold font-heading text-white transition rounded-[5px] bg-cub-blue hover:bg-blue-900">
         Full Calendar
       </a>
     </div>
@@ -181,7 +181,7 @@ hero_header: true
       <li class="flex items-start gap-3"><span class="mt-1">✨</span> <span>Open to every kid and every family — no experience needed</span></li>
     </ul>
     <div class="mt-6">
-      <a href="/about" class="inline-flex items-center px-5 py-3 font-semibold text-white transition rounded-[5px] bg-cub-blue hover:bg-blue-900">
+      <a href="/about" class="inline-flex items-center px-5 py-3 font-semibold font-heading text-white transition rounded-[5px] bg-cub-blue hover:bg-blue-900">
         More About Pack 209
       </a>
     </div>
@@ -270,7 +270,7 @@ hero_header: true
       <div class="mt-6">
         <a href="mailto:leaders@cubscoutpack209.org?subject=Question%20about%20Pack%20209"
            target="_blank" rel="noopener"
-           class="inline-flex items-center px-5 py-3 font-semibold text-white transition rounded-[5px] bg-cub-blue hover:bg-blue-900">
+           class="inline-flex items-center px-5 py-3 font-semibold font-heading text-white transition rounded-[5px] bg-cub-blue hover:bg-blue-900">
           Ask a Question
         </a>
         <p class="mt-3 text-sm text-slate-500">
@@ -292,7 +292,7 @@ hero_header: true
       <p class="mt-3 text-white">New to Scouting? We’ll help you get started. Everyone’s welcome.</p>
       <p class="mt-3 text-white">We meet the third Tuesday of the month at 7:00 PM at the Silver Spring United Methods Church on Georgia Ave. Whether you're a parent looking to get involved or a child ready for a new challenge, we welcome you to Pack 209. Together, we build leaders and friends in our community.</p>
       <div class="mt-6">
-        <a href="/join" class="inline-flex items-center px-6 py-3 font-bold transition bg-cub-gold rounded-[5px] text-cub-blue hover:bg-yellow-300">
+        <a href="/join" class="inline-flex items-center px-6 py-3 font-bold font-heading transition bg-cub-gold rounded-[5px] text-cub-blue hover:bg-yellow-300">
           Join Pack 209
         </a>
       </div>

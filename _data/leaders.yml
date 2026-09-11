@@ -8,7 +8,7 @@
 
 - name: Charlie Stern
   role: Cubmaster
-  image: /assets/images/blankleader.png
+  image: /assets/images/denchief.png
   ring_color: yellow-400
 
 - name: Carter Tellinghuisen
@@ -21,35 +21,40 @@
   image: /assets/images/blankleader.png
   ring_color: slate-500
 
-- name: Amanda Zigmond
-  role: Treasurer, Den Leader (Wolves)
-  image: /assets/images/blankleader.png
-  ring_color: yellow-700
-
 - name: John McCauley
-  role: Den Leader (Lions)
-  image: /assets/images/blankleader.png
+  role: Den Leader - Lions
+  image: /assets/images/lionleader.png
   ring_color: yellow-400
 
+- name: Matt Townley
+  role: Den Leader - Tigers
+  image: /assets/images/tigerleader.png
+  ring_color: stone-800
+
 - name: Alex Roark
-  role: Den Leader (Wolves)
-  image: /assets/images/blankleader.png
+  role: Den Leader - Wolves
+  image: /assets/images/wolfleader.png
   ring_color: slate-400
 
+- name: Amanda Zigmond
+  role: Den Leader - Wolves, Treasurer
+  image: /assets/images/wolfleader.png
+  ring_color: yellow-700
+
 - name: Lane Goodman
-  role: Den Leader (Bears), Webmaster
-  image: /assets/images/blankleader.png
+  role: Den Leader - Bears, Webmaster
+  image: /assets/images/bearleader.png
   ring_color: stone-800
 
-- name: Matt Townley
-  role: Den Leader (Tigers)
-  image: /assets/images/blankleader.png
-  ring_color: stone-800
-
-- name: Pat S.
-  role: Den Leader (Webelos)
-  image: /assets/images/blankleader.png
+- name: Amy Haslett
+  role: Den Leader - Webelos
+  image: /assets/images/webelosleader.png
   ring_color: slate-500
+
+- name: Helen Zaitsev
+  role: Den Leader - Arrow of Light
+  image: /assets/images/arrowoflightleader.png
+  ring_color: stone-800
 
 - name: You?
   role: ""
