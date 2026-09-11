@@ -1,10 +1,12 @@
 ---
-# Feel free to add content and custom Front Matter to this file.
-# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-
 layout: default
 navbarText: Silver Spring, MD
 hero_header: true
+announcement_visible: true
+announcement_text: Come to our Join Scouting event on 9/15! <a href="/join"
+  class="underline hover:no-underline">Learn more</a> or <a
+  href="mailto:leaders@cubscoutpack209.org" class="underline
+  hover:no-underline">contact us
 ---
 
 <!-- HERO: full-bleed, breaks out of the max-w-6xl main container. Parallax: bg-fixed keeps the photo in place while the page scrolls over it (same technique as the "Ready to Explore" CTA below). -->
@@ -16,7 +18,7 @@ hero_header: true
         <h1 class="text-4xl sm:text-5xl md:text-6xl text-white font-extrabold">
           Cub Scout Pack 209
         </h1>
-        <h2 class="text-xl sm:text-2xl md:text-3xl text-white line-height-sm">Welcome to the Adventure</h2>
+        <h2 class="text-xl sm:text-2xl md:text-3xl text-white line-height-sm">Welcome to the Adventure Test!</h2>
         <p class="text-lg sm:text-xl">
           A Scouting America pack for all youth in <span class="font-semibold">kindergarten through 5th grade</span> in Silver Spring, MD. New families are always welcome.
         </p>
