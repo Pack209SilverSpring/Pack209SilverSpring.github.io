@@ -16,7 +16,7 @@ permalink: /register/
           Welcome to the Pack
         </h1>
         <p class="mt-4 text-lg sm:text-xl">
-          Here's everything you need to register for the 2026–27 year, in four steps.
+          Everything you need to register for Cub Scout Pack 209
         </p>
       </div>
     </div>
