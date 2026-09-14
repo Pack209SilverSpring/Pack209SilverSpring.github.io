@@ -51,4 +51,37 @@
   .prose h3 {
     @apply text-2xl font-bold text-cub-gold mt-6 mb-2;
   }
+
+  /* Plain-Markdown content styling. Content pages edited through the CMS
+     (Decap) are written as real Markdown rather than hand-classed HTML, so
+     these rules give bare <p>/<ul>/<a>/etc. tags the same look the site's
+     hand-coded pages already use, without an editor needing to add classes. */
+  .prose p {
+    @apply mt-4 leading-7;
+  }
+  .prose p:first-child {
+    @apply mt-0;
+  }
+  .prose ul {
+    @apply mt-4 space-y-2 leading-7 list-disc list-outside pl-5;
+  }
+  .prose ol {
+    @apply mt-4 space-y-2 leading-7 list-decimal list-outside pl-5;
+  }
+  .prose li > ul,
+  .prose li > ol {
+    @apply mt-2;
+  }
+  .prose a {
+    @apply text-cub-blue underline decoration-cub-blue/30 underline-offset-2 hover:decoration-cub-blue;
+  }
+  .prose strong {
+    @apply font-semibold;
+  }
+  .prose blockquote {
+    @apply pl-4 mt-4 italic border-l-4 border-cub-blue/30 text-slate-600;
+  }
+  .prose hr {
+    @apply my-8 border-slate-200;
+  }
 }

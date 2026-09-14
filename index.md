@@ -11,20 +11,65 @@ hero_header: true
 # banner after an event passes, so it's easy to bring back next time.
 announcement_visible: true
 announcement_text: "Come to our Join Scouting event on 9/15!"
+
+hero_image: /assets/images/209_parade.jpg
+hero_title: Cub Scout Pack 209
+hero_subtitle: Welcome to the Adventure
+hero_description: >-
+  A Scouting America pack for all youth in <span class="font-semibold">kindergarten through 5th grade</span> in Silver Spring, MD. New families are always welcome.
+
+why_image: /assets/images/209_billygoat1.jpg
+why_image_alt: Pack 209 Cub Scouts on a family camping trip
+why_text: >-
+  Pack 209 meets in Silver Spring, MD, and is open to any kid in kindergarten through fifth grade who
+  want to get outside, learn new skills, and make new friends. Here's what a
+  typical year looks like:
+why_bullets:
+  - emoji: "🌲"
+    text: "Campouts and hikes in every season"
+  - emoji: "🧪"
+    text: "Pinewood Derby, monthly pack meetings, and hands-on projects with dens"
+  - emoji: "🤝"
+    text: "Den friendships that carry from Kindergarten to 5th grade"
+  - emoji: "✨"
+    text: "Open to every kid and every family — no experience needed"
+
+activity_cards:
+  - image: /assets/images/209_campfire.jpg
+    alt: "Pack 209 Cub Scouts camping trip"
+    title: "Family Camping"
+    description: "Our pack goes on a fall and spring family camping trip out in nature. It's one giant playdate outside with all of your scout's friends"
+  - image: /assets/images/209_pinewood3.jpg
+    alt: "Pack 209 Cub Scouts racing cars at the Pinewood Derby"
+    title: "Pinewood Derby"
+    description: "Scouts design, build, and race their own wooden car in the classic yearly event."
+  - image: /assets/images/209_sweepthecreek.jpg
+    alt: "Pack 209 Cub Scouts volunteering together"
+    title: "Community Service"
+    description: "Scouting for Food, Sweep the Creek, and other projects that give back."
+  - image: /assets/images/209_hike4.jpg
+    alt: "Pack 209 Cub Scouts hiking a local trail"
+    title: "Parades & Hikes"
+    description: "Pack 209 joins the Montgomery County Thanksgiving Parade, goes on local area hikes, and more throughout the year."
+
+cta_paragraph_1: >-
+  New to Scouting? We’ll help you get started. Everyone’s welcome.
+cta_paragraph_2: >-
+  We meet the third Tuesday of the month at 7:00 PM at the Silver Spring United Methods Church on Georgia Ave. Whether you're a parent looking to get involved or a child ready for a new challenge, we welcome you to Pack 209. Together, we build leaders and friends in our community.
 ---
 
 <!-- HERO: full-bleed, breaks out of the max-w-6xl main container. Parallax: bg-fixed keeps the photo in place while the page scrolls over it (same technique as the "Ready to Explore" CTA below). -->
 <section class="relative left-1/2 right-1/2 w-screen -ml-[50vw] -mr-[50vw]">
-  <div class="relative h-[80vh] min-h-[520px] max-h-[820px] bg-center bg-cover" style="background-image: url('{{ '/assets/images/209_parade.jpg' | relative_url }}');">
+  <div class="relative h-[80vh] min-h-[520px] max-h-[820px] bg-center bg-cover" style="background-image: url('{{ page.hero_image | relative_url }}');">
     <div class="absolute inset-0 bg-gradient-to-b from-cub-blue/70 via-black/45 to-black/60"></div>
     <div class="relative h-full max-w-6xl px-4 mx-auto">
       <div class="flex flex-col items-start justify-center h-full max-w-2xl text-left text-white">
         <h1 class="text-4xl sm:text-5xl md:text-6xl text-white font-extrabold">
-          Cub Scout Pack 209
+          {{ page.hero_title }}
         </h1>
-        <h2 class="text-xl sm:text-2xl md:text-3xl text-white line-height-sm">Welcome to the Adventure</h2>
+        <h2 class="text-xl sm:text-2xl md:text-3xl text-white line-height-sm">{{ page.hero_subtitle }}</h2>
         <p class="text-lg sm:text-xl">
-          A Scouting America pack for all youth in <span class="font-semibold">kindergarten through 5th grade</span> in Silver Spring, MD. New families are always welcome.
+          {{ page.hero_description }}
         </p>
         <div class="flex flex-wrap gap-4 mt-8">
           <a href="/join" class="inline-flex items-center px-6 py-3 font-bold font-heading transition bg-yellow-400 rounded-[5px] text-blue-900 hover:bg-yellow-600">
@@ -173,20 +218,17 @@ announcement_text: "Come to our Join Scouting event on 9/15!"
 <div class="max-w-6xl px-4 py-16 mx-auto">
 <section class="grid items-center gap-10 md:grid-cols-2">
   <div>
-    <img src="{{ '/assets/images/209_billygoat1.jpg' | relative_url }}" alt="Pack 209 Cub Scouts on a family camping trip" class="object-cover w-full max-h-[660px] bg-bottom rounded-[5px]">
+    <img src="{{ page.why_image | relative_url }}" alt="{{ page.why_image_alt }}" class="object-cover w-full max-h-[660px] bg-bottom rounded-[5px]">
   </div>
   <div>
     <h2 class="text-3xl font-bold sm:text-4xl text-forest">Why Cub Scouting?</h2>
     <p class="mt-4 text-lg leading-7">
-      Pack 209 meets in Silver Spring, MD, and is open to any kid in kindergarten through fifth grade who
-      want to get outside, learn new skills, and make new friends. Here's what a
-      typical year looks like:
+      {{ page.why_text }}
     </p>
     <ul class="mt-6 space-y-3">
-      <li class="flex items-start gap-3"><span class="mt-1">🌲</span> <span>Campouts and hikes in every season</span></li>
-      <li class="flex items-start gap-3"><span class="mt-1">🧪</span> <span>Pinewood Derby, monthly pack meetings, and hands-on projects with dens</span></li>
-      <li class="flex items-start gap-3"><span class="mt-1">🤝</span> <span>Den friendships that carry from Kindergarten to 5th grade</span></li>
-      <li class="flex items-start gap-3"><span class="mt-1">✨</span> <span>Open to every kid and every family — no experience needed</span></li>
+      {% for bullet in page.why_bullets %}
+      <li class="flex items-start gap-3"><span class="mt-1">{{ bullet.emoji }}</span> <span>{{ bullet.text }}</span></li>
+      {% endfor %}
     </ul>
     <div class="mt-6">
       <a href="/about" class="inline-flex items-center px-5 py-3 font-semibold font-heading text-white transition rounded-[5px] bg-cub-blue hover:bg-blue-900">
@@ -206,34 +248,15 @@ announcement_text: "Come to our Join Scouting event on 9/15!"
 
 <section class="max-w-6xl px-4 py-10 mx-auto">
   <div class="grid gap-6 mt-6 sm:grid-cols-2 lg:grid-cols-4">
+    {% for card in page.activity_cards %}
     <div class="overflow-hidden bg-white rounded-[5px] ring-1 ring-slate-200">
-      <img src="{{ '/assets/images/209_campfire.jpg' | relative_url }}" alt="Pack 209 Cub Scouts camping trip" class="object-cover w-full h-40">
+      <img src="{{ card.image | relative_url }}" alt="{{ card.alt }}" class="object-cover w-full h-40">
       <div class="p-4 pt-2">
-        <h3 class="font-bold text-cub-blue mt-1">Family Camping</h3>
-        <p class="mt-1 text-sm text-slate-600">Our pack goes on a fall and spring family camping trip out in nature. It's one giant playdate outside with all of your scout's friends</p>
+        <h3 class="font-bold text-cub-blue mt-1">{{ card.title }}</h3>
+        <p class="mt-1 text-sm text-slate-600">{{ card.description }}</p>
       </div>
     </div>
-    <div class="overflow-hidden bg-white rounded-[5px] ring-1 ring-slate-200">
-      <img src="{{ '/assets/images/209_pinewood3.jpg' | relative_url }}" alt="Pack 209 Cub Scouts racing cars at the Pinewood Derby" class="object-cover w-full h-40">
-      <div class="p-4 pt-2">
-        <h3 class="font-bold text-cub-blue mt-1">Pinewood Derby</h3>
-        <p class="mt-1 text-sm text-slate-600">Scouts design, build, and race their own wooden car in the classic yearly event.</p>
-      </div>
-    </div>
-    <div class="overflow-hidden bg-white rounded-[5px] ring-1 ring-slate-200">
-      <img src="{{ '/assets/images/209_sweepthecreek.jpg' | relative_url }}" alt="Pack 209 Cub Scouts volunteering together" class="object-cover w-full h-40">
-      <div class="p-4 pt-2">
-        <h3 class="font-bold text-cub-blue mt-1">Community Service</h3>
-        <p class="mt-1 text-sm text-slate-600">Scouting for Food, Sweep the Creek, and other projects that give back.</p>
-      </div>
-    </div>
-    <div class="overflow-hidden bg-white rounded-[5px] ring-1 ring-slate-200">
-      <img src="{{ '/assets/images/209_hike4.jpg' | relative_url }}" alt="Pack 209 Cub Scouts hiking a local trail" class="object-cover w-full h-40">
-      <div class="p-4 pt-2">
-        <h3 class="font-bold text-cub-blue mt-1">Parades &amp; Hikes</h3>
-        <p class="mt-1 text-sm text-slate-600">Pack 209 joins the Montgomery County Thanksgiving Parade, goes on local area hikes, and more throughout the year.</p>
-      </div>
-    </div>
+    {% endfor %}
   </div>
 </section>
 
@@ -279,8 +302,8 @@ announcement_text: "Come to our Join Scouting event on 9/15!"
     <div class="absolute inset-0 bg-cub-blue/85"></div>
     <div class="relative max-w-6xl mx-auto">
       <h2 class="text-3xl font-bold text-white sm:text-4xl">Ready to Explore?</h2>
-      <p class="mt-3 text-white">New to Scouting? We’ll help you get started. Everyone’s welcome.</p>
-      <p class="mt-3 text-white">We meet the third Tuesday of the month at 7:00 PM at the Silver Spring United Methods Church on Georgia Ave. Whether you're a parent looking to get involved or a child ready for a new challenge, we welcome you to Pack 209. Together, we build leaders and friends in our community.</p>
+      <p class="mt-3 text-white">{{ page.cta_paragraph_1 }}</p>
+      <p class="mt-3 text-white">{{ page.cta_paragraph_2 }}</p>
       <div class="mt-6">
         <a href="/join" class="inline-flex items-center px-6 py-3 font-bold font-heading transition bg-cub-gold rounded-[5px] text-cub-blue hover:bg-yellow-300">
           Join Pack 209

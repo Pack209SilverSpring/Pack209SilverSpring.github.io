@@ -3,6 +3,14 @@ layout: default
 title: Join Pack 209
 permalink: /join/
 hideTitle: true
+
+cards:
+  - title: Sign up for Pack 209
+    description: Four short steps to register your scout for the year. We'll walk you through each one.
+    link_text: See the steps
+  - title: Contact us to learn more
+    description: Talk to a parent leader, ask anything, or arrange to visit a meeting first — no commitment.
+    link_text: Get in touch
 ---
 
 <!-- TODO: once Pack 209 has its own program overview PDF, re-add a download hero here. -->
@@ -13,13 +21,13 @@ hideTitle: true
     <a href="/register"
        class="group block p-8 transition font-heading rounded-[5px] bg-cub-gold ring-1 ring-cub-blue hover:bg-yellow-300">
       <h2 class="mt-0 mb-0 text-2xl font-bold tracking-tight text-cub-blue sm:text-3xl">
-        Sign up for Pack 209
+        {{ page.cards[0].title }}
       </h2>
       <p class="mt-3 text-cub-blue/80">
-        Four short steps to register your scout for the year. We'll walk you through each one.
+        {{ page.cards[0].description }}
       </p>
       <span class="inline-flex items-center gap-1 mt-6 font-bold text-cub-blue">
-        See the steps
+        {{ page.cards[0].link_text }}
         <span aria-hidden="true" class="transition-transform group-hover:translate-x-0.5">→</span>
       </span>
     </a>
@@ -27,13 +35,13 @@ hideTitle: true
        target="_blank" rel="noopener"
        class="group block p-8 transition font-heading bg-white rounded-[5px] ring-1 ring-cub-blue hover:bg-slate-50">
       <h2 class="mt-0 mb-0 text-2xl font-bold tracking-tight text-cub-blue sm:text-3xl">
-        Contact us to learn more
+        {{ page.cards[1].title }}
       </h2>
       <p class="mt-3 text-slate-600">
-        Talk to a parent leader, ask anything, or arrange to visit a meeting first — no commitment.
+        {{ page.cards[1].description }}
       </p>
       <span class="inline-flex items-center gap-1 mt-6 font-bold text-cub-blue">
-        Get in touch
+        {{ page.cards[1].link_text }}
         <span aria-hidden="true" class="transition-transform group-hover:translate-x-0.5">→</span>
       </span>
     </a>

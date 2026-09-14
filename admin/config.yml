@@ -16,6 +16,13 @@ publish_mode: simple
 # Jekyll pages are full of Liquid ({{ }} / {% %}) that Decap's live preview
 # would render as literal text (it doesn't know Liquid), so previews are
 # disabled site-wide below on each collection instead of trying to fake it.
+#
+# Every page below exposes only the copy/images that are safe to edit as
+# plain fields. The rest of each page (layout, buttons, links, section
+# structure) lives in a locked "Page layout" field at the bottom of the
+# form — it's there so saving the page doesn't wipe it out, but it isn't
+# meant to be hand-edited. If you need to change page structure, do it in
+# the file directly (or ask your developer), not from this field.
 
 media_folder: "assets/images"
 public_folder: "/assets/images"
@@ -71,8 +78,8 @@ collections:
   - name: "pages"
     label: "Site Pages"
     files:
-      - label: "Homepage Announcement Banner"
-        name: "home_announcement"
+      - label: "Homepage"
+        name: "homepage"
         file: "index.md"
         editor:
           preview: false
@@ -87,6 +94,39 @@ collections:
             widget: "string"
             required: false
             hint: "Shown after the 📣 emoji, before the 'Learn more' link. Keep it short. Only needs a value when the banner above is turned on."
+
+          - { label: "Hero photo", name: "hero_image", widget: "image" }
+          - { label: "Hero headline", name: "hero_title", widget: "string" }
+          - { label: "Hero subheadline", name: "hero_subtitle", widget: "string" }
+          - label: "Hero description"
+            name: "hero_description"
+            widget: "text"
+            hint: "The paragraph under the subheadline. Basic HTML like <span> or <strong> is OK if it's already there."
+
+          - { label: "\"Why Cub Scouting?\" photo", name: "why_image", widget: "image" }
+          - { label: "\"Why Cub Scouting?\" photo alt text (for accessibility)", name: "why_image_alt", widget: "string" }
+          - { label: "\"Why Cub Scouting?\" intro paragraph", name: "why_text", widget: "text" }
+          - label: "\"Why Cub Scouting?\" bullet points"
+            name: "why_bullets"
+            widget: "list"
+            summary: "{{emoji}} {{text}}"
+            fields:
+              - { label: "Emoji", name: "emoji", widget: "string" }
+              - { label: "Text", name: "text", widget: "string" }
+
+          - label: "\"What We Do\" activity cards"
+            name: "activity_cards"
+            widget: "list"
+            summary: "{{title}}"
+            fields:
+              - { label: "Photo", name: "image", widget: "image" }
+              - { label: "Photo alt text (for accessibility)", name: "alt", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+
+          - { label: "Closing \"Ready to Explore?\" first paragraph", name: "cta_paragraph_1", widget: "text" }
+          - { label: "Closing \"Ready to Explore?\" second paragraph", name: "cta_paragraph_2", widget: "text" }
+
           - label: "Page layout (do not edit — controls the rest of the homepage)"
             name: "body"
             widget: "code"
@@ -94,6 +134,121 @@ collections:
             output_code_only: true
             allow_language_selection: false
             required: false
+
+      - label: "About Page"
+        name: "about"
+        file: "about.md"
+        editor:
+          preview: false
+        fields:
+          - { label: "Hero photo", name: "hero_image", widget: "image" }
+          - { label: "Hero headline", name: "hero_title", widget: "string" }
+          - { label: "Hero subheadline", name: "hero_subtitle", widget: "string" }
+
+          - { label: "\"Our Pack\" photo", name: "our_pack_image", widget: "image" }
+          - { label: "\"Our Pack\" photo alt text (for accessibility)", name: "our_pack_image_alt", widget: "string" }
+          - label: "\"Our Pack\" text"
+            name: "our_pack_text"
+            widget: "text"
+            hint: "Leave a blank line between paragraphs."
+
+          - label: "\"Our Story\" text"
+            name: "our_story_text"
+            widget: "text"
+            hint: "Leave a blank line between paragraphs."
+
+          - label: "\"Our Hosts & Leaders\" text"
+            name: "hosts_leaders_text"
+            widget: "text"
+            hint: "Leave a blank line between paragraphs."
+
+          - { label: "Closing section photo", name: "closing_cta_image", widget: "image" }
+          - { label: "Closing section text", name: "closing_cta_text", widget: "text" }
+
+          - label: "Page layout (do not edit — controls the rest of the About page)"
+            name: "body"
+            widget: "code"
+            default_language: "html"
+            output_code_only: true
+            allow_language_selection: false
+            required: false
+
+      - label: "Join Page"
+        name: "join"
+        file: "join.md"
+        editor:
+          preview: false
+        fields:
+          - label: "Two cards"
+            name: "cards"
+            widget: "list"
+            summary: "{{title}}"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+              - { label: "Link text", name: "link_text", widget: "string" }
+
+          - label: "Page layout (do not edit — controls the rest of the Join page)"
+            name: "body"
+            widget: "code"
+            default_language: "html"
+            output_code_only: true
+            allow_language_selection: false
+            required: false
+
+      - label: "Register Page"
+        name: "register"
+        file: "register.md"
+        editor:
+          preview: false
+        fields:
+          - { label: "Hero photo", name: "hero_image", widget: "image" }
+          - { label: "Hero headline", name: "hero_title", widget: "string" }
+          - { label: "Hero subheadline", name: "hero_subtitle", widget: "string" }
+
+          - { label: "Step 1 (Pack dues) amount, numbers only, no $", name: "pack_dues_amount", widget: "string" }
+          - { label: "Step 1 (Pack dues) description", name: "pack_dues_description", widget: "text" }
+
+          - { label: "Step 2 (Scouting America dues) amount, numbers only, no $", name: "national_dues_amount", widget: "string" }
+          - label: "Step 2 (Scouting America dues) description"
+            name: "national_dues_description"
+            widget: "text"
+            hint: "Basic HTML like <strong> or <em> is OK if it's already there."
+          - label: "Step 2 returning-scouts note"
+            name: "national_dues_returning_note"
+            widget: "text"
+            hint: "Basic HTML like <strong> is OK if it's already there."
+
+          - { label: "Step 3 (Scout info form) description", name: "scout_info_description", widget: "text" }
+
+          - label: "Step 4 (Uniform) description"
+            name: "uniform_description"
+            widget: "text"
+            hint: "Basic HTML like <strong> or a <a href=...> link is OK if it's already there."
+
+          - { label: "Closing \"Stuck on a step?\" text", name: "closing_text", widget: "text" }
+
+          - label: "Page layout (do not edit — controls the rest of the Register page)"
+            name: "body"
+            widget: "code"
+            default_language: "html"
+            output_code_only: true
+            allow_language_selection: false
+            required: false
+
+      - label: "Resources Page"
+        name: "resources"
+        file: "resources.md"
+        editor:
+          preview: false
+        fields:
+          - { label: "Hero photo", name: "hero_image", widget: "image" }
+          - { label: "Hero headline", name: "hero_title", widget: "string" }
+          - { label: "Hero subheadline", name: "hero_subtitle", widget: "string" }
+          - label: "Page content"
+            name: "body"
+            widget: "markdown"
+            hint: "This is the full text of the page below the hero photo."
 
       - label: "Contact Page"
         name: "contact"
