@@ -292,7 +292,7 @@ announcement_text: Come to our Join Scouting event on 9/15! <a href="/join"
     <div class="relative max-w-6xl mx-auto">
       <h2 class="text-3xl font-bold text-white sm:text-4xl">Ready to Explore?</h2>
       <p class="mt-3 text-white">New to Scouting? We’ll help you get started. Everyone’s welcome.</p>
-      <p class="mt-3 text-white">We meet the third Tuesday of the month at 7:00 PM at the Silver Spring United Methods Church on Georgia Ave. Whether you're a parent looking to get involved or a child ready for a new challenge, we welcome you to Pack 209. Together, we build leaders and friends in our community.</p>
+      <p class="mt-3 text-white">We meet the third Tuesday of the month, 7:00 PM, at Silver Spring United Methodist Church on Georgia Ave. Whether you're a parent looking to get involved or a child ready for a new challenge, we welcome you to Pack 209. Together, we build leaders and friends in our community.</p>
       <div class="mt-6">
         <a href="/join" class="inline-flex items-center px-6 py-3 font-bold font-heading transition bg-cub-gold rounded-[5px] text-cub-blue hover:bg-yellow-300">
           Join Pack 209

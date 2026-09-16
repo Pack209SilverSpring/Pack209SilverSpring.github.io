@@ -32,6 +32,7 @@ permalink: /resources/
 
   <h2 class="mt-12 text-2xl font-bold text-forest">Cub Scout Family Basics</h2>
   <p class="mt-4 leading-7">
+    Cub Scouting works best when parents are involved, not just dropping off.
     As a Cub Scout parent/caregiver, your involvement is integral to your Scout having a great experience —
     one of the great joys of Scouting is the family-centered aspect of the program. Here's what you can do
     to help your Cub Scout succeed:
@@ -45,7 +46,7 @@ permalink: /resources/
     <li>Have fun! Take part and enjoy spending time with your Cub Scout and their friends.</li>
   </ul>
   <p class="mt-4 leading-7">
-    <a href="https://www.scouting.org/" rel="noopener" class="text-cub-blue underline decoration-cub-blue/30 underline-offset-2 hover:decoration-cub-blue">Click here to access Cub Scouting information from Scouting America</a>.
+    More Cub Scouting info is on the <a href="https://www.scouting.org/" rel="noopener" class="text-cub-blue underline decoration-cub-blue/30 underline-offset-2 hover:decoration-cub-blue">Scouting America website</a>.
   </p>
 
   <h2 class="mt-12 text-2xl font-bold text-forest">Help Wanted: How to "Help the Pack Go!"</h2>
@@ -60,7 +61,7 @@ permalink: /resources/
     In addition to Den Leaders/Assistant Den Leaders, the Pack relies on volunteers for: Committee Chair,
     Cubmaster/Assistant Cubmaster(s), Treasurer, New Membership Coordinator, Pack Trainer, Campout
     Coordinator, Hikemaster, Pinewood Derby Lead, leads for other yearly Pack activities, and a Webmaster.
-    Some positions are filled for this year, but some are open — please consider volunteering, or ask any
+    Many positions are filled for this year, but some are open. If you're interested please consider volunteering, or ask any
     current leader for more information.
   </p>
 

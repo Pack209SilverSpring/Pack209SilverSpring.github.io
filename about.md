@@ -27,19 +27,20 @@ permalink: /about/
     <div>
         <h2 class="text-2xl font-bold text-forest">Our pack</h2>
         <p class="mt-4 text-lg leading-7">
-            We are a Cub Scout Pack based in Silver Spring, Maryland, open to boys and girls in
-            kindergarten through fifth grade (we're launching a new Lion (K) den this
-            fall!). We foster an open, non-discriminatory, and diverse community. While many of our Scouts attend Woodlin Elementary, the Pack includes families from a variety of area schools and neighborhoods.
+            We're a Cub Scout Pack in Silver Spring, Maryland, open to boys and girls in
+            kindergarten through fifth grade ( we are launching a new Lion (K) den
+            in fall 2026). Everyone's welcome - we foster an open, non-discriminatory, and diverse community. While many of our
+            scouts attend Woodlin Elementary, the Pack includes families from schools all
+            over the area.
         </p>
         <p class="mt-4 text-lg leading-7">
-            Everything we do ties back to the Scout Oath and Law. Being trustworthy, helpful, and
-            kind aren't just words on a poster — they're what we expect from each other at every
+            Everything we do ties back to the Scout Oath and Law. Trustworthiness,
+            helpfulness, kindness are just a few of the character traits we hope to build in each other at every
             meeting and campout.
         </p>
         <p class="mt-4 text-lg leading-7">
-            Mostly, we want kids to leave a Pack 209 meeting a little more confident than when they
-            showed up — whether that's from finishing a hike, helping a younger Scout, or just
-            building something that actually works.
+            We want kids to leave a Pack 209 meeting a little more confident than
+            when they showed up. Whether they finished a hike, helped a younger scout, or built a pinewood derby car they are proud of, we're all invested in motivating the boys and girls of pack 209 to be their best!
         </p>
     </div>
 
@@ -53,10 +54,9 @@ permalink: /about/
 <div class="mt-16 px-8">
     <h2 class="text-2xl font-bold text-forest">Our Story</h2>
     <p class="mt-4 text-lg leading-7">
-        Scouting has deep roots in our community. The Boy Scouts of America was founded in 1910
-        ("Be Prepared" is still the Scout motto for older youth), and our own Troop 209 was
+        Scouting has deep roots in our community. The Boy Scouts of America was founded in 1910. "Be Prepared" is the Scout motto for older youth, and our own Troop 209 was
         chartered back in 1918 as one of Montgomery County's oldest scouting units. Cub Scouting
-        for younger kids came along in 1930, built around a simpler idea: "Do Your Best."
+        for younger kids came along in 1930, built around the motto : "Do Your Best."
     </p>
     <p class="mt-4 text-lg leading-7">
         Pack 209 serves the Woodside neighborhoods north of downtown Silver Spring, and is part of
@@ -125,9 +125,8 @@ permalink: /about/
             <div class="mt-4">
                 <h3 class="text-xl font-bold text-cub-blue">Our Motto: "Do Your Best"</h3>
                 <p>
-                    These three simple words guide everything we do in Cub Scouting. We don't expect perfection—we
-                    encourage each Scout to set their own personal goals and then give 100% effort toward achieving
-                    them.
+                     These three simple words guide everything we do in Cub Scouting. It's not about being perfect. We ask each Scout to set their own
+                    goal and give it their full effort.
                 </p>
             </div>
             <div class="mt-6">
@@ -162,7 +161,7 @@ permalink: /about/
     <div class=" max-w-6xl px-4 mx-auto relative">
     <h2 class="text-3xl font-bold text-white sm:text-4xl">Join our Adventure</h2>
     <p class="mt-4 text-lg leading-7 text-white">
-        Pack 209 welcomes all children in kindergarten through fifth grade. Our volunteer-led program provides
+        Pack 209 welcomes all youth in kindergarten through fifth grade. Our volunteer-led program provides
         age-appropriate activities that build character, foster citizenship, and develop physical and mental fitness—all
         while having fun and making memories that last a lifetime.
     </p>
