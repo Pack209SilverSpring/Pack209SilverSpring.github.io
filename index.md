@@ -240,7 +240,7 @@ announcement_text: Come to our Join Scouting event on 9/15! <a href="/join"
 </div>
     <!-- Den Finder / Schedule -->
     <div>
-      <h2 class="text-3xl font-bold sm:text-4xl text-forest">Find Your Den</h2>
+      <h2>Find Your Den</h2>
       <p class="mt-3">Meetings tailored to grade/age. New families welcome—jump in anytime. Pack meetings are
       hosted at Silver Spring United Methodist Church (8900 Georgia Ave), in Fellowship Hall.</p>
       <div class="mt-6 divide-y divide-slate-200">
