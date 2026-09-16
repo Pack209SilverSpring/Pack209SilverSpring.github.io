@@ -156,7 +156,7 @@ permalink: /about/
     </div>
 </div>
 <div class="relative left-1/2 right-1/2 w-screen -ml-[50vw] -mr-[50vw] mt-16">
-  <section class="relative flex items-start justify-start min-h-[420px] px-4 py-16 overflow-hidden text-left bg-bottom-center bg-cover bg-fixed" style="background-image: url('{{ '/assets/images/209_parade.jpg' | relative_url }}');">
+  <section class="relative flex items-start justify-start min-h-[420px] px-4 py-16 overflow-hidden text-left bg-bottom bg-cover bg-fixed" style="background-image: url('{{ '/assets/images/209_billygoat.jpg' | relative_url }}');">
     <div class="absolute inset-0 bg-forest/75"></div>
     <div class=" max-w-6xl px-4 mx-auto relative">
     <h2 class="text-3xl font-bold text-white sm:text-4xl">Join our Adventure</h2>
