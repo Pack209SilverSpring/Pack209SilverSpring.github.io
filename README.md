@@ -11,7 +11,7 @@ This repository is based off an original work by Pack 57, Palo Alto. Thanks!
 ## Features
 
 - **Responsive Design**: Mobile-friendly layout using TailwindCSS
-- **Event Management**: Integration with Google Calendar for public and private events
+- **Event Management**: Integration with Google Calendar for Pack-wide events
 - **Downloadable Calendar Events**: Support for adding events to personal calendars (.ics)
 - **Leadership Directory**: Information about pack leadership
 - **Den Information**: Details about each den and meeting times

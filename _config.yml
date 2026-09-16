@@ -44,43 +44,6 @@ gcalendar:
       layout: event-public
       date_format: "%Y-%m-%d"
       look_ahead: 365
-    # TODO: add each Den calendar ID
-    # - name: 🦁 Lion Den
-    #   id: REPLACE-WITH-REAL-LION-DEN-CALENDAR-ID@group.calendar.google.com
-    #   directory: events
-    #   layout: event-private
-    #   date_format: "%Y-%m-%d"
-    #   look_ahead: 365
-    # - name: 🐯 Tiger Den
-    #   id: REPLACE-WITH-REAL-TIGER-DEN-CALENDAR-ID@group.calendar.google.com
-    #   directory: events
-    #   layout: event-private
-    #   date_format: "%Y-%m-%d"
-    #   look_ahead: 365
-    # - name: 🐺 Wolf Den
-    #   id: REPLACE-WITH-REAL-WOLF-DEN-CALENDAR-ID@group.calendar.google.com
-    #   directory: events
-    #   layout: event-private
-    #   date_format: "%Y-%m-%d"
-    #   look_ahead: 365
-    # - name: 🐻 Bear Den
-    #   id: REPLACE-WITH-REAL-BEAR-DEN-CALENDAR-ID@group.calendar.google.com
-    #   directory: events
-    #   layout: event-private
-    #   date_format: "%Y-%m-%d"
-    #   look_ahead: 365
-    # - name: ⚜️ Webelos Den
-    #   id: REPLACE-WITH-REAL-WEBELOS-DEN-CALENDAR-ID@group.calendar.google.com
-    #   directory: events
-    #   layout: event-private
-    #   date_format: "%Y-%m-%d"
-    #   look_ahead: 365
-    # - name: 🏹 AoL Den
-    #   id: REPLACE-WITH-REAL-AOL-DEN-CALENDAR-ID@group.calendar.google.com
-    #   directory: events
-    #   layout: event-private
-    #   date_format: "%Y-%m-%d"
-    #   look_ahead: 365
 
 
 # Exclude from processing.

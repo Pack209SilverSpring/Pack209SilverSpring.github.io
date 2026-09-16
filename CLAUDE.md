@@ -31,8 +31,7 @@ This repository contains a Jekyll-based static website for Cub Scout Pack 209 in
 - **_config.yml**: Main Jekyll configuration file
 - **_layouts/**: Contains layout templates including:
   - **default.html**: Main site layout
-  - **event-public.html**: Template for public events
-  - **event-private.html**: Template for private (members-only) events
+  - **event-public.html**: Template for calendar events
 - **assets/**: Contains images and CSS
 - **_tailwind.css**: TailwindCSS configuration
 - **.github/workflows/pages.yml**: GitHub Actions workflow for building and deploying the site
@@ -40,11 +39,8 @@ This repository contains a Jekyll-based static website for Cub Scout Pack 209 in
 ### Calendar Integration
 
 The site uses the jekyll-google-calendar plugin to integrate with Google Calendar.
-Two calendars are configured:
-1. Public calendar (events visible to everyone)
-2. Private calendar (details only visible to members)
-
-The site reads events from these calendars and generates static pages for each event.
+A single Pack-wide calendar is configured (events visible to everyone), and the
+site reads events from it and generates a static page for each event.
 
 ## Secret Management
 

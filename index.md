@@ -18,7 +18,7 @@ announcement_text: Come to our Join Scouting event on 9/15! <a href="/join"
         <h1 class="text-4xl sm:text-5xl md:text-6xl text-white font-extrabold">
           Cub Scout Pack 209
         </h1>
-        <h2 class="text-xl sm:text-2xl md:text-3xl text-white line-height-sm">Welcome to the Adventure Test!</h2>
+        <h2 class="text-xl sm:text-2xl md:text-3xl text-white line-height-sm">Welcome to the Adventure</h2>
         <p class="text-lg sm:text-xl">
           A Scouting America pack for all youth in <span class="font-semibold">kindergarten through 5th grade</span> in Silver Spring, MD. New families are always welcome.
         </p>
@@ -94,7 +94,7 @@ announcement_text: Come to our Join Scouting event on 9/15! <a href="/join"
 
               <!-- Location -> city only (public events only) -->
               {%- assign loc = p.event.location | default: p.location | default: p.venue -%}
-              {%- if loc and p.layout contains "public" -%}
+              {%- if loc -%}
                 {%- assign parts = loc | split: ',' -%}
                 {%- if parts.size >= 3 -%}
                   {%- assign city = parts[1] | strip -%}
