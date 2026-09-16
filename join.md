@@ -23,7 +23,7 @@ hideTitle: true
         <span aria-hidden="true" class="transition-transform group-hover:translate-x-0.5">→</span>
       </span>
     </a>
-    <a href="mailto:leaders@cubscoutpack209.org?subject=Question%20about%20Pack%20209"
+    <a href="mailto:cubmaster@cubscoutpack209.org?subject=Question%20about%20Pack%20209"
        target="_blank" rel="noopener"
        class="group block p-8 transition font-heading bg-white rounded-[5px] ring-1 ring-cub-blue hover:bg-slate-50">
       <h2 class="mt-0 mb-0 text-2xl font-bold tracking-tight text-cub-blue sm:text-3xl">

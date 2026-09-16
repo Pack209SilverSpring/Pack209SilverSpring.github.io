@@ -6,7 +6,7 @@ A Jekyll-based website for Cub Scout Pack 209 in Silver Spring, MD.
 
 This repository contains the source code for the Pack 209 website. The site is built using Jekyll, styled with TailwindCSS, and integrates with Google Calendar for event management.
 
-This repository is based off an original work by Pack 57, Palo Alto. Thanks!
+This repository is based off an original work by [Pack 57, Palo Alto](https://github.com/Pack57PaloAlto/pack57paloalto.github.io). Thanks!
 
 ## Features
 
@@ -14,7 +14,7 @@ This repository is based off an original work by Pack 57, Palo Alto. Thanks!
 - **Event Management**: Integration with Google Calendar for Pack-wide events
 - **Downloadable Calendar Events**: Support for adding events to personal calendars (.ics)
 - **Leadership Directory**: Information about pack leadership
-- **Den Information**: Details about each den and meeting times
+- **Den Information**: Details about each den
 
 ## Getting Started
 
@@ -27,8 +27,8 @@ This repository is based off an original work by Pack 57, Palo Alto. Thanks!
 
 1. Clone the repository
    ```
-   git clone https://github.com/your-username/pack209.git
-   cd pack209
+   git clone https://github.com/Pack209SilverSpring/Pack209SilverSpring.github.io.git
+   cd Pack209SilverSpring.github.io
    ```
 
 2. Install dependencies

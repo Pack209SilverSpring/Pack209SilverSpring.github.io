@@ -8,7 +8,7 @@ permalink: /resources/
 
 <!-- HERO: full-bleed, parallax bg-fixed background (same technique as the homepage hero and "Ready to Explore" CTA) -->
 <section class="relative left-1/2 right-1/2 w-screen -ml-[50vw] -mr-[50vw]">
-  <div class="relative h-[45vh] min-h-[360px] max-h-[520px] bg-center bg-cover" style="background-image: url('{{ '/assets/images/209_bridging.jpg' | relative_url }}');">
+  <div class="relative h-[45vh] min-h-[360px] max-h-[520px] bg-bottom-center bg-cover" style="background-image: url('{{ '/assets/images/209_bridging.jpg' | relative_url }}');">
     <div class="absolute inset-0 bg-gradient-to-b from-cub-blue/70 via-black/45 to-black/60"></div>
     <div class="relative h-full max-w-6xl px-4 mx-auto">
       <div class="flex flex-col items-start justify-center h-full max-w-2xl text-left text-white">
@@ -29,6 +29,21 @@ permalink: /resources/
     Family is a critical part of our Pack and the Cub Scout experience — thank you to our parents, family
     members, and other caregivers for being part of our team!
   </p>
+
+  <div class="p-6 mt-8 rounded-[5px] bg-slate-50 ring-1 ring-slate-200">
+    <h2 class="text-xs font-semibold tracking-[0.2em] uppercase text-cub-blue/70">Quick Links</h2>
+    <ul class="grid gap-x-6 gap-y-2 mt-3 leading-7 sm:grid-cols-2">
+      <li><a href="{{ '/calendar/' | relative_url }}" class="text-cub-blue underline decoration-cub-blue/30 underline-offset-2 hover:decoration-cub-blue">Pack Calendar</a></li>
+      <li><a href="{{ '/register/' | relative_url }}" class="text-cub-blue underline decoration-cub-blue/30 underline-offset-2 hover:decoration-cub-blue">Register a Scout</a></li>
+      <li><a href="https://filestore.scouting.org/filestore/HealthSafety/pdf/680-001_AB.pdf" target="_blank" rel="noopener" class="text-cub-blue underline decoration-cub-blue/30 underline-offset-2 hover:decoration-cub-blue">Annual Health and Safety Form (PDF)</a></li>
+      <li><a href="https://forms.gle/RrMjVrj47FY9R1Bz9" target="_blank" rel="noopener" class="text-cub-blue underline decoration-cub-blue/30 underline-offset-2 hover:decoration-cub-blue">Family Talent Survey</a></li>
+      <li><a href="https://www.scouting.org/programs/cub-scouts/cub-scout-uniform/" rel="noopener" class="text-cub-blue underline decoration-cub-blue/30 underline-offset-2 hover:decoration-cub-blue">Cub Scout Uniform Guide</a></li>
+      <li><a href="https://www.scouting.org/training/safeguarding-youth/" rel="noopener" class="text-cub-blue underline decoration-cub-blue/30 underline-offset-2 hover:decoration-cub-blue">Youth Protection at Scouting America</a></li>
+      <li><a href="https://www.scouting.org/wp-content/uploads/2023/07/512-73523WelcomeNewCSFamily_WEB.pdf" rel="noopener" class="text-cub-blue underline decoration-cub-blue/30 underline-offset-2 hover:decoration-cub-blue">New Cub Scout Family Information Guide</a></li>
+      <li><a href="https://www.scouting.org/programs/cub-scouts/what-cub-scouts-earn/the-advancement-trail/" rel="noopener" class="text-cub-blue underline decoration-cub-blue/30 underline-offset-2 hover:decoration-cub-blue">Advancement Trail</a></li>
+      <li><a href="https://www.scouting.org/programs/cub-scouts/adventures/" rel="noopener" class="text-cub-blue underline decoration-cub-blue/30 underline-offset-2 hover:decoration-cub-blue">Cub Scout Adventures</a></li>
+    </ul>
+  </div>
 
   <h2 class="mt-12 text-2xl font-bold text-forest">Cub Scout Family Basics</h2>
   <p class="mt-4 leading-7">
@@ -104,6 +119,9 @@ permalink: /resources/
     <li>Several rank Adventures are personal-safety themed, so Scouts build these skills as part of the regular program.</li>
     <li>Please follow site-specific guidelines at campouts and events, and be courteous of other families' needs and comfort levels.</li>
   </ul>
+  <p class="mt-4 leading-7">
+    Keeping kids safe guides everything Scouting America does &mdash; as they put it, <em>"Being a leader in Scouting America is a privilege, not a right."</em> Every adult leader completes youth protection training before working with Scouts and renews it annually, and background checks and BSA's "two-deep" leadership policy add further safeguards. Read more, including how to report a concern, on Scouting America's <a href="https://www.scouting.org/training/safeguarding-youth/" rel="noopener" class="text-cub-blue underline decoration-cub-blue/30 underline-offset-2 hover:decoration-cub-blue">Youth Protection page</a>.
+  </p>
 
   <h2 class="mt-12 text-2xl font-bold text-forest">Uniforms & Where to Buy</h2>
   <p class="mt-4 leading-7">
@@ -112,7 +130,7 @@ permalink: /resources/
     Official pants/socks are optional; dark pants or clean jeans work fine. The blue shirt purchased in a
     Scout's first year can be worn through 5th grade, so size up. Gently used hand-me-downs from prior Pack
     families may be available in our rummage bin. <strong>"Class B"</strong> is our pack t-shirt, whose cost
-    is included in annual dues.
+    is included in annual dues. <a href="https://www.scouting.org/programs/cub-scouts/cub-scout-uniform/" rel="noopener" class="text-cub-blue underline decoration-cub-blue/30 underline-offset-2 hover:decoration-cub-blue">Read more about Cub Scout uniforms</a>.
   </p>
   <p class="mt-4 leading-7">
     Any family struggling with the cost of a uniform, Scouts BSA registration, or Pack dues should speak

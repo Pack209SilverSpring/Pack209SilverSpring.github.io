@@ -8,7 +8,7 @@ permalink: /about/
 
 <!-- HERO: full-bleed, parallax bg-fixed background (same technique as the homepage hero and "Ready to Explore" CTA) -->
 <section class="relative left-1/2 right-1/2 w-screen -ml-[50vw] -mr-[50vw]">
-  <div class="relative h-[45vh] min-h-[360px] max-h-[520px] bg-center bg-cover bg-fixed" style="background-image: url('{{ '/assets/images/209_campfire.jpg' | relative_url }}');">
+  <div class="relative h-[45vh] min-h-[360px] max-h-[520px] bg-bottom-center bg-cover bg-fixed" style="background-image: url('{{ '/assets/images/209_campfire.jpg' | relative_url }}');">
     <div class="absolute inset-0 bg-gradient-to-b from-cub-blue/70 via-black/45 to-black/60"></div>
     <div class="relative h-full max-w-6xl px-4 mx-auto">
       <div class="flex flex-col items-start justify-center h-full max-w-2xl text-left text-white">
@@ -156,7 +156,7 @@ permalink: /about/
     </div>
 </div>
 <div class="relative left-1/2 right-1/2 w-screen -ml-[50vw] -mr-[50vw] mt-16">
-  <section class="relative flex items-start justify-start min-h-[420px] px-4 py-16 overflow-hidden text-left bg-center bg-cover bg-fixed" style="background-image: url('{{ '/assets/images/209_parade.jpg' | relative_url }}');">
+  <section class="relative flex items-start justify-start min-h-[420px] px-4 py-16 overflow-hidden text-left bg-bottom-center bg-cover bg-fixed" style="background-image: url('{{ '/assets/images/209_parade.jpg' | relative_url }}');">
     <div class="absolute inset-0 bg-forest/75"></div>
     <div class=" max-w-6xl px-4 mx-auto relative">
     <h2 class="text-3xl font-bold text-white sm:text-4xl">Join our Adventure</h2>

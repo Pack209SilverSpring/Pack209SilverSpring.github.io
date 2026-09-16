@@ -5,13 +5,13 @@ hero_header: true
 announcement_visible: true
 announcement_text: Come to our Join Scouting event on 9/15! <a href="/join"
   class="underline hover:no-underline">Learn more</a> or <a
-  href="mailto:leaders@cubscoutpack209.org" class="underline
+  href="mailto:cubmaster@cubscoutpack209.org" class="underline
   hover:no-underline">contact us
 ---
 
 <!-- HERO: full-bleed, breaks out of the max-w-6xl main container. Parallax: bg-fixed keeps the photo in place while the page scrolls over it (same technique as the "Ready to Explore" CTA below). -->
 <section class="relative left-1/2 right-1/2 w-screen -ml-[50vw] -mr-[50vw]">
-  <div class="relative h-[80vh] min-h-[520px] max-h-[820px] bg-center bg-cover" style="background-image: url('{{ '/assets/images/209_parade.jpg' | relative_url }}');">
+  <div class="relative h-[80vh] min-h-[520px] max-h-[820px] bg-[20%] bg-cover" style="background-image: url('{{ '/assets/images/209_parade.jpg' | relative_url }}');">
     <div class="absolute inset-0 bg-gradient-to-b from-cub-blue/70 via-black/45 to-black/60"></div>
     <div class="relative h-full max-w-6xl px-4 mx-auto">
       <div class="flex flex-col items-start justify-center h-full max-w-2xl text-left text-white">
@@ -37,7 +37,7 @@ announcement_text: Come to our Join Scouting event on 9/15! <a href="/join"
 
 <!-- ANNOUNCEMENT BANNER: pulled from the live cubscoutpack209.org site on 2026-09-09 — this is time-sensitive, update or remove after the event passes! -->
 <section class="px-4 py-3 text-sm font-medium text-center text-forest bg-yellow-100 relative left-1/2 right-1/2 w-screen -ml-[50vw] -mr-[50vw]">
-  📣 Come to our Join Scouting event on 9/15! <a href="/join" class="underline hover:no-underline">Learn more</a> or <a href="mailto:leaders@cubscoutpack209.org" class="underline hover:no-underline">contact us</a>.
+  📣 Come to our Join Scouting event on 9/15! <a href="/join" class="underline hover:no-underline">Learn more</a> or <a href="mailto:cubmaster@cubscoutpack209.org" class="underline hover:no-underline">contact us</a>.
 </section>
 
 <!-- TODO: program overview PDF -->
@@ -246,37 +246,31 @@ announcement_text: Come to our Join Scouting event on 9/15! <a href="/join"
       <div class="mt-6 divide-y divide-slate-200">
         <div class="flex items-baseline justify-between py-3">
           <p class="font-semibold">Lions (Kindergarten)</p>
-          <p class="text-sm text-slate-600">Meeting day TBD</p>
         </div>
         <div class="flex items-baseline justify-between py-3">
           <p class="font-semibold">Tigers (1st Grade)</p>
-          <p class="text-sm text-slate-600">Meeting day TBD</p>
         </div>
         <div class="flex items-baseline justify-between py-3">
           <p class="font-semibold">Wolves (2nd Grade)</p>
-          <p class="text-sm text-slate-600">Meeting day TBD</p>
         </div>
         <div class="flex items-baseline justify-between py-3">
           <p class="font-semibold">Bears (3rd Grade)</p>
-          <p class="text-sm text-slate-600">Meeting day TBD</p>
         </div>
         <div class="flex items-baseline justify-between py-3">
           <p class="font-semibold">Webelos (4th Grade)</p>
-          <p class="text-sm text-slate-600">Meeting day TBD</p>
         </div>
         <div class="flex items-baseline justify-between py-3">
           <p class="font-semibold">Arrow of Light (5th Grade)</p>
-          <p class="text-sm text-slate-600">Meeting day TBD</p>
         </div>
       </div>
       <div class="mt-6">
-        <a href="mailto:leaders@cubscoutpack209.org?subject=Question%20about%20Pack%20209"
+        <a href="mailto:cubmaster@cubscoutpack209.org?subject=Question%20about%20Pack%20209"
            target="_blank" rel="noopener"
            class="inline-flex items-center px-5 py-3 font-semibold font-heading text-white transition rounded-[5px] bg-cub-blue hover:bg-blue-900">
           Ask a Question
         </a>
         <p class="mt-3 text-sm text-slate-500">
-          or email <a href="mailto:leaders@cubscoutpack209.org" class="text-cub-blue underline decoration-cub-blue/30 underline-offset-2 hover:decoration-cub-blue">leaders@cubscoutpack209.org</a>
+          or email <a href="mailto:cubmaster@cubscoutpack209.org" class="text-cub-blue underline decoration-cub-blue/30 underline-offset-2 hover:decoration-cub-blue">cubmaster@cubscoutpack209.org</a>
         </p>
       </div>
     </div>
@@ -287,7 +281,7 @@ announcement_text: Come to our Join Scouting event on 9/15! <a href="/join"
 
 <!-- FINAL CTA: full-bleed parallax background photo (image stays fixed while the page scrolls over it) -->
 <div class="relative left-1/2 right-1/2 w-screen -ml-[50vw] -mr-[50vw] mt-16">
-  <section class="relative flex items-center justify-center min-h-[420px] px-4 py-16 overflow-hidden text-center bg-center bg-cover bg-fixed" style="background-image: url('{{ '/assets/images/209_campfire.jpg' | relative_url }}');">
+  <section class="relative flex items-center justify-center min-h-[420px] px-4 py-16 overflow-hidden text-center bg-bottom-center bg-cover bg-fixed" style="background-image: url('{{ '/assets/images/209_campfire.jpg' | relative_url }}');">
     <div class="absolute inset-0 bg-cub-blue/85"></div>
     <div class="relative max-w-6xl mx-auto">
       <h2 class="text-3xl font-bold text-white sm:text-4xl">Ready to Explore?</h2>
