@@ -12,7 +12,7 @@ permalink: /register/
 
 <!-- HERO: full-bleed, parallax bg-fixed background (same technique as the homepage hero and "Ready to Explore" CTA) -->
 <section class="relative left-1/2 right-1/2 w-screen -ml-[50vw] -mr-[50vw]">
-  <div class="relative h-[45vh] min-h-[360px] max-h-[520px] bg-bottom-center bg-cover bg-fixed" style="background-image: url('{{ '/assets/images/209_campout.jpg' | relative_url }}');">
+  <div class="relative h-[45vh] min-h-[360px] max-h-[520px] bg-[15%] bg-cover" style="background-image: url('{{ '/assets/images/209_campout.jpg' | relative_url }}');">
     <div class="absolute inset-0 bg-gradient-to-b from-cub-blue/70 via-black/45 to-black/60"></div>
     <div class="relative h-full max-w-6xl px-4 mx-auto">
       <div class="flex flex-col items-start justify-center h-full max-w-2xl text-left text-white">
@@ -75,10 +75,10 @@ permalink: /register/
         </dl>
         <div class="mt-6 rounded-[5px] p-5" style="background-color:#6D1ED4">
           <div class="flex items-baseline justify-between">
-            <p class="text-lg font-extrabold tracking-tight text-white">Zelle&reg;</p>
+            <span class="text-xs font-semibold tracking-[0.2em] uppercase text-white/90">Pay pack dues</span>
             <span class="text-xl font-extrabold text-white">$115</span>
           </div>
-          <p class="mt-2 text-sm font-semibold text-white">Pay with Zelle</p>
+          <p class="mt-2 text-sm font-semibold text-white">Pay with <span class="text-lg font-extrabold tracking-tight text-white">Zelle&reg;</span></p>
           <p class="mt-1 text-sm text-purple-100">
             Send $115 to
             <a href="mailto:Treasurer@cubscoutpack209.org" class="underline decoration-white/60 underline-offset-2 hover:decoration-white">Treasurer@cubscoutpack209.org</a>

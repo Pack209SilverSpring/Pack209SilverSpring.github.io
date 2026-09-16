@@ -8,7 +8,7 @@ permalink: /resources/
 
 <!-- HERO: full-bleed, parallax bg-fixed background (same technique as the homepage hero and "Ready to Explore" CTA) -->
 <section class="relative left-1/2 right-1/2 w-screen -ml-[50vw] -mr-[50vw]">
-  <div class="relative h-[45vh] min-h-[360px] max-h-[520px] bg-bottom-center bg-cover" style="background-image: url('{{ '/assets/images/209_bridging.jpg' | relative_url }}');">
+  <div class="relative h-[45vh] min-h-[360px] max-h-[520px] bg-[20%] bg-cover" style="background-image: url('{{ '/assets/images/209_bridging.jpg' | relative_url }}');">
     <div class="absolute inset-0 bg-gradient-to-b from-cub-blue/70 via-black/45 to-black/60"></div>
     <div class="relative h-full max-w-6xl px-4 mx-auto">
       <div class="flex flex-col items-start justify-center h-full max-w-2xl text-left text-white">

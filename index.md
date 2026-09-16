@@ -11,7 +11,7 @@ announcement_text: Come to our Join Scouting event on 9/15! <a href="/join"
 
 <!-- HERO: full-bleed, breaks out of the max-w-6xl main container. Parallax: bg-fixed keeps the photo in place while the page scrolls over it (same technique as the "Ready to Explore" CTA below). -->
 <section class="relative left-1/2 right-1/2 w-screen -ml-[50vw] -mr-[50vw]">
-  <div class="relative h-[80vh] min-h-[520px] max-h-[820px] bg-[20%] bg-cover" style="background-image: url('{{ '/assets/images/209_parade.jpg' | relative_url }}');">
+  <div class="relative h-[80vh] min-h-[520px] max-h-[820px] bg-[20%] bg-cover" style="background-image: url('{{ '/assets/images/209_scoutshike.jpg' | relative_url }}');">
     <div class="absolute inset-0 bg-gradient-to-b from-cub-blue/70 via-black/45 to-black/60"></div>
     <div class="relative h-full max-w-6xl px-4 mx-auto">
       <div class="flex flex-col items-start justify-center h-full max-w-2xl text-left text-white">
@@ -167,7 +167,7 @@ announcement_text: Come to our Join Scouting event on 9/15! <a href="/join"
 <div class="max-w-6xl px-4 py-16 mx-auto">
 <section class="grid items-center gap-10 md:grid-cols-2">
   <div>
-    <img src="{{ '/assets/images/209_billygoat1.jpg' | relative_url }}" alt="Pack 209 Cub Scouts on a family camping trip" class="object-cover w-full max-h-[660px] bg-bottom rounded-[5px]">
+    <img src="{{ '/assets/images/209_denmeeting.jpg' | relative_url }}" alt="Pack 209 Cub Scouts on a family camping trip" class="object-cover w-full max-h-[660px] bg-bottom rounded-[5px]">
   </div>
   <div>
     <h2 class="text-3xl font-bold sm:text-4xl text-forest">Why Cub Scouting?</h2>
@@ -233,7 +233,7 @@ announcement_text: Come to our Join Scouting event on 9/15! <a href="/join"
 
 <!-- BE PART OF THE PACK (Leaders + Dens) -->
 <section class="max-w-6xl px-4 py-16 mx-auto">
-  <div class="grid gap-12 lg:grid-cols-2">
+  <div class="grid gap-2 lg:grid-cols-2">
     <!-- Leaders -->
     <div markdown="1">
       {% include leaders.md %}
