@@ -137,9 +137,8 @@ closing_cta_text: |
             <div class="mt-4">
                 <h3 class="text-xl font-bold text-cub-blue">Our Motto: "Do Your Best"</h3>
                 <p>
-                    These three simple words guide everything we do in Cub Scouting. We don't expect perfection—we
-                    encourage each Scout to set their own personal goals and then give 100% effort toward achieving
-                    them.
+                     These three simple words guide everything we do in Cub Scouting. It's not about being perfect. We ask each Scout to set their own
+                    goal and give it their full effort.
                 </p>
             </div>
             <div class="mt-6">

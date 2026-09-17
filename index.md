@@ -1,7 +1,4 @@
 ---
-# Feel free to add content and custom Front Matter to this file.
-# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-
 layout: default
 navbarText: Silver Spring, MD
 hero_header: true
@@ -10,7 +7,10 @@ hero_header: true
 # Turn announcement_visible off (rather than deleting the text) to hide the
 # banner after an event passes, so it's easy to bring back next time.
 announcement_visible: true
-announcement_text: "Come to our Join Scouting event on 9/15!"
+announcement_text: Come to our Join Scouting event on 9/15! <a href="/join"
+  class="underline hover:no-underline">Learn more</a> or <a
+  href="mailto:cubmaster@cubscoutpack209.org" class="underline
+  hover:no-underline">contact us
 
 hero_image: /assets/images/209_parade.jpg
 hero_title: Cub Scout Pack 209
@@ -60,7 +60,7 @@ cta_paragraph_2: >-
 
 <!-- HERO: full-bleed, breaks out of the max-w-6xl main container. Parallax: bg-fixed keeps the photo in place while the page scrolls over it (same technique as the "Ready to Explore" CTA below). -->
 <section class="relative left-1/2 right-1/2 w-screen -ml-[50vw] -mr-[50vw]">
-  <div class="relative h-[80vh] min-h-[520px] max-h-[820px] bg-center bg-cover" style="background-image: url('{{ page.hero_image | relative_url }}');">
+  <div class="relative h-[80vh] min-h-[520px] max-h-[820px] bg-[20%] bg-cover" style="background-image: url('{{ page.hero_image | relative_url }}');">
     <div class="absolute inset-0 bg-gradient-to-b from-cub-blue/70 via-black/45 to-black/60"></div>
     <div class="relative h-full max-w-6xl px-4 mx-auto">
       <div class="flex flex-col items-start justify-center h-full max-w-2xl text-left text-white">
@@ -87,7 +87,7 @@ cta_paragraph_2: >-
 <!-- ANNOUNCEMENT BANNER: text is a CMS-editable frontmatter field (announcement_text) so leaders can update it without touching code. Set announcement_visible: false in front matter (or via /admin) to hide it. -->
 {% if page.announcement_visible %}
 <section class="px-4 py-3 text-sm font-medium text-center text-forest bg-yellow-100 relative left-1/2 right-1/2 w-screen -ml-[50vw] -mr-[50vw]">
-  📣 {{ page.announcement_text }} <a href="/join" class="underline hover:no-underline">Learn more</a> or <a href="mailto:leaders@cubscoutpack209.org" class="underline hover:no-underline">contact us</a>.
+  📣 {{ page.announcement_text }} <a href="/join" class="underline hover:no-underline">Learn more</a> or <a href="mailto:cubmaster@cubscoutpack209.org" class="underline hover:no-underline">contact us</a>.
 </section>
 {% endif %}
 
@@ -145,7 +145,7 @@ cta_paragraph_2: >-
 
               <!-- Location -> city only (public events only) -->
               {%- assign loc = p.event.location | default: p.location | default: p.venue -%}
-              {%- if loc and p.layout contains "public" -%}
+              {%- if loc -%}
                 {%- assign parts = loc | split: ',' -%}
                 {%- if parts.size >= 3 -%}
                   {%- assign city = parts[1] | strip -%}
@@ -262,32 +262,31 @@ cta_paragraph_2: >-
 
 <!-- BE PART OF THE PACK (Leaders + Dens) -->
 <section class="max-w-6xl px-4 py-16 mx-auto">
-  <div class="grid gap-12 lg:grid-cols-2">
+  <div class="grid gap-2 lg:grid-cols-2">
     <!-- Leaders -->
     <div markdown="1">
       {% include leaders.md %}
 </div>
     <!-- Den Finder / Schedule -->
     <div>
-      <h2 class="text-3xl font-bold sm:text-4xl text-forest">Find Your Den</h2>
+      <h2>Find Your Den</h2>
       <p class="mt-3">Meetings tailored to grade/age. New families welcome—jump in anytime. Pack meetings are
       hosted at Silver Spring United Methodist Church (8900 Georgia Ave), in Fellowship Hall.</p>
       <div class="mt-6 divide-y divide-slate-200">
         {% for den in site.data.dens.dens %}
         <div class="flex items-baseline justify-between py-3">
           <p class="font-semibold">{{ den.name }} ({{ den.grade }})</p>
-          <p class="text-sm text-slate-600">{{ den.meeting_day }}</p>
         </div>
         {% endfor %}
       </div>
       <div class="mt-6">
-        <a href="mailto:leaders@cubscoutpack209.org?subject=Question%20about%20Pack%20209"
+        <a href="mailto:cubmaster@cubscoutpack209.org?subject=Question%20about%20Pack%20209"
            target="_blank" rel="noopener"
            class="inline-flex items-center px-5 py-3 font-semibold font-heading text-white transition rounded-[5px] bg-cub-blue hover:bg-blue-900">
           Ask a Question
         </a>
         <p class="mt-3 text-sm text-slate-500">
-          or email <a href="mailto:leaders@cubscoutpack209.org" class="text-cub-blue underline decoration-cub-blue/30 underline-offset-2 hover:decoration-cub-blue">leaders@cubscoutpack209.org</a>
+          or email <a href="mailto:cubmaster@cubscoutpack209.org" class="text-cub-blue underline decoration-cub-blue/30 underline-offset-2 hover:decoration-cub-blue">cubmaster@cubscoutpack209.org</a>
         </p>
       </div>
     </div>
@@ -298,7 +297,7 @@ cta_paragraph_2: >-
 
 <!-- FINAL CTA: full-bleed parallax background photo (image stays fixed while the page scrolls over it) -->
 <div class="relative left-1/2 right-1/2 w-screen -ml-[50vw] -mr-[50vw] mt-16">
-  <section class="relative flex items-center justify-center min-h-[420px] px-4 py-16 overflow-hidden text-center bg-center bg-cover bg-fixed" style="background-image: url('{{ '/assets/images/209_campfire.jpg' | relative_url }}');">
+  <section class="relative flex items-center justify-center min-h-[420px] px-4 py-16 overflow-hidden text-center bg-bottom-center bg-cover bg-fixed" style="background-image: url('{{ '/assets/images/209_campfire.jpg' | relative_url }}');">
     <div class="absolute inset-0 bg-cub-blue/85"></div>
     <div class="relative max-w-6xl mx-auto">
       <h2 class="text-3xl font-bold text-white sm:text-4xl">Ready to Explore?</h2>

@@ -8,7 +8,7 @@ Parameters:
 
 Pack 209 is run by parents — every leader below is also a Pack 209 family.
 
-<div class="grid gap-6 mt-6 sm:grid-cols-2" markdown="0">
+<div class="grid gap-2 mt-6 sm:grid-cols-2" markdown="0">
 
 {% for leader in site.data.leaders.leaders %}
   {% include leader-card.html leader=leader %}

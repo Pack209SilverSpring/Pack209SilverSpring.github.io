@@ -11,7 +11,7 @@ hero_subtitle: Everything Pack 209 families need to know, in one place.
 
 <!-- HERO: full-bleed, parallax bg-fixed background (same technique as the homepage hero and "Ready to Explore" CTA) -->
 <section class="relative left-1/2 right-1/2 w-screen -ml-[50vw] -mr-[50vw]">
-  <div class="relative h-[45vh] min-h-[360px] max-h-[520px] bg-center bg-cover" style="background-image: url('{{ page.hero_image | relative_url }}');">
+  <div class="relative h-[45vh] min-h-[360px] max-h-[520px] bg-[20%] bg-cover" style="background-image: url('{{ page.hero_image | relative_url }}');">
     <div class="absolute inset-0 bg-gradient-to-b from-cub-blue/70 via-black/45 to-black/60"></div>
     <div class="relative h-full max-w-6xl px-4 mx-auto">
       <div class="flex flex-col items-start justify-center h-full max-w-2xl text-left text-white">
@@ -25,6 +25,21 @@ hero_subtitle: Everything Pack 209 families need to know, in one place.
     </div>
   </div>
 </section>
+
+<div class="p-6 mt-8 rounded-[5px] bg-slate-50 ring-1 ring-slate-200">
+  <h2 class="text-xs font-semibold tracking-[0.2em] uppercase text-cub-blue/70">Quick Links</h2>
+  <ul class="grid gap-x-6 gap-y-2 mt-3 leading-7 sm:grid-cols-2">
+    <li><a href="{{ '/calendar/' | relative_url }}" class="text-cub-blue underline decoration-cub-blue/30 underline-offset-2 hover:decoration-cub-blue">Pack Calendar</a></li>
+    <li><a href="{{ '/register/' | relative_url }}" class="text-cub-blue underline decoration-cub-blue/30 underline-offset-2 hover:decoration-cub-blue">Register a Scout</a></li>
+    <li><a href="https://filestore.scouting.org/filestore/HealthSafety/pdf/680-001_AB.pdf" target="_blank" rel="noopener" class="text-cub-blue underline decoration-cub-blue/30 underline-offset-2 hover:decoration-cub-blue">Annual Health and Safety Form (PDF)</a></li>
+    <li><a href="https://forms.gle/RrMjVrj47FY9R1Bz9" target="_blank" rel="noopener" class="text-cub-blue underline decoration-cub-blue/30 underline-offset-2 hover:decoration-cub-blue">Family Talent Survey</a></li>
+    <li><a href="https://www.scouting.org/programs/cub-scouts/cub-scout-uniform/" rel="noopener" class="text-cub-blue underline decoration-cub-blue/30 underline-offset-2 hover:decoration-cub-blue">Cub Scout Uniform Guide</a></li>
+    <li><a href="https://www.scouting.org/training/safeguarding-youth/" rel="noopener" class="text-cub-blue underline decoration-cub-blue/30 underline-offset-2 hover:decoration-cub-blue">Youth Protection at Scouting America</a></li>
+    <li><a href="https://www.scouting.org/wp-content/uploads/2023/07/512-73523WelcomeNewCSFamily_WEB.pdf" rel="noopener" class="text-cub-blue underline decoration-cub-blue/30 underline-offset-2 hover:decoration-cub-blue">New Cub Scout Family Information Guide</a></li>
+    <li><a href="https://www.scouting.org/programs/cub-scouts/what-cub-scouts-earn/the-advancement-trail/" rel="noopener" class="text-cub-blue underline decoration-cub-blue/30 underline-offset-2 hover:decoration-cub-blue">Advancement Trail</a></li>
+    <li><a href="https://www.scouting.org/programs/cub-scouts/adventures/" rel="noopener" class="text-cub-blue underline decoration-cub-blue/30 underline-offset-2 hover:decoration-cub-blue">Cub Scout Adventures</a></li>
+  </ul>
+</div>
 
 <div class="max-w-3xl px-4 py-10" markdown="1">
 
@@ -87,9 +102,11 @@ Parents/caregivers are expected to help ensure all Scouts follow these simple ru
 - Several rank Adventures are personal-safety themed, so Scouts build these skills as part of the regular program.
 - Please follow site-specific guidelines at campouts and events, and be courteous of other families' needs and comfort levels.
 
+Keeping kids safe guides everything Scouting America does &mdash; as they put it, <em>"Being a leader in Scouting America is a privilege, not a right."</em> Every adult leader completes youth protection training before working with Scouts and renews it annually, and background checks and BSA's "two-deep" leadership policy add further safeguards. Read more, including how to report a concern, on Scouting America's [Youth Protection page](https://www.scouting.org/training/safeguarding-youth).
+
 ## Uniforms & Where to Buy
 
-Cub Scouts wear two uniforms. <strong>"Class A"</strong> is the traditional blue Cub Scout shirt with neckerchief, slide, and hat specific to the Scout's level — the belt displays earned "belt loop" awards. Official pants/socks are optional; dark pants or clean jeans work fine. The blue shirt purchased in a Scout's first year can be worn through 5th grade, so size up. Gently used hand-me-downs from prior Pack families may be available in our rummage bin. <strong>"Class B"</strong> is our pack t-shirt, whose cost is included in annual dues.
+Cub Scouts wear two uniforms. <strong>"Class A"</strong> is the traditional blue Cub Scout shirt with neckerchief, slide, and hat specific to the Scout's level — the belt displays earned "belt loop" awards. Official pants/socks are optional; dark pants or clean jeans work fine. The blue shirt purchased in a Scout's first year can be worn through 5th grade, so size up. Gently used hand-me-downs from prior Pack families may be available in our rummage bin. <strong>"Class B"</strong> is our pack t-shirt, whose cost is included in annual dues.[Read more about Cub Scout uniforms](https://www.scouting.org/programs/cub-scouts/cub-scout-uniform).
 
 Any family struggling with the cost of a uniform, Scouts BSA registration, or Pack dues should speak privately with the Cubmaster — assistance may be available.
 
@@ -99,8 +116,8 @@ Any family struggling with the cost of a uniform, Scouts BSA registration, or Pa
 Mon–Fri: 9:30am–5pm · Sat: 10am–3pm · Sun: closed
 
 <div class="pt-8 mt-12 border-t border-slate-200">
-  <a href="mailto:leaders@cubscoutpack209.org" class="inline-flex items-center px-5 py-3 font-semibold font-heading text-white transition rounded-[5px] bg-cub-blue hover:bg-blue-900">
-    Questions? Email leaders@cubscoutpack209.org
+  <a href="mailto:cubmaster@cubscoutpack209.org" class="inline-flex items-center px-5 py-3 font-semibold font-heading text-white transition rounded-[5px] bg-cub-blue hover:bg-blue-900">
+    Questions? Email cubmaster@cubscoutpack209.org
   </a>
 </div>
 

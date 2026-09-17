@@ -20,8 +20,8 @@ description: >- # this means to ignore newlines until "baseurl:"
   Cub Scout Pack 209 of Silver Spring, Maryland. We provide fun, character-building adventures
   for K-5th grade youth through outdoor activities, STEM projects, and community service.
   Join us for camping, Pinewood Derby races, and much more!
-baseurl: "" # the subpath of your site, e.g. /blog -- empty because we're using an org root site (Pack209SilverSpring.github.io)
-url: "https://pack209silverspring.github.io" # update if you switch repo names or add a custom domain later
+baseurl: "" # the subpath of your site, e.g. /blog -- empty, root domain
+url: "https://cubscoutpack209.org" # custom domain (see CNAME file); GitHub Pages default was pack209silverspring.github.io
 twitter_username: jekyllrb
 github_username:  jekyll
 
@@ -44,43 +44,6 @@ gcalendar:
       layout: event-public
       date_format: "%Y-%m-%d"
       look_ahead: 365
-    # TODO: add each Den calendar ID
-    # - name: 🦁 Lion Den
-    #   id: REPLACE-WITH-REAL-LION-DEN-CALENDAR-ID@group.calendar.google.com
-    #   directory: events
-    #   layout: event-private
-    #   date_format: "%Y-%m-%d"
-    #   look_ahead: 365
-    # - name: 🐯 Tiger Den
-    #   id: REPLACE-WITH-REAL-TIGER-DEN-CALENDAR-ID@group.calendar.google.com
-    #   directory: events
-    #   layout: event-private
-    #   date_format: "%Y-%m-%d"
-    #   look_ahead: 365
-    # - name: 🐺 Wolf Den
-    #   id: REPLACE-WITH-REAL-WOLF-DEN-CALENDAR-ID@group.calendar.google.com
-    #   directory: events
-    #   layout: event-private
-    #   date_format: "%Y-%m-%d"
-    #   look_ahead: 365
-    # - name: 🐻 Bear Den
-    #   id: REPLACE-WITH-REAL-BEAR-DEN-CALENDAR-ID@group.calendar.google.com
-    #   directory: events
-    #   layout: event-private
-    #   date_format: "%Y-%m-%d"
-    #   look_ahead: 365
-    # - name: ⚜️ Webelos Den
-    #   id: REPLACE-WITH-REAL-WEBELOS-DEN-CALENDAR-ID@group.calendar.google.com
-    #   directory: events
-    #   layout: event-private
-    #   date_format: "%Y-%m-%d"
-    #   look_ahead: 365
-    # - name: 🏹 AoL Den
-    #   id: REPLACE-WITH-REAL-AOL-DEN-CALENDAR-ID@group.calendar.google.com
-    #   directory: events
-    #   layout: event-private
-    #   date_format: "%Y-%m-%d"
-    #   look_ahead: 365
 
 
 # Exclude from processing.
