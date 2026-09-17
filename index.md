@@ -10,15 +10,15 @@ announcement_visible: true
 announcement_text: Come to our Join Scouting event on 9/15! <a href="/join"
   class="underline hover:no-underline">Learn more</a> or <a
   href="mailto:cubmaster@cubscoutpack209.org" class="underline
-  hover:no-underline">contact us
+  hover:no-underline">contact us</a>
 
-hero_image: /assets/images/209_parade.jpg
+hero_image: /assets/images/209_scoutshike.jpg
 hero_title: Cub Scout Pack 209
 hero_subtitle: Welcome to the Adventure
 hero_description: >-
   A Scouting America pack for all youth in <span class="font-semibold">kindergarten through 5th grade</span> in Silver Spring, MD. New families are always welcome.
 
-why_image: /assets/images/209_billygoat1.jpg
+why_image: /assets/images/209_denmeeting.jpg
 why_image_alt: Pack 209 Cub Scouts on a family camping trip
 why_text: >-
   Pack 209 meets in Silver Spring, MD, and is open to any kid in kindergarten through fifth grade who
@@ -67,7 +67,7 @@ cta_paragraph_2: >-
         <h1 class="text-4xl sm:text-5xl md:text-6xl text-white font-extrabold">
           {{ page.hero_title }}
         </h1>
-        <h2 class="text-xl sm:text-2xl md:text-3xl text-white line-height-sm">{{ page.hero_subtitle }}</h2>
+        <h2 class="mt-2 mb-3 text-xl sm:text-2xl md:text-3xl text-white line-height-sm">{{ page.hero_subtitle }}</h2>
         <p class="text-lg sm:text-xl">
           {{ page.hero_description }}
         </p>
@@ -86,8 +86,8 @@ cta_paragraph_2: >-
 
 <!-- ANNOUNCEMENT BANNER: text is a CMS-editable frontmatter field (announcement_text) so leaders can update it without touching code. Set announcement_visible: false in front matter (or via /admin) to hide it. -->
 {% if page.announcement_visible %}
-<section class="px-4 py-3 text-sm font-medium text-center text-forest bg-yellow-100 relative left-1/2 right-1/2 w-screen -ml-[50vw] -mr-[50vw]">
-  📣 {{ page.announcement_text }} <a href="/join" class="underline hover:no-underline">Learn more</a> or <a href="mailto:cubmaster@cubscoutpack209.org" class="underline hover:no-underline">contact us</a>.
+<section class="px-4 py-3 text-sm font-medium text-center text-forest bg-yellow-100 relative left-1/2 right-1/2 w-screen -ml-[50vw] -mr-[50vw] mb-6">
+  📣 {{ page.announcement_text }}
 </section>
 {% endif %}
 
@@ -134,15 +134,13 @@ cta_paragraph_2: >-
                 – {{ end_iso | date: "%a • %b %-d" }}
               {%- endif -%}
             </p>
-
             <!-- Middle content centered -->
             <div class="flex flex-col items-center justify-center text-center">
               <h3 class="mt-1 font-bold text-cub-blue">
-                <a href="{{ p.url | relative_url }}" class="hover:underline">
+                <a href="{{ p.url | relative_url }}" class="no-underline hover:underline">
                   {{ p.title | default: "Pack Event" }}
                 </a>
               </h3>
-
               <!-- Location -> city only (public events only) -->
               {%- assign loc = p.event.location | default: p.location | default: p.venue -%}
               {%- if loc -%}
@@ -156,7 +154,6 @@ cta_paragraph_2: >-
                 {%- endif -%}
                 <p class="mt-2 text-sm text-slate-600">{{ city }}</p>
               {%- endif -%}
-
               <!-- Times only for same-day timed events -->
               {%- if p.event.start.dateTime and end_iso and end_day == ev_day -%}
                 <p class="mt-1 text-xs text-slate-500">
@@ -167,8 +164,7 @@ cta_paragraph_2: >-
                 </p>
               {%- endif -%}
             </div>
-
-            <a href="{{ p.url | relative_url }}" class="inline-flex mt-3 font-semibold text-slate-900 hover:underline">Details</a>
+            <a href="{{ p.url | relative_url }}" class="inline-flex mt-3 font-semibold text-slate-900 no-underline hover:underline">Details</a>
           </article>
           {%- assign shown = shown | plus: 1 -%}
         {%- else -%}
@@ -178,32 +174,29 @@ cta_paragraph_2: >-
             {%- capture event_item -%}
               <li class="pb-3 mb-3 border-b border-slate-100 last:border-0 last:mb-0 last:pb-0">
                 <p class="text-sm text-slate-500">{{ current_ev_iso | date: "%b %-d" }}</p>
-                <a href="{{ p.url | relative_url }}" class="font-medium hover:underline">{{ p.title | default: "Pack Event" }}</a>
+                <a href="{{ p.url | relative_url }}" class="font-medium no-underline hover:underline">{{ p.title | default: "Pack Event" }}</a>
               </li>
             {%- endcapture -%}
             {%- assign additional_events = additional_events | append: event_item -%}
           {%- endif -%}
         {%- endif -%}
       {%- endfor -%}
-
       <!-- Third card with list of more events -->
       {%- if remaining_events > 0 -%}
         <article class="flex flex-col justify-between h-full p-5 bg-white rounded-[5px] border border-slate-200">
           <h3 class="py-0 mt-0 mb-3 font-bold text-cub-blue">More Upcoming Events</h3>
           <div class="flex items-center flex-1">
-            <ul class="w-full text-sm">
+            <ul class="w-full text-sm list-none">
               {{ additional_events }}
             </ul>
           </div>
-          <a href="/events/" class="inline-flex mt-3 font-semibold text-slate-900 hover:underline">See All Events</a>
+          <a href="/events/" class="inline-flex mt-3 font-semibold text-slate-900 no-underline hover:underline">See All Events</a>
         </article>
       {%- endif -%}
     </div>
-
     {%- if upcoming.size == 0 -%}
       <p class="mt-6 text-center text-slate-600">No upcoming events found.</p>
     {%- endif -%}
-
     <div class="mt-8 text-center">
       <a href="/calendar/" class="inline-flex items-center px-5 py-3 font-semibold font-heading text-white transition rounded-[5px] bg-cub-blue hover:bg-blue-900">
         Full Calendar

@@ -42,35 +42,24 @@
 }
 
 @layer components {
+  /* Visual identity for prose content -- colors, weights, link/list style.
+     Applied via the outer `.prose` wrapper in every layout (default.html),
+     so it reaches every page. Deliberately carries NO margin/padding/
+     leading, so it can never fight a hand-coded page's own spacing. */
   .prose h1 {
-    @apply text-4xl font-extrabold text-cub-gold mt-8;
+    @apply text-4xl font-extrabold text-cub-gold;
   }
   .prose h2 {
-    @apply text-3xl font-bold text-cub-blue mt-6 mb-4;
+    @apply text-3xl font-bold text-cub-blue;
   }
   .prose h3 {
-    @apply text-2xl font-bold text-cub-gold mt-6 mb-2;
-  }
-
-  /* Plain-Markdown content styling. Content pages edited through the CMS
-     (Decap) are written as real Markdown rather than hand-classed HTML, so
-     these rules give bare <p>/<ul>/<a>/etc. tags the same look the site's
-     hand-coded pages already use, without an editor needing to add classes. */
-  .prose p {
-    @apply mt-4 leading-7;
-  }
-  .prose p:first-child {
-    @apply mt-0;
+    @apply text-2xl font-bold text-cub-gold;
   }
   .prose ul {
-    @apply mt-4 space-y-2 leading-7 list-disc list-outside pl-5;
+    @apply list-disc list-outside;
   }
   .prose ol {
-    @apply mt-4 space-y-2 leading-7 list-decimal list-outside pl-5;
-  }
-  .prose li > ul,
-  .prose li > ol {
-    @apply mt-2;
+    @apply list-decimal list-outside;
   }
   .prose a {
     @apply text-cub-blue underline decoration-cub-blue/30 underline-offset-2 hover:decoration-cub-blue;
@@ -79,9 +68,50 @@
     @apply font-semibold;
   }
   .prose blockquote {
-    @apply pl-4 mt-4 italic border-l-4 border-cub-blue/30 text-slate-600;
+    @apply italic border-l-4 border-cub-blue/30 text-slate-600;
   }
   .prose hr {
-    @apply my-8 border-slate-200;
+    @apply border-slate-200;
+  }
+
+  /* Spacing/leading for genuine flowing CMS Markdown ONLY. Content pages
+     edited through Decap are real Markdown rendered via `| markdownify`,
+     so they come out as bare <p>/<ul>/etc. with no classes at all -- these
+     rules give that raw output the same rhythm the site's hand-coded pages
+     already have. Opt in with `prose-copy` alongside `prose` on the
+     specific block that renders markdownified text (see about.md,
+     event-public.html); do NOT add it to the layout-wide `.prose` wrapper,
+     since hand-coded pages set their own margin/leading per element and
+     this would double up or fight with those. */
+  .prose-copy h1 {
+    @apply mt-8;
+  }
+  .prose-copy h2 {
+    @apply mt-6 mb-4;
+  }
+  .prose-copy h3 {
+    @apply mt-6 mb-2;
+  }
+  .prose-copy p {
+    @apply mt-4 leading-7;
+  }
+  .prose-copy p:first-child {
+    @apply mt-0;
+  }
+  .prose-copy ul {
+    @apply mt-4 space-y-2 leading-7 pl-5;
+  }
+  .prose-copy ol {
+    @apply mt-4 space-y-2 leading-7 pl-5;
+  }
+  .prose-copy li > ul,
+  .prose-copy li > ol {
+    @apply mt-2;
+  }
+  .prose-copy blockquote {
+    @apply pl-4 mt-4;
+  }
+  .prose-copy hr {
+    @apply my-8;
   }
 }

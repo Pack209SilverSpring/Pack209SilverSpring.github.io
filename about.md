@@ -5,7 +5,7 @@ hideTitle: true
 hero_header: true
 permalink: /about/
 
-hero_image: /assets/images/209_campfire.jpg
+hero_image: /assets/images/209_parade.jpg
 hero_title: About Pack 209
 hero_subtitle: Building character, confidence, and community
 
@@ -48,7 +48,7 @@ hosts_leaders_text: |
   families and our community, creating an inclusive environment where all children can
   experience the benefits of scouting.
 
-closing_cta_image: /assets/images/209_parade.jpg
+closing_cta_image: /assets/images/209_billygoat.jpg
 closing_cta_text: |
   Pack 209 welcomes all children in kindergarten through fifth grade. Our volunteer-led program provides
   age-appropriate activities that build character, foster citizenship, and develop physical and mental fitness—all
@@ -57,7 +57,7 @@ closing_cta_text: |
 
 <!-- HERO: full-bleed, parallax bg-fixed background (same technique as the homepage hero and "Ready to Explore" CTA) -->
 <section class="relative left-1/2 right-1/2 w-screen -ml-[50vw] -mr-[50vw]">
-  <div class="relative h-[45vh] min-h-[360px] max-h-[520px] bg-center bg-cover bg-fixed" style="background-image: url('{{ page.hero_image | relative_url }}');">
+  <div class="relative h-[45vh] min-h-[360px] max-h-[520px] bg-[15%] bg-cover" style="background-image: url('{{ page.hero_image | relative_url }}');">
     <div class="absolute inset-0 bg-gradient-to-b from-cub-blue/70 via-black/45 to-black/60"></div>
     <div class="relative h-full max-w-6xl px-4 mx-auto">
       <div class="flex flex-col items-start justify-center h-full max-w-2xl text-left text-white">
@@ -73,10 +73,10 @@ closing_cta_text: |
 </section>
 
 <div class="grid items-center gap-12 p-12 mt-10 bg-white md:grid-cols-2">
-    <div class="prose">
+    <div class="prose prose-copy text-lg">
+        <h2 class="text-2xl font-bold text-forest">Our Pack</h2>
         {{ page.our_pack_text | markdownify }}
     </div>
-
     <div>
         <img src="{{ page.our_pack_image | relative_url }}" alt="{{ page.our_pack_image_alt }}"
             class="object-cover w-full h-80 rounded-[5px]" loading="lazy" decoding="async">
@@ -86,7 +86,7 @@ closing_cta_text: |
 
 <div class="mt-16 px-8">
     <h2 class="text-2xl font-bold text-forest">Our Story</h2>
-    <div class="prose">
+    <div class="prose prose-copy text-md">
         {{ page.our_story_text | markdownify }}
     </div>
 </div>
@@ -98,7 +98,7 @@ closing_cta_text: |
 
   <div class="flex flex-wrap gap-5 md:flex-nowrap">
   <div class="min-w-[120px] mx-auto items-center flex-1">
-        <div class="prose text-white">
+        <div class="prose prose-copy text-white">
             {{ page.hosts_leaders_text | markdownify }}
         </div>
     </div>
@@ -131,7 +131,7 @@ closing_cta_text: |
 </div>
 
 <div class="mt-16">
-    <div class="grid gap-12 px-8 bg-white md:grid-cols-2">
+    <div class="grid gap-12 p-8 bg-white md:grid-cols-2">
         <div>
             <h2 class="text-2xl font-bold text-forest">Cub Scout Motto & Slogan</h2>
             <div class="mt-4">
@@ -172,7 +172,7 @@ closing_cta_text: |
     <div class="absolute inset-0 bg-forest/75"></div>
     <div class=" max-w-6xl px-4 mx-auto relative">
     <h2 class="text-3xl font-bold text-white sm:text-4xl">Join our Adventure</h2>
-    <div class="mt-4 text-lg leading-7 text-white prose">
+    <div class="mt-4 text-lg leading-7 text-white prose prose-copy">
         {{ page.closing_cta_text | markdownify }}
     </div>
     <div class="mt-6">

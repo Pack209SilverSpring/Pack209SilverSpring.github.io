@@ -90,10 +90,7 @@ closing_text: >-
         <h3 class="mt-5 mb-0 text-xl font-bold text-cub-blue">
           Pay Pack 209 dues
         </h3>
-        <p class="mt-3 text-slate-600">
-          {{ page.pack_dues_amount }}
-        </p>
-        <p class="mt-3 text-sm text-slate-500">
+        <p class="mt-3 text-slate-500">
           {{ page.pack_dues_description }}
         </p>
         <dl class="mt-5 text-sm text-slate-500 space-y-1">
