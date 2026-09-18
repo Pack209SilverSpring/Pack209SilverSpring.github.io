@@ -1,5 +1,6 @@
 ---
 announcement_visible: true
+announcement_status: warning
 announcement_text: Missed our Join Scouting event on 9/15? <a href="/join"
   class="underline hover:no-underline">Learn more</a> or <a
   href="mailto:cubmaster@cubscoutpack209.org" class="underline
@@ -80,10 +81,24 @@ navbarText: Silver Spring, MD
   </div>
 </section>
 
-<!-- ANNOUNCEMENT BANNER: text is a CMS-editable frontmatter field (announcement_text) so leaders can update it without touching code. Set announcement_visible: false in front matter (or via /admin) to hide it. -->
+<!-- ANNOUNCEMENT BANNER: text and status are CMS-editable frontmatter fields
+     (announcement_text, announcement_status) so leaders can update it without
+     touching code. Set announcement_visible: false in front matter (or via
+     /admin) to hide it. Status maps to a fixed `.announcement-<status>`
+     class in _tailwind.css (info/warning/success/error) rather than
+     interpolating a Tailwind utility directly, so it can't hit the same
+     "Tailwind never sees the literal class" bug the leader ring colors had. -->
 {% if page.announcement_visible %}
-<section class="px-4 py-3 text-sm font-medium text-center text-forest bg-yellow-100 relative left-1/2 right-1/2 w-screen -ml-[50vw] -mr-[50vw] mb-6">
-  <span aria-hidden="true">📣</span> {{ page.announcement_text }}
+{% assign status = page.announcement_status | default: "warning" %}
+<section class="announcement-{{ status }} px-4 py-3 text-sm font-medium text-center relative left-1/2 right-1/2 w-screen -ml-[50vw] -mr-[50vw] mb-6">
+  <span aria-hidden="true">
+    {% case status %}
+      {% when "info" %}ℹ️
+      {% when "success" %}✅
+      {% when "error" %}🚨
+      {% else %}📣
+    {% endcase %}
+  </span> {{ page.announcement_text }}
 </section>
 {% endif %}
 

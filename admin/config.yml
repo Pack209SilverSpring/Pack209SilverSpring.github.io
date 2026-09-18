@@ -53,9 +53,22 @@ collections:
                     multiple: false
               - label: "Ring Color"
                 name: "ring_color"
-                widget: "string"
+                widget: "select"
                 default: "slate-400"
-                hint: "Tailwind color name for the ring around the photo, e.g. yellow-400, slate-500, stone-800"
+                hint: "Color of the ring around the photo."
+                options:
+                  - { label: "Yellow (light)", value: "yellow-400" }
+                  - { label: "Yellow (dark)", value: "yellow-700" }
+                  - { label: "Slate (light)", value: "slate-400" }
+                  - { label: "Slate (medium)", value: "slate-500" }
+                  - { label: "Slate (dark)", value: "slate-800" }
+                  - { label: "Stone (dark)", value: "stone-800" }
+                  - { label: "Blue (light)", value: "blue-400" }
+                  - { label: "Blue (dark)", value: "blue-600" }
+                  - { label: "Red", value: "red-400" }
+                  - { label: "Green", value: "green-500" }
+                  - { label: "Purple", value: "purple-400" }
+                  - { label: "Orange", value: "orange-400" }
 
   - name: "dens"
     label: "Dens & Meeting Times"
@@ -93,7 +106,18 @@ collections:
             name: "announcement_text"
             widget: "string"
             required: false
-            hint: "Shown after the 📣 emoji, before the 'Learn more' link. Keep it short. Only needs a value when the banner above is turned on."
+            hint: "Shown after the emoji, before the 'Learn more' link. Keep it short. Only needs a value when the banner above is turned on."
+          - label: "Announcement style"
+            name: "announcement_status"
+            widget: "select"
+            default: "warning"
+            required: false
+            hint: "Controls the banner's color and icon. Info = blue, Warning = yellow, Success = green, Error = red."
+            options:
+              - { label: "Info (blue)", value: "info" }
+              - { label: "Warning (yellow)", value: "warning" }
+              - { label: "Success (green)", value: "success" }
+              - { label: "Error (red)", value: "error" }
 
           - { label: "Hero photo", name: "hero_image", widget: "image" }
           - { label: "Hero headline", name: "hero_title", widget: "string" }
