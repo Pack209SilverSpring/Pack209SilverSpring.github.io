@@ -115,3 +115,16 @@
     @apply my-8;
   }
 }
+
+/* `background-attachment: fixed` (Tailwind's `bg-fixed`, used for the
+   parallax hero/CTA photo bands) is unreliable on mobile browsers --
+   notably iOS Safari, and doubly so here since `body` has
+   `overflow-x-hidden`, which can make a fixed background clip or fail
+   to render at all instead of just losing the parallax effect. Fall
+   back to normal scrolling backgrounds below the tablet breakpoint,
+   where the parallax motion isn't really visible anyway. */
+@media (max-width: 767px) {
+  .bg-fixed {
+    background-attachment: scroll;
+  }
+}

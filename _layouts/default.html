@@ -74,7 +74,7 @@
   </header>
 
   <!-- Page content -->
-  <main id="content" class="container flex-1 max-w-6xl px-4 mx-auto {% if page.hero_header %}pt-0{% else %}pt-10{% endif %}">
+  <main id="content" class="container flex-1 max-w-6xl px-2 md:px-4 mx-auto {% if page.hero_header %}pt-0{% else %}pt-10{% endif %}">
     {% unless page.hideTitle %}
       {% if page.title or page.subtitle %}
         <div class="flex flex-col border-b border-gray-300 min-h-14">
@@ -125,11 +125,28 @@
     document.addEventListener('DOMContentLoaded', function() {
       const mobileMenuButton = document.getElementById('mobile-menu-button');
       const mobileMenu = document.getElementById('mobile-menu');
+      const siteHeader = document.getElementById('site-header');
+      const isTransparentHeader = !!(siteHeader && siteHeader.classList.contains('is-transparent'));
+      const scrollThreshold = 40;
+
+      // Transparent-over-hero header: swap to a solid header once the
+      // page scrolls past the hero, OR whenever the mobile menu is open --
+      // otherwise, near the top of a hero page, the top nav bar stays
+      // see-through behind the (opaque, white) mobile menu panel dropped
+      // below it, which looks broken. Only active on pages that opt in
+      // via the `is-transparent` marker class (page.hero_header: true).
+      function updateHeaderState() {
+        if (!isTransparentHeader) return;
+        var menuOpen = mobileMenu && !mobileMenu.classList.contains('hidden');
+        var pastHero = window.scrollY > scrollThreshold;
+        siteHeader.classList.toggle('scrolled', pastHero || menuOpen);
+      }
 
       // Simple toggle function for mobile menu
       function toggleMenu() {
-        const isOpen = mobileMenu.classList.toggle('hidden');
-        mobileMenuButton.setAttribute('aria-expanded', !isOpen);
+        const isHidden = mobileMenu.classList.toggle('hidden');
+        mobileMenuButton.setAttribute('aria-expanded', !isHidden);
+        updateHeaderState();
       }
 
       // Toggle on button click
@@ -145,22 +162,11 @@
             !mobileMenuButton.contains(event.target)) {
           mobileMenu.classList.add('hidden');
           mobileMenuButton.setAttribute('aria-expanded', 'false');
+          updateHeaderState();
         }
       });
 
-      // Transparent-over-hero header: swap to a solid header once the
-      // page scrolls past the hero. Only active on pages that opt in
-      // via the `is-transparent` marker class (page.hero_header: true).
-      var siteHeader = document.getElementById('site-header');
-      if (siteHeader && siteHeader.classList.contains('is-transparent')) {
-        var scrollThreshold = 40;
-        var updateHeaderState = function() {
-          if (window.scrollY > scrollThreshold) {
-            siteHeader.classList.add('scrolled');
-          } else {
-            siteHeader.classList.remove('scrolled');
-          }
-        };
+      if (isTransparentHeader) {
         updateHeaderState();
         window.addEventListener('scroll', updateHeaderState, { passive: true });
       }

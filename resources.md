@@ -26,7 +26,7 @@ hero_subtitle: Everything Pack 209 families need to know, in one place.
   </div>
 </section>
 
-<div class="max-w-3xl px-2 md:px-8 py-10">
+<div class="max-w-3xl px-3 md:px-8 py-10">
 
 <p class="text-lg leading-7">
 Family is a critical part of our Pack and the Cub Scout experience — thank you to our parents, family members, and other caregivers for being part of our team!
