@@ -8,9 +8,13 @@ cards:
   - title: Sign up for Pack 209
     description: Four short steps to register your scout for the year. We'll walk you through each one.
     link_text: See the steps
+    link_url: "/register"
+    external: false
   - title: Contact us to learn more
     description: Talk to a parent leader, ask anything, or arrange to visit a meeting first — no commitment.
     link_text: Get in touch
+    link_url: "mailto:cubmaster@cubscoutpack209.org?subject=Question%20about%20Pack%20209"
+    external: true
 ---
 
 <!-- TODO: once Pack 209 has its own program overview PDF, re-add a download hero here. -->
@@ -22,27 +26,26 @@ cards:
 <!-- TWO CTAs -->
 <section class="px-4 mt-6 mb-12 sm:px-6 lg:px-8 sm:mt-8">
   <div class="grid max-w-6xl gap-6 mx-auto md:grid-cols-2">
-    <a href="/register"
+    <a href="{% if page.cards[0].external %}{{ page.cards[0].link_url }}{% else %}{{ page.cards[0].link_url | relative_url }}{% endif %}"{% if page.cards[0].external %} target="_blank" rel="noopener"{% endif %}
        class="group block p-8 transition font-heading rounded-[5px] bg-cub-gold ring-1 ring-slate-200 hover:bg-yellow-300 no-underline">
       <h2 class="mt-0 mb-0 text-2xl font-bold tracking-tight text-cub-blue sm:text-3xl">
         {{ page.cards[0].title }}
       </h2>
       <p class="mt-3 text-cub-blue/80">
-        {{ page.cards[0].description }}
+        {{ page.cards[0].description | markdownify | remove: "<p>" | remove: "</p>" }}
       </p>
       <span class="inline-flex items-center gap-1 mt-6 font-bold text-cub-blue">
         {{ page.cards[0].link_text }}
         <span aria-hidden="true" class="transition-transform group-hover:translate-x-0.5">→</span>
       </span>
     </a>
-    <a href="mailto:cubmaster@cubscoutpack209.org?subject=Question%20about%20Pack%20209"
-       target="_blank" rel="noopener"
+    <a href="{% if page.cards[1].external %}{{ page.cards[1].link_url }}{% else %}{{ page.cards[1].link_url | relative_url }}{% endif %}"{% if page.cards[1].external %} target="_blank" rel="noopener"{% endif %}
        class="group block p-8 transition font-heading bg-white rounded-[5px] ring-1 ring-slate-200 hover:bg-slate-50 no-underline">
       <h2 class="mt-0 mb-0 text-2xl font-bold tracking-tight text-cub-blue sm:text-3xl">
         {{ page.cards[1].title }}
       </h2>
       <p class="mt-3 text-slate-600">
-        {{ page.cards[1].description }}
+        {{ page.cards[1].description | markdownify | remove: "<p>" | remove: "</p>" }}
       </p>
       <span class="inline-flex items-center gap-1 mt-6 font-bold text-cub-blue">
         {{ page.cards[1].link_text }}
