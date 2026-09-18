@@ -43,6 +43,31 @@
     min-width: 1.75rem;
     text-align: center;
   }
+
+  /* Mobile: the toolbar (nav buttons, title, view switcher) was
+     cramming into one row -- the multi-month title (the visibleRange
+     window spans over a year) squeezed to 4 lines and pushed the
+     Month/List buttons off the right edge of the screen. Stack the
+     three toolbar sections vertically below the same breakpoint the
+     widget's JS uses to pick the mobile view, and shrink the title
+     so it doesn't dominate the card. */
+  @media (max-width: 640px) {
+    #calendar .fc-header-toolbar {
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    #calendar .fc-toolbar-chunk {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.5rem;
+    }
+    #calendar .fc-toolbar-title {
+      font-size: 1.15rem;
+      text-align: center;
+    }
+  }
 </style>
 
 <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.js'></script>
@@ -58,7 +83,7 @@
       : { left: 'prev,next today', center: 'title', right: 'dayGridMonth,listUpcoming' };
 
     var cal = new FullCalendar.Calendar(el, {
-      initialView: isSmall ? 'listMonth' : 'dayGridMonth',
+      initialView: isSmall ? 'listUpcoming' : 'dayGridMonth',
       headerToolbar: headerToolbar,
       views: {
         // FullCalendar's built-in `listYear` view shows the current
