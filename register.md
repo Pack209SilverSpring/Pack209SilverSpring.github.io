@@ -76,7 +76,7 @@ closing_text: >-
         <div class="flex flex-col mt-6 gap-3">
           <a href="https://my.scouting.org/VES/OnlineReg/1.0.0/?tu=UF-MB-082paa0209"
              target="_blank" rel="noopener"
-             class="flex items-baseline justify-between gap-4 px-5 py-4 transition font-heading rounded-[5px] bg-cub-blue ring-1 ring-cub-blue hover:bg-blue-900">
+             class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1 px-5 py-4 transition font-heading rounded-[5px] bg-cub-blue ring-1 ring-cub-blue hover:bg-blue-900">
             <span class="text-xs font-semibold tracking-[0.2em] uppercase text-white/90">Register through Scouting America</span>
             <span class="text-xl font-extrabold text-white">${{ page.national_dues_amount }}</span>
           </a>
@@ -98,7 +98,7 @@ closing_text: >-
           <div class="flex gap-2"><dt class="font-semibold text-cub-blue/80 min-w-24">Done when:</dt><dd>Payment confirmed</dd></div>
         </dl>
         <div class="mt-6 rounded-[5px] p-5" style="background-color:#6D1ED4">
-          <div class="flex items-baseline justify-between">
+          <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
             <span class="text-xs font-semibold tracking-[0.2em] uppercase text-white/90">Pay pack dues</span>
             <span class="text-xl font-extrabold text-white">${{ page.pack_dues_amount }}</span>
           </div>
@@ -146,7 +146,7 @@ closing_text: >-
         </dl>
         <a href="https://filestore.scouting.org/filestore/HealthSafety/pdf/680-001_AB.pdf"
            target="_blank" rel="noopener"
-           class="flex items-baseline justify-between gap-4 px-5 py-4 mt-6 transition font-heading rounded-[5px] bg-cub-blue ring-1 ring-cub-blue hover:bg-blue-900">
+           class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1 px-5 py-4 mt-6 transition font-heading rounded-[5px] bg-cub-blue ring-1 ring-cub-blue hover:bg-blue-900">
           <span class="text-xs font-semibold tracking-[0.2em] uppercase text-white/90">Download the Health and Safety Form</span>
           <span class="text-cub-gold" aria-hidden="true">→</span>
         </a>
@@ -175,7 +175,7 @@ closing_text: >-
       <div class="mt-8">
         <a href="mailto:cubmaster@cubscoutpack209.org?subject=Registration%20help"
            class="inline-flex items-center justify-center px-7 py-3.5 font-bold font-heading transition bg-cub-gold rounded-[5px] text-cub-blue hover:bg-yellow-300 no-underline">
-          Email cubmaster@cubscoutpack209.org
+          Contact Us
         </a>
       </div>
     </div>

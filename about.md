@@ -72,7 +72,7 @@ closing_cta_text: |
   </div>
 </section>
 
-<div class="grid items-center gap-12 p-3 md:p-12 mt-10 bg-white md:grid-cols-2">
+<div class="grid items-center gap-12 p-3 md:p-8 mt-10 rounded-[5px] ring-1 ring-slate-200 bg-white md:grid-cols-2">
     <div class="prose prose-copy text-lg">
         <h2 class="text-2xl font-bold text-forest">Our Pack</h2>
         {{ page.our_pack_text | markdownify }}
@@ -86,7 +86,7 @@ closing_cta_text: |
 
 <div class="mt-16 px-2 md:px-8">
     <h2 class="text-2xl font-bold text-forest">Our Story</h2>
-    <div class="prose prose-copy text-md">
+    <div class="prose prose-copy text-base">
         {{ page.our_story_text | markdownify }}
     </div>
 </div>
@@ -114,7 +114,7 @@ closing_cta_text: |
 <div class="mt-16 px-4 md:px-8">
     <h2 class="text-2xl font-bold text-forest">Scout Law</h2>
     <p class="mt-4 text-lg">These are the principles we teach our scouts. We hope they all grow up to be:</p>
-    <div class="flex justify-between flex-wrap gap-2 mt-6 text-center">
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-x-4 gap-y-3 mt-6 text-center">
         <p class="text-lg font-medium text-cub-blue">Trustworthy</p>
         <p class="text-lg font-medium text-cub-blue">Loyal</p>
         <p class="text-lg font-medium text-cub-blue">Helpful</p>
@@ -131,7 +131,7 @@ closing_cta_text: |
 </div>
 
 <div class="mt-16">
-    <div class="grid gap-12 p-4 md:p-8 bg-white md:grid-cols-2">
+    <div class="grid gap-12 p-4 md:p-8 bg-white md:grid-cols-2 rounded-[5px] ring-1 ring-slate-200">
         <div>
             <h2 class="text-2xl font-bold text-forest">Cub Scout Motto & Slogan</h2>
             <div class="mt-4">
@@ -175,12 +175,12 @@ closing_cta_text: |
     <div class="mt-4 text-lg leading-7 text-white prose prose-copy">
         {{ page.closing_cta_text | markdownify }}
     </div>
-    <div class="mt-6">
-        <a href="/join" class="inline-flex items-center px-6 py-3 font-bold font-heading transition bg-cub-gold rounded-[5px] text-cub-blue hover:bg-yellow-300 no-underline">
+    <div class="flex flex-col w-full gap-4 mt-6 sm:w-auto sm:flex-row sm:flex-wrap">
+        <a href="/join" class="inline-flex items-center justify-center w-full px-6 py-3 font-bold font-heading transition bg-cub-gold rounded-[5px] text-cub-blue hover:bg-yellow-300 no-underline sm:w-auto">
           Join Pack 209
         </a>
         <a href="/contact"
-            class="inline-flex items-center px-6 py-3 ml-4 font-bold font-heading text-white transition rounded-[5px] bg-cub-blue hover:bg-blue-900 no-underline">
+            class="inline-flex items-center justify-center w-full px-6 py-3 font-bold font-heading text-white transition rounded-[5px] bg-cub-blue hover:bg-blue-900 no-underline sm:w-auto">
             Contact Us
         </a>
     </div>
