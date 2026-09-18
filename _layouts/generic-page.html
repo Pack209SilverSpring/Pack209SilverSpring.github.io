@@ -3,10 +3,12 @@ layout: default
 ---
 
 <!-- HERO: full-bleed, parallax bg-fixed background (same technique used by the
-     homepage hero, Resources, and Register pages). All content on this page
-     comes from CMS fields (title, hero_subtitle, hero_description, sections) --
-     there's no free-editing HTML body field here at all, so a "New Page" from
-     the CMS can never corrupt page structure the way a full-markdown body can. -->
+     homepage hero, Resources, and Register pages) -- only shown when this page
+     has a hero image. All content on this page comes from CMS fields (title,
+     hero_subtitle, hero_description, sections) -- there's no free-editing HTML
+     body field here at all, so a "New Page" from the CMS can never corrupt
+     page structure the way a full-markdown body can. -->
+{% if page.hero_image %}
 <section class="relative left-1/2 right-1/2 w-screen -ml-[50vw] -mr-[50vw]">
   <div class="relative h-[45vh] min-h-[360px] max-h-[520px] bg-[20%] bg-cover" style="background-image: url('{{ page.hero_image | relative_url }}');">
     <div class="absolute inset-0 bg-gradient-to-b from-cub-blue/70 via-black/45 to-black/60"></div>
@@ -16,20 +18,31 @@ layout: default
           {{ page.title }}
         </h1>
         {% if page.hero_subtitle %}
-        <p class="mt-4 text-lg sm:text-xl">
+        <p class="mt-2 text-xl sm:text-2xl text-white">
           {{ page.hero_subtitle }}
+        </p>
+        {% endif %}
+        {% if page.hero_description %}
+        <p class="mt-4 text-lg sm:text-xl text-white">
+          {{ page.hero_description | markdownify | remove: "<p>" | remove: "</p>" }}
         </p>
         {% endif %}
       </div>
     </div>
   </div>
 </section>
+{% endif %}
 
 <div class="max-w-3xl px-3 md:px-8 py-10">
 
-{% if page.hero_description %}
-<p class="text-lg leading-7">{{ page.hero_description | markdownify | remove: "<p>" | remove: "</p>" }}</p>
-{% endif %}
+{% unless page.hero_image %}
+  {% if page.hero_subtitle %}
+  <p class="text-xl text-slate-600">{{ page.hero_subtitle }}</p>
+  {% endif %}
+  {% if page.hero_description %}
+  <p class="mt-4 text-lg leading-7">{{ page.hero_description | markdownify | remove: "<p>" | remove: "</p>" }}</p>
+  {% endif %}
+{% endunless %}
 
 <div class="prose prose-copy">
 {% for section in page.sections %}

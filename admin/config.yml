@@ -95,7 +95,11 @@ collections:
       preview: false
     fields:
       - { label: "Page title", name: "title", widget: "string" }
-      - { label: "Hero image", name: "hero_image", widget: "image" }
+      - label: "Hero image"
+        name: "hero_image"
+        widget: "image"
+        required: false
+        hint: "Optional. With a photo, the title and subtitle show over it in gold and white. Without one, the page just gets a plain green title like the rest of the site."
       - { label: "Hero subtitle", name: "hero_subtitle", widget: "string", required: false }
       - label: "Hero description"
         name: "hero_description"

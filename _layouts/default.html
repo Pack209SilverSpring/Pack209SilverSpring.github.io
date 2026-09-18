@@ -24,15 +24,30 @@
      class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-[60] focus:rounded-[5px] focus:bg-white focus:px-4 focus:py-2 focus:font-semibold focus:text-cub-blue focus:shadow-lg focus:outline focus:outline-2 focus:outline-cub-blue">
     Skip to main content
   </a>
+  {%- comment -%}
+    A page counts as "having a hero" if it explicitly sets hero_header (the
+    hand-coded pages always do), OR if it has a hero_image (the generic-page
+    layout, where hero_header isn't set per-page -- whether the transparent
+    floating header and cub-gold/white hero text apply is decided here, from
+    whether there's actually an image to float over).
+  {%- endcomment -%}
+  {%- assign has_hero = false -%}
+  {%- if page.hero_header or page.hero_image -%}
+    {%- assign has_hero = true -%}
+  {%- endif -%}
+  {%- assign hide_default_title = false -%}
+  {%- if page.hideTitle or page.hero_image -%}
+    {%- assign hide_default_title = true -%}
+  {%- endif -%}
   <!-- Top bar -->
-  <header id="site-header" class="group border-b-4 transition-colors duration-300 {% if page.hero_header %}fixed inset-x-0 top-0 z-50 is-transparent bg-transparent border-transparent [&.scrolled]:bg-white [&.scrolled]:border-cub-gold [&.scrolled]:shadow-sm{% else %}relative bg-white border-cub-gold{% endif %}">
+  <header id="site-header" class="group border-b-4 transition-colors duration-300 {% if has_hero %}fixed inset-x-0 top-0 z-50 is-transparent bg-transparent border-transparent [&.scrolled]:bg-white [&.scrolled]:border-cub-gold [&.scrolled]:shadow-sm{% else %}relative bg-white border-cub-gold{% endif %}">
   <div class="max-w-6xl px-4 mx-auto">
   <div class="flex items-center justify-between h-20">
       <!-- Brand logo -->
       <a href="{{ '/' | relative_url }}" class="flex items-center gap-3 ">
         <img src="{{ '/assets/images/pack209-logo.png' | relative_url }}" alt="Pack 209"
              class="w-auto h-12">
-        {% if page.hero_header %}
+        {% if has_hero %}
           <p class="text-md font-heading font-semibold leading-none text-white transition-colors duration-300 group-[.scrolled]:text-cub-blue">Cub Scout <br />Pack 209</p>
         {% else %}
           <p class="text-md font-heading font-semibold leading-none text-cub-blue">Cub Scout <br />Pack 209</p>
@@ -41,7 +56,7 @@
 
       <!-- Desktop nav -->
       {% assign nav_link_class = "font-medium transition-colors duration-300 " %}
-      {% if page.hero_header %}
+      {% if has_hero %}
         {% assign nav_link_class = nav_link_class | append: "text-white/90 font-heading hover:text-white group-[.scrolled]:text-cub-blue group-[.scrolled]:hover:text-blue-600" %}
       {% else %}
         {% assign nav_link_class = nav_link_class | append: "text-cub-blue font-heading hover:text-cub-blue" %}
@@ -56,7 +71,7 @@
       </nav>
 
       <!-- Mobile menu button -->
-      <button id="mobile-menu-button" type="button" class="inline-flex items-center justify-center p-3 transition-colors duration-300 rounded-[5px] md:hidden focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-cub-gold {% if page.hero_header %}text-white hover:bg-white/10 group-[.scrolled]:text-cub-blue group-[.scrolled]:hover:bg-slate-100{% else %}text-cub-blue hover:bg-slate-100{% endif %}"
+      <button id="mobile-menu-button" type="button" class="inline-flex items-center justify-center p-3 transition-colors duration-300 rounded-[5px] md:hidden focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-cub-gold {% if has_hero %}text-white hover:bg-white/10 group-[.scrolled]:text-cub-blue group-[.scrolled]:hover:bg-slate-100{% else %}text-cub-blue hover:bg-slate-100{% endif %}"
               aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
@@ -78,8 +93,8 @@
   </header>
 
   <!-- Page content -->
-  <main id="content" class="container flex-1 max-w-6xl px-2 md:px-4 mx-auto {% if page.hero_header %}pt-0{% else %}pt-10{% endif %}">
-    {% unless page.hideTitle %}
+  <main id="content" class="container flex-1 max-w-6xl px-2 md:px-4 mx-auto {% if has_hero %}pt-0{% else %}pt-10{% endif %}">
+    {% unless hide_default_title %}
       {% if page.title or page.subtitle %}
         <div class="flex flex-col border-b border-gray-300 min-h-14">
           {% if page.title %}
@@ -138,7 +153,8 @@
       // otherwise, near the top of a hero page, the top nav bar stays
       // see-through behind the (opaque, white) mobile menu panel dropped
       // below it, which looks broken. Only active on pages that opt in
-      // via the `is-transparent` marker class (page.hero_header: true).
+      // via the `is-transparent` marker class (page.hero_header: true, or a
+      // generic page with a hero_image -- see `has_hero` near the top of this file).
       function updateHeaderState() {
         if (!isTransparentHeader) return;
         var menuOpen = mobileMenu && !mobileMenu.classList.contains('hidden');

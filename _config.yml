@@ -43,14 +43,17 @@ collections:
     output: true
     permalink: /:slug/
 
+# hideTitle/hero_header aren't set here: whether a given generic page shows
+# the plain title block or the transparent floating hero header now depends
+# on whether that page has a hero_image, computed in _layouts/default.html
+# (see `has_hero`) -- a blanket default here would force every generic page
+# into hero styling even when it has no hero photo to show.
 defaults:
   - scope:
       path: ""
       type: "generic_pages"
     values:
       layout: "generic-page"
-      hideTitle: true
-      hero_header: true
 
 # Google Calendar config. The GCALENDAR_KEY_JSON GitHub Actions secret is
 # written out to gcalendar-key.json at build time (see .github/workflows/pages.yml).
