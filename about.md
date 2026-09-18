@@ -106,7 +106,7 @@ closing_cta_text: |
   </div>
     <div class="flex">
         <a href="/join"
-            class="px-6 py-3 mx-auto mt-5 font-bold transition bg-cub-gold rounded-[5px] text-cub-blue hover:bg-yellow-300">
+            class="px-6 py-3 mx-auto mt-5 font-bold transition bg-cub-gold rounded-[5px] text-cub-blue hover:bg-yellow-300 no-underline">
             Join Pack 209
         </a>
     </div>
@@ -176,11 +176,11 @@ closing_cta_text: |
         {{ page.closing_cta_text | markdownify }}
     </div>
     <div class="mt-6">
-        <a href="/join" class="inline-flex items-center px-6 py-3 font-bold font-heading transition bg-cub-gold rounded-[5px] text-cub-blue hover:bg-yellow-300">
+        <a href="/join" class="inline-flex items-center px-6 py-3 font-bold font-heading transition bg-cub-gold rounded-[5px] text-cub-blue hover:bg-yellow-300 no-underline">
           Join Pack 209
         </a>
         <a href="/contact"
-            class="inline-flex items-center px-6 py-3 ml-4 font-bold font-heading text-white transition rounded-[5px] bg-cub-blue hover:bg-blue-900">
+            class="inline-flex items-center px-6 py-3 ml-4 font-bold font-heading text-white transition rounded-[5px] bg-cub-blue hover:bg-blue-900 no-underline">
             Contact Us
         </a>
     </div>

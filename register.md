@@ -70,7 +70,7 @@ closing_text: >-
           {{ page.national_dues_returning_note }}
         </p>
         <dl class="mt-5 text-sm text-slate-500 space-y-1">
-          <div class="flex gap-2"><dt class="font-semibold text-cub-blue/80 min-w-24">Where:</dt><dd>my.scouting.org (you'll create an account if you don't have one)</dd></div>
+          <div class="flex gap-2"><dt class="font-semibold text-cub-blue/80 min-w-24">Where:</dt><dd>my.scouting.org<br />(you'll create an account if you don't have one)</dd></div>
           <div class="flex gap-2"><dt class="font-semibold text-cub-blue/80 min-w-24">Done when:</dt><dd>You receive a registration confirmation email</dd></div>
         </dl>
         <div class="flex flex-col mt-6 gap-3">
@@ -78,7 +78,7 @@ closing_text: >-
              target="_blank" rel="noopener"
              class="flex items-baseline justify-between gap-4 px-5 py-4 transition font-heading rounded-[5px] bg-cub-blue ring-1 ring-cub-blue hover:bg-blue-900">
             <span class="text-xs font-semibold tracking-[0.2em] uppercase text-white/90">Register through Scouting America</span>
-            <span class="text-xl font-extrabold text-white">{{ page.national_dues_amount }}</span>
+            <span class="text-xl font-extrabold text-white">${{ page.national_dues_amount }}</span>
           </a>
         </div>
       </article>
@@ -100,12 +100,12 @@ closing_text: >-
         <div class="mt-6 rounded-[5px] p-5" style="background-color:#6D1ED4">
           <div class="flex items-baseline justify-between">
             <span class="text-xs font-semibold tracking-[0.2em] uppercase text-white/90">Pay pack dues</span>
-            <span class="text-xl font-extrabold text-white">{{ page.pack_dues_amount }}</span>
+            <span class="text-xl font-extrabold text-white">${{ page.pack_dues_amount }}</span>
           </div>
           <p class="mt-2 text-sm font-semibold text-white">Pay with <span class="text-lg font-extrabold tracking-tight text-white">Zelle&reg;</span></p>
           <p class="mt-1 text-sm text-purple-100">
             Send $115 to
-            <a href="mailto:Treasurer@cubscoutpack209.org" class="underline decoration-white/60 underline-offset-2 hover:decoration-white">Treasurer@cubscoutpack209.org</a>
+            <a href="mailto:Treasurer@cubscoutpack209.org" class="underline text-white decoration-white/60 underline-offset-2 hover:decoration-white">Treasurer@cubscoutpack209.org</a>
             using Zelle in your banking app.
           </p>
         </div>
@@ -125,8 +125,8 @@ closing_text: >-
           {{ page.uniform_description }}
         </p>
         <dl class="mt-5 text-sm text-slate-500 space-y-1">
-          <div class="flex gap-2"><dt class="font-semibold text-cub-blue/80 min-w-24">Where:</dt><dd>National Capital Scout Shop — 9190 Rockville Pike, Bethesda, MD 20814 <span class="text-slate-400">((301) 564-1091 · Mon–Fri 9:30am–5pm, Sat 10am–3pm, closed Sun)</span> <span class="text-slate-400">(or <a href="https://www.scoutshop.org/" rel="noopener" class="text-cub-blue/80 underline decoration-cub-blue/30 underline-offset-2 hover:decoration-cub-blue">shop online</a>)</span></dd></div>
-          <div class="flex gap-2"><dt class="font-semibold text-cub-blue/80 min-w-24">Done when:</dt><dd>Your scout has a shirt, pants, and neckerchief that fit</dd></div>
+          <div class="flex gap-2"><dt class="font-semibold text-cub-blue/80 min-w-24">Where:</dt><dd>National Capital Scout Shop <br /> 9190 Rockville Pike, Bethesda, MD 20814 <span class="text-slate-400"><br />(301) 564-1091 <br /> Mon–Fri 9:30am–5pm, Sat 10am–3pm<br />closed Sun</span><br /><span class="text-slate-400">(or <a href="https://www.scoutshop.org/" rel="noopener" class="text-cub-blue/80 underline decoration-cub-blue/30 underline-offset-2 hover:decoration-cub-blue">shop online</a>)</span></dd></div>
+          <div class="flex gap-2"><dt class="font-semibold text-cub-blue/80 min-w-24">Done when:</dt><dd>Your scout has a shirt, pants, and neckerchief</dd></div>
         </dl>
       </article>
       <!-- STEP 4 · Medical form + optional talent survey -->
@@ -174,7 +174,7 @@ closing_text: >-
       </p>
       <div class="mt-8">
         <a href="mailto:cubmaster@cubscoutpack209.org?subject=Registration%20help"
-           class="inline-flex items-center justify-center px-7 py-3.5 font-bold font-heading transition bg-cub-gold rounded-[5px] text-cub-blue hover:bg-yellow-300">
+           class="inline-flex items-center justify-center px-7 py-3.5 font-bold font-heading transition bg-cub-gold rounded-[5px] text-cub-blue hover:bg-yellow-300 no-underline">
           Email cubmaster@cubscoutpack209.org
         </a>
       </div>
