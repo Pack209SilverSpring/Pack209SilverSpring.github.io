@@ -7,12 +7,12 @@ hideTitle: true
 ---
 
 <section class="mx-auto max-w-6xl md:px-4 py-10">
-  <h2 class="text-2xl md:text-3xl font-bold text-forest">Calendar</h2>
+  <h1 class="text-2xl md:text-3xl font-extrabold text-forest">Calendar</h1>
 
   {% include calendar-widget.html %}
 
   <div class="mt-8">
-    <h3 class="text-lg font-bold text-cub-blue">Subscribe in Google Calendar</h3>
+    <h2 class="text-lg font-bold text-cub-blue">Subscribe in Google Calendar</h2>
     <p class="mt-2 text-sm text-slate-600">Open the calendar in Google Calendar to subscribe and get updates on your phone.</p>
 
     <div class="mt-3 flex flex-wrap gap-2">
@@ -21,7 +21,7 @@ hideTitle: true
         <a href="https://calendar.google.com/calendar/render?cid={{ cal.id | url_encode }}"
            target="_blank" rel="noopener noreferrer"
            class="inline-flex items-center rounded-[5px] px-3 py-2 text-sm font-medium font-heading ring-1 ring-slate-300 bg-white hover:bg-slate-50">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
           </svg>
           {{ cal.name }}

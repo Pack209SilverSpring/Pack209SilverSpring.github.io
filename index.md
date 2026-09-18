@@ -59,12 +59,12 @@ navbarText: Silver Spring, MD
   <div class="relative h-[80vh] min-h-[520px] max-h-[820px] bg-[20%] bg-cover" style="background-image: url('{{ page.hero_image | relative_url }}');">
     <div class="absolute inset-0 bg-gradient-to-b from-cub-blue/70 via-black/45 to-black/60"></div>
     <div class="relative h-full max-w-6xl px-4 mx-auto">
-      <div class="flex flex-col items-start justify-center h-full max-w-2xl text-left text-white">
-        <h1 class="text-4xl sm:text-5xl md:text-6xl text-white font-extrabold">
+      <div class="flex flex-col items-start justify-center h-full max-w-2xl text-left">
+        <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold text-cub-gold">
           {{ page.hero_title }}
         </h1>
         <h2 class="mt-2 mb-3 text-xl sm:text-2xl md:text-3xl text-white line-height-sm">{{ page.hero_subtitle }}</h2>
-        <p class="text-lg sm:text-xl">
+        <p class="text-lg sm:text-xl text-white">
           {{ page.hero_description }}
         </p>
         <div class="flex flex-col w-full gap-4 mt-8 sm:w-auto sm:flex-row sm:flex-wrap">
@@ -83,7 +83,7 @@ navbarText: Silver Spring, MD
 <!-- ANNOUNCEMENT BANNER: text is a CMS-editable frontmatter field (announcement_text) so leaders can update it without touching code. Set announcement_visible: false in front matter (or via /admin) to hide it. -->
 {% if page.announcement_visible %}
 <section class="px-4 py-3 text-sm font-medium text-center text-forest bg-yellow-100 relative left-1/2 right-1/2 w-screen -ml-[50vw] -mr-[50vw] mb-6">
-  📣 {{ page.announcement_text }}
+  <span aria-hidden="true">📣</span> {{ page.announcement_text }}
 </section>
 {% endif %}
 
@@ -216,7 +216,7 @@ navbarText: Silver Spring, MD
     </p>
     <ul class="mt-6 space-y-3">
       {% for bullet in page.why_bullets %}
-      <li class="flex items-start gap-3"><span class="mt-1">{{ bullet.emoji }}</span> <span>{{ bullet.text }}</span></li>
+      <li class="flex items-start gap-3"><span class="mt-1" aria-hidden="true">{{ bullet.emoji }}</span> <span>{{ bullet.text }}</span></li>
       {% endfor %}
     </ul>
     <div class="mt-6">

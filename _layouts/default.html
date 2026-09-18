@@ -20,6 +20,10 @@
   <meta name="description" content="{{ page.excerpt | default: site.description | default: 'Scouting adventures, friends, and fun.' | strip_html }}">
 </head>
 <body class="flex flex-col min-h-screen overflow-x-hidden bg-slate-50 text-slate-800">
+  <a href="#content"
+     class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-[60] focus:rounded-[5px] focus:bg-white focus:px-4 focus:py-2 focus:font-semibold focus:text-cub-blue focus:shadow-lg focus:outline focus:outline-2 focus:outline-cub-blue">
+    Skip to main content
+  </a>
   <!-- Top bar -->
   <header id="site-header" class="group border-b-4 transition-colors duration-300 {% if page.hero_header %}fixed inset-x-0 top-0 z-50 is-transparent bg-transparent border-transparent [&.scrolled]:bg-white [&.scrolled]:border-cub-gold [&.scrolled]:shadow-sm{% else %}relative bg-white border-cub-gold{% endif %}">
   <div class="max-w-6xl px-4 mx-auto">
@@ -42,7 +46,7 @@
       {% else %}
         {% assign nav_link_class = nav_link_class | append: "text-cub-blue font-heading hover:text-cub-blue" %}
       {% endif %}
-      <nav class="items-center hidden gap-8 md:flex">
+      <nav class="items-center hidden gap-8 md:flex" aria-label="Primary">
       <a class="{{ nav_link_class }}" href="{{ '/about/' | relative_url }}">About</a>
       <a class="{{ nav_link_class }}" href="{{ '/calendar/' | relative_url }}">Calendar</a>
       <a class="{{ nav_link_class }}" href="{{ '/resources/' | relative_url }}">Resources</a>
@@ -52,9 +56,9 @@
       </nav>
 
       <!-- Mobile menu button -->
-      <button id="mobile-menu-button" class="inline-flex items-center justify-center p-3 transition-colors duration-300 rounded-[5px] md:hidden focus:outline-none {% if page.hero_header %}text-white hover:bg-white/10 group-[.scrolled]:text-cub-blue group-[.scrolled]:hover:bg-slate-100{% else %}text-cub-blue hover:bg-slate-100{% endif %}"
-              aria-label="Open menu" aria-expanded="false">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <button id="mobile-menu-button" type="button" class="inline-flex items-center justify-center p-3 transition-colors duration-300 rounded-[5px] md:hidden focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-cub-gold {% if page.hero_header %}text-white hover:bg-white/10 group-[.scrolled]:text-cub-blue group-[.scrolled]:hover:bg-slate-100{% else %}text-cub-blue hover:bg-slate-100{% endif %}"
+              aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
         </svg>
       </button>
@@ -63,7 +67,7 @@
 
   <!-- Mobile menu (hidden by default) -->
   <div id="mobile-menu" class="hidden w-full px-4 pb-4 bg-white border-t border-slate-100 md:hidden">
-    <nav class="flex flex-col mt-2 space-y-1">
+    <nav class="flex flex-col mt-2 space-y-1" aria-label="Mobile">
       <a class="px-4 py-2 font-medium rounded text-slate-700 hover:bg-slate-50 hover:text-cub-blue" href="{{ '/about/' | relative_url }}">About</a>
       <a class="px-4 py-2 font-medium rounded text-slate-700 hover:bg-slate-50 hover:text-cub-blue" href="{{ '/calendar/' | relative_url }}">Calendar</a>
       <a class="px-4 py-2 font-medium rounded text-slate-700 hover:bg-slate-50 hover:text-cub-blue" href="{{ '/resources/' | relative_url }}">Resources</a>
@@ -146,6 +150,15 @@
       function toggleMenu() {
         const isHidden = mobileMenu.classList.toggle('hidden');
         mobileMenuButton.setAttribute('aria-expanded', !isHidden);
+        mobileMenuButton.setAttribute('aria-label', isHidden ? 'Open menu' : 'Close menu');
+        updateHeaderState();
+      }
+
+      function closeMenu() {
+        if (mobileMenu.classList.contains('hidden')) return;
+        mobileMenu.classList.add('hidden');
+        mobileMenuButton.setAttribute('aria-expanded', 'false');
+        mobileMenuButton.setAttribute('aria-label', 'Open menu');
         updateHeaderState();
       }
 
@@ -160,9 +173,16 @@
         if (!mobileMenu.classList.contains('hidden') &&
             !mobileMenu.contains(event.target) &&
             !mobileMenuButton.contains(event.target)) {
-          mobileMenu.classList.add('hidden');
-          mobileMenuButton.setAttribute('aria-expanded', 'false');
-          updateHeaderState();
+          closeMenu();
+        }
+      });
+
+      // Close on Escape, and return focus to the toggle button so keyboard
+      // users aren't left with focus stranded inside a now-hidden panel.
+      document.addEventListener('keydown', function(event) {
+        if (event.key === 'Escape' && !mobileMenu.classList.contains('hidden')) {
+          closeMenu();
+          mobileMenuButton.focus();
         }
       });
 
