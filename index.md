@@ -1,6 +1,6 @@
 ---
 announcement_visible: true
-announcement_text: Come to our Join Scouting event on 9/15! <a href="/join"
+announcement_text: Missed our Join Scouting event on 9/15? <a href="/join"
   class="underline hover:no-underline">Learn more</a> or <a
   href="mailto:cubmaster@cubscoutpack209.org" class="underline
   hover:no-underline">contact us</a>
