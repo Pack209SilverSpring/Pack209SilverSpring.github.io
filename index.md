@@ -4,7 +4,7 @@ announcement_text: Come to our Join Scouting event on 9/15! <a href="/join"
   class="underline hover:no-underline">Learn more</a> or <a
   href="mailto:cubmaster@cubscoutpack209.org" class="underline
   hover:no-underline">contact us</a>
-hero_image: /assets/images/209_scoutshikee.png
+hero_image: /assets/images/209_scoutshikee.jpg
 why_image: /assets/images/209_denmeeting.jpg
 why_image_alt: Pack 209 Cub Scouts on a family camping trip
 why_text: "Pack 209 meets in Silver Spring, MD, and is open to any kid in

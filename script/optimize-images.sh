@@ -45,11 +45,15 @@ png_settings() {
   local name="$1"
 
   case "$name" in
+    # Small square leader headshots -- these are the only PNGs that should
+    # stay tiny. Everything else (hero photos, content images uploaded
+    # through the Decap CMS media picker, etc.) needs real resolution, so
+    # the default below is sized for a full-width photo, not an avatar.
     blankleader.png|cubmaster.png|lionleader.png|tigerleader.png|wolfleader.png|bearleader.png|webelosleader.png|arrowoflightleader.png|jakeh.png|jyothim.png|lindyw.png|richp.png|davidt.png|denchief.png)
       echo "256"
       ;;
     *)
-      echo "512"
+      echo "1600"
       ;;
   esac
 }
