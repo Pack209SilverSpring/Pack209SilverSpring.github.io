@@ -26,13 +26,13 @@ hero_subtitle: Everything Pack 209 families need to know, in one place.
   </div>
 </section>
 
-<div class="max-w-3xl px-4 py-10">
+<div class="max-w-3xl px-2 md:px-8 py-10">
 
 <p class="text-lg leading-7">
 Family is a critical part of our Pack and the Cub Scout experience — thank you to our parents, family members, and other caregivers for being part of our team!
 </p>
 
-<div class="p-6 mt-8 rounded-[5px] bg-slate-50 ring-1 ring-slate-200">
+<div class="p-3 md:p-6 mt-8 rounded-[5px] bg-slate-50 ring-1 ring-slate-200">
   <h2 class="text-xs font-semibold tracking-[0.2em] uppercase text-cub-blue/70">Quick Links</h2>
   <ul class="grid gap-x-6 gap-y-2 mt-3 leading-7 sm:grid-cols-2 list-none">
     <li><a href="{{ '/calendar/' | relative_url }}" class="text-cub-blue underline decoration-cub-blue/30 underline-offset-2 hover:decoration-cub-blue">Pack Calendar</a></li>

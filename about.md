@@ -72,7 +72,7 @@ closing_cta_text: |
   </div>
 </section>
 
-<div class="grid items-center gap-12 p-12 mt-10 bg-white md:grid-cols-2">
+<div class="grid items-center gap-12 p-3 md:p-12 mt-10 bg-white md:grid-cols-2">
     <div class="prose prose-copy text-lg">
         <h2 class="text-2xl font-bold text-forest">Our Pack</h2>
         {{ page.our_pack_text | markdownify }}
@@ -84,14 +84,14 @@ closing_cta_text: |
 
 </div>
 
-<div class="mt-16 px-8">
+<div class="mt-16 px-2 md:px-8">
     <h2 class="text-2xl font-bold text-forest">Our Story</h2>
     <div class="prose prose-copy text-md">
         {{ page.our_story_text | markdownify }}
     </div>
 </div>
 
-<div class="px-8 py-10 mt-12 text-white shadow-lg rounded-[5px] bg-scout-blue">
+<div class="px-4 md:px-8 py-10 mt-12 text-white shadow-lg rounded-[5px] bg-scout-blue">
   <h2 class="m-0 text-3xl font-bold tracking-tight text-center text-white">
     Our Hosts and Leaders
   </h2>
@@ -111,7 +111,7 @@ closing_cta_text: |
         </a>
     </div>
 </div>
-<div class="mt-16 px-8">
+<div class="mt-16 px-4 md:px-8">
     <h2 class="text-2xl font-bold text-forest">Scout Law</h2>
     <p class="mt-4 text-lg">These are the principles we teach our scouts. We hope they all grow up to be:</p>
     <div class="flex justify-between flex-wrap gap-2 mt-6 text-center">
@@ -131,7 +131,7 @@ closing_cta_text: |
 </div>
 
 <div class="mt-16">
-    <div class="grid gap-12 p-8 bg-white md:grid-cols-2">
+    <div class="grid gap-12 p-4 md:p-8 bg-white md:grid-cols-2">
         <div>
             <h2 class="text-2xl font-bold text-forest">Cub Scout Motto & Slogan</h2>
             <div class="mt-4">
@@ -153,7 +153,7 @@ closing_cta_text: |
             <h2 class="text-2xl font-bold text-forest">The Outdoor Code</h2>
             <div class="mt-4">
                 <p class="italic">As an American, I will do my best to —</p>
-                <ul class="mt-4 space-y-2">
+                <ul class="mt-4 space-y-2 list-none">
                     <li><span class="font-semibold">Be clean in my outdoor manners.</span> A Cub Scout takes care of the
                         outdoors and keeps it clean.</li>
                     <li><span class="font-semibold">Be careful with fire.</span> A Cub Scout may enjoy a campfire only

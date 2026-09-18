@@ -52,11 +52,11 @@ closing_text: >-
 </section>
 
 <!-- FOUR STEPS -->
-<section class="px-4 mt-16 sm:px-6 lg:px-8">
+<section class="mt-16 sm:px-4 lg:px-8">
   <div class="max-w-6xl mx-auto">
     <div class="grid gap-6 md:grid-cols-2">
       <!-- STEP 1 · National dues -->
-      <article class="flex flex-col p-8 bg-white rounded-[5px] ring-1 ring-slate-200">
+      <article class="flex flex-col p-3 md:p-8 bg-white rounded-[5px] ring-1 ring-slate-200">
         <div class="flex items-center justify-between">
           <span class="inline-flex items-center justify-center w-12 h-12 text-xl font-extrabold rounded-full bg-cub-blue text-white">1</span>
         </div>
@@ -83,7 +83,7 @@ closing_text: >-
         </div>
       </article>
       <!-- STEP 2 · Pack dues -->
-      <article class="flex flex-col p-8 bg-white rounded-[5px] ring-1 ring-slate-200">
+      <article class="flex flex-col p-3 md:p-8 bg-white rounded-[5px] ring-1 ring-slate-200">
         <div class="flex items-center justify-between">
           <span class="inline-flex items-center justify-center w-12 h-12 text-xl font-extrabold rounded-full bg-cub-blue text-white">2</span>
         </div>
@@ -114,7 +114,7 @@ closing_text: >-
         </p>
       </article>
       <!-- STEP 3 · Uniform -->
-      <article class="flex flex-col p-8 bg-white rounded-[5px] ring-1 ring-slate-200">
+      <article class="flex flex-col p-3 md:p-8 bg-white rounded-[5px] ring-1 ring-slate-200">
         <div class="flex items-center justify-between">
           <span class="inline-flex items-center justify-center w-12 h-12 text-xl font-extrabold rounded-full bg-cub-blue text-white">3</span>
         </div>
@@ -130,7 +130,7 @@ closing_text: >-
         </dl>
       </article>
       <!-- STEP 4 · Medical form + optional talent survey -->
-      <article class="flex flex-col p-8 bg-white rounded-[5px] ring-1 ring-slate-200">
+      <article class="flex flex-col p-3 md:p-8 bg-white rounded-[5px] ring-1 ring-slate-200">
         <div class="flex items-center justify-between">
           <span class="inline-flex items-center justify-center w-12 h-12 text-xl font-extrabold rounded-full bg-cub-blue text-white">4</span>
         </div>
