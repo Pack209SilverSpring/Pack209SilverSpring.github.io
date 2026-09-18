@@ -15,8 +15,12 @@ cards:
 
 <!-- TODO: once Pack 209 has its own program overview PDF, re-add a download hero here. -->
 
+<div class="max-w-6xl px-4 pt-12 mx-auto text-center sm:px-6 lg:px-8">
+  <h1 class="text-3xl font-extrabold sm:text-4xl text-forest">Join Pack 209</h1>
+</div>
+
 <!-- TWO CTAs -->
-<section class="px-4 mt-12 mb-12 sm:px-6 lg:px-8 sm:mt-16">
+<section class="px-4 mt-6 mb-12 sm:px-6 lg:px-8 sm:mt-8">
   <div class="grid max-w-6xl gap-6 mx-auto md:grid-cols-2">
     <a href="/register"
        class="group block p-8 transition font-heading rounded-[5px] bg-cub-gold ring-1 ring-slate-200 hover:bg-yellow-300 no-underline">

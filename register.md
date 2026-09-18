@@ -40,7 +40,7 @@ closing_text: >-
     <div class="absolute inset-0 bg-gradient-to-b from-cub-blue/70 via-black/45 to-black/60"></div>
     <div class="relative h-full max-w-6xl px-4 mx-auto">
       <div class="flex flex-col items-start justify-center h-full max-w-2xl text-left text-white">
-        <h1 class="text-4xl font-extrabold sm:text-5xl md:text-6xl">
+        <h1 class="text-4xl font-extrabold sm:text-5xl md:text-6xl text-cub-gold">
           {{ page.hero_title }}
         </h1>
         <p class="mt-4 text-lg sm:text-xl">
@@ -54,6 +54,7 @@ closing_text: >-
 <!-- FOUR STEPS -->
 <section class="mt-16 sm:px-4 lg:px-8">
   <div class="max-w-6xl mx-auto">
+    <h2 class="sr-only">Four steps to register</h2>
     <div class="grid gap-6 md:grid-cols-2">
       <!-- STEP 1 · National dues -->
       <article class="flex flex-col p-3 md:p-8 bg-white rounded-[5px] ring-1 ring-slate-200">

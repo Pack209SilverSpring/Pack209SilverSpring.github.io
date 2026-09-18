@@ -61,7 +61,7 @@ closing_cta_text: |
     <div class="absolute inset-0 bg-gradient-to-b from-cub-blue/70 via-black/45 to-black/60"></div>
     <div class="relative h-full max-w-6xl px-4 mx-auto">
       <div class="flex flex-col items-start justify-center h-full max-w-2xl text-left text-white">
-        <h1 class="text-4xl font-extrabold sm:text-5xl md:text-6xl">
+        <h1 class="text-4xl font-extrabold sm:text-5xl md:text-6xl text-cub-gold">
           {{ page.hero_title }}
         </h1>
         <p class="mt-4 text-lg sm:text-xl">

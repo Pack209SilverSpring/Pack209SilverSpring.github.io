@@ -15,7 +15,7 @@ hero_subtitle: Everything Pack 209 families need to know, in one place.
     <div class="absolute inset-0 bg-gradient-to-b from-cub-blue/70 via-black/45 to-black/60"></div>
     <div class="relative h-full max-w-6xl px-4 mx-auto">
       <div class="flex flex-col items-start justify-center h-full max-w-2xl text-left text-white">
-        <h1 class="text-4xl font-extrabold sm:text-5xl md:text-6xl">
+        <h1 class="text-4xl font-extrabold sm:text-5xl md:text-6xl text-cub-gold">
           {{ page.hero_title }}
         </h1>
         <p class="mt-4 text-lg sm:text-xl">
@@ -62,7 +62,7 @@ As a Cub Scout parent/caregiver, your involvement is integral to your Scout havi
 - Have fun! Take part and enjoy spending time with your Cub Scout and their friends.
 {: class="mt-4 space-y-3 leading-7 list-disc list-outside pl-5" }
 
-[Click here to access Cub Scouting information from Scouting America](https://www.scouting.org/).
+[Visit Scouting America for more Cub Scouting information](https://www.scouting.org/).
 
 ## Help Wanted: How to "Help the Pack Go!"
 {: class="mt-12 text-2xl font-bold text-forest" }

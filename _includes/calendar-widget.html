@@ -31,10 +31,13 @@
   }
   #calendar .fc-dayGridMonth-view .fc-daygrid-event .fc-event-time { flex-shrink: 0; margin-right: 0.25rem; }
 
-  /* Month-view only: highlight today's date number */
+  /* Month-view only: highlight today's date number. Text is a dark
+     slate rather than white -- white-on-#ca8a04 only reaches ~2.9:1
+     contrast (fails WCAG's 4.5:1 minimum for this size text); the dark
+     text below clears ~5:1. */
   #calendar .fc-dayGridMonth-view .fc-day-today .fc-daygrid-day-number {
     background: #ca8a04;
-    color: white;
+    color: #1e293b;
     font-weight: 800;
     border-radius: 9999px;
     padding: 0.15rem 0.5rem;

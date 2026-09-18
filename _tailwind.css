@@ -47,13 +47,13 @@
      so it reaches every page. Deliberately carries NO margin/padding/
      leading, so it can never fight a hand-coded page's own spacing. */
   .prose h1 {
-    @apply text-4xl font-extrabold text-cub-gold;
+    @apply text-4xl font-extrabold text-forest;
   }
   .prose h2 {
     @apply text-3xl font-bold text-cub-blue;
   }
   .prose h3 {
-    @apply text-2xl font-bold text-cub-gold;
+    @apply text-2xl font-bold text-cub-blue;
   }
   .prose ul {
     @apply list-disc list-outside;
