@@ -175,12 +175,12 @@ closing_cta_text: |
     <div class="mt-4 text-lg leading-7 text-white prose prose-copy">
         {{ page.closing_cta_text | markdownify }}
     </div>
-    <div class="mt-6">
-        <a href="/join" class="inline-flex items-center px-6 py-3 font-bold font-heading transition bg-cub-gold rounded-[5px] text-cub-blue hover:bg-yellow-300 no-underline">
+    <div class="flex flex-col w-full gap-4 mt-6 sm:w-auto sm:flex-row sm:flex-wrap">
+        <a href="/join" class="inline-flex items-center justify-center w-full px-6 py-3 font-bold font-heading transition bg-cub-gold rounded-[5px] text-cub-blue hover:bg-yellow-300 no-underline sm:w-auto">
           Join Pack 209
         </a>
         <a href="/contact"
-            class="inline-flex items-center px-6 py-3 ml-4 font-bold font-heading text-white transition rounded-[5px] bg-cub-blue hover:bg-blue-900 no-underline">
+            class="inline-flex items-center justify-center w-full px-6 py-3 font-bold font-heading text-white transition rounded-[5px] bg-cub-blue hover:bg-blue-900 no-underline sm:w-auto">
             Contact Us
         </a>
     </div>

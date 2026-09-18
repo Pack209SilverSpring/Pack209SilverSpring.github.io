@@ -175,7 +175,7 @@ closing_text: >-
       <div class="mt-8">
         <a href="mailto:cubmaster@cubscoutpack209.org?subject=Registration%20help"
            class="inline-flex items-center justify-center px-7 py-3.5 font-bold font-heading transition bg-cub-gold rounded-[5px] text-cub-blue hover:bg-yellow-300 no-underline">
-          Email cubmaster@cubscoutpack209.org
+          Contact Us
         </a>
       </div>
     </div>

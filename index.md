@@ -67,11 +67,11 @@ navbarText: Silver Spring, MD
         <p class="text-lg sm:text-xl">
           {{ page.hero_description }}
         </p>
-        <div class="flex flex-wrap gap-4 mt-8">
-          <a href="/join" class="inline-flex items-center px-6 py-3 font-bold font-heading transition bg-yellow-400 rounded-[5px] text-blue-900 hover:bg-yellow-600 no-underline">
+        <div class="flex flex-col w-full gap-4 mt-8 sm:w-auto sm:flex-row sm:flex-wrap">
+          <a href="/join" class="inline-flex items-center justify-center w-full px-6 py-3 font-bold font-heading transition bg-yellow-400 rounded-[5px] text-blue-900 hover:bg-yellow-600 no-underline sm:w-auto">
             Join Now
           </a>
-          <a href="/calendar" class="inline-flex items-center px-6 py-3 font-semibold font-heading text-white transition rounded-[5px] bg-cub-blue ring-1 ring-cub-blue hover:bg-blue-900 no-underline">
+          <a href="/calendar" class="inline-flex items-center justify-center w-full px-6 py-3 font-semibold font-heading text-white transition rounded-[5px] bg-cub-blue ring-1 ring-cub-blue hover:bg-blue-900 no-underline sm:w-auto">
             Upcoming Events
           </a>
         </div>
@@ -194,7 +194,7 @@ navbarText: Silver Spring, MD
       <p class="mt-6 text-center text-slate-600">No upcoming events found.</p>
     {%- endif -%}
     <div class="mt-8 text-center">
-      <a href="/calendar/" class="inline-flex items-center px-5 py-3 font-semibold font-heading text-white transition rounded-[5px] bg-cub-blue hover:bg-blue-900 no-underline">
+      <a href="/calendar/" class="inline-flex items-center justify-center w-full px-5 py-3 font-semibold font-heading text-white transition rounded-[5px] bg-cub-blue hover:bg-blue-900 no-underline sm:w-auto">
         Full Calendar
       </a>
     </div>
@@ -220,7 +220,7 @@ navbarText: Silver Spring, MD
       {% endfor %}
     </ul>
     <div class="mt-6">
-      <a href="/about" class="inline-flex items-center px-5 py-3 font-semibold font-heading text-white transition rounded-[5px] bg-cub-blue hover:bg-blue-900 no-underline">
+      <a href="/about" class="inline-flex items-center justify-center w-full px-5 py-3 font-semibold font-heading text-white transition rounded-[5px] bg-cub-blue hover:bg-blue-900 no-underline sm:w-auto">
         More About Pack 209
       </a>
     </div>
@@ -271,7 +271,7 @@ navbarText: Silver Spring, MD
       <div class="mt-6">
         <a href="mailto:cubmaster@cubscoutpack209.org?subject=Question%20about%20Pack%20209"
            target="_blank" rel="noopener"
-           class="inline-flex items-center px-5 py-3 font-semibold font-heading text-white transition rounded-[5px] bg-cub-blue hover:bg-blue-900 no-underline">
+           class="inline-flex items-center justify-center w-full px-5 py-3 font-semibold font-heading text-white transition rounded-[5px] bg-cub-blue hover:bg-blue-900 no-underline sm:w-auto">
           Ask a Question
         </a>
         <p class="mt-3 text-sm text-slate-500">
@@ -293,7 +293,7 @@ navbarText: Silver Spring, MD
       <p class="mt-3 text-white">{{ page.cta_paragraph_1 }}</p>
       <p class="mt-3 text-white">{{ page.cta_paragraph_2 }}</p>
       <div class="mt-6">
-        <a href="/join" class="inline-flex items-center px-6 py-3 font-bold font-heading transition bg-cub-gold rounded-[5px] text-cub-blue hover:bg-yellow-300 no-underline">
+        <a href="/join" class="inline-flex items-center justify-center w-full px-6 py-3 font-bold font-heading transition bg-cub-gold rounded-[5px] text-cub-blue hover:bg-yellow-300 no-underline sm:w-auto">
           Join Pack 209
         </a>
       </div>
