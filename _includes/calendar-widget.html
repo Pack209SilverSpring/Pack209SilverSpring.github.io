@@ -55,13 +55,29 @@
 
     var headerToolbar = compact
       ? { left: 'prev,next', center: 'title', right: 'today' }
-      : { left: 'prev,next today', center: 'title', right: 'dayGridMonth,listYear' };
+      : { left: 'prev,next today', center: 'title', right: 'dayGridMonth,listUpcoming' };
 
     var cal = new FullCalendar.Calendar(el, {
       initialView: isSmall ? 'listMonth' : 'dayGridMonth',
       headerToolbar: headerToolbar,
       views: {
-        listYear: { buttonText: 'List' }
+        // FullCalendar's built-in `listYear` view shows the current
+        // *calendar* year (Jan 1 - Dec 31), which is why List mode was
+        // showing already-passed months. This custom view instead shows a
+        // rolling 365 days starting from today, matching the site's
+        // `look_ahead` event window.
+        listUpcoming: {
+          type: 'list',
+          visibleRange: function (currentDate) {
+            var start = new Date(currentDate.valueOf());
+            var end = new Date(currentDate.valueOf());
+            start.setDate(start.getDate() - 30);
+            end.setDate(end.getDate() + 365);
+            return { start: start, end: end };
+          },
+          dateIncrement: { days: 30 },
+          buttonText: 'List'
+        }
       },
       buttonText: { today: 'Today', month: 'Month' },
       height: 'auto',
