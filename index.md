@@ -1,61 +1,57 @@
 ---
-layout: default
-navbarText: Silver Spring, MD
-hero_header: true
-
-# Homepage announcement banner — edit from the CMS (/admin) or right here.
-# Turn announcement_visible off (rather than deleting the text) to hide the
-# banner after an event passes, so it's easy to bring back next time.
 announcement_visible: true
 announcement_text: Come to our Join Scouting event on 9/15! <a href="/join"
   class="underline hover:no-underline">Learn more</a> or <a
   href="mailto:cubmaster@cubscoutpack209.org" class="underline
   hover:no-underline">contact us</a>
-
 hero_image: /assets/images/209_scoutshike.jpg
-hero_title: Cub Scout Pack 209
-hero_subtitle: Welcome to the Adventure
-hero_description: >-
-  A Scouting America pack for all youth in <span class="font-semibold">kindergarten through 5th grade</span> in Silver Spring, MD. New families are always welcome.
-
 why_image: /assets/images/209_denmeeting.jpg
 why_image_alt: Pack 209 Cub Scouts on a family camping trip
-why_text: >-
-  Pack 209 meets in Silver Spring, MD, and is open to any kid in kindergarten through fifth grade who
-  want to get outside, learn new skills, and make new friends. Here's what a
-  typical year looks like:
+why_text: "Pack 209 meets in Silver Spring, MD, and is open to any kid in
+  kindergarten through fifth grade who want to get outside, learn new skills,
+  and make new friends. Here's what a typical year looks like:"
+layout: default
+hero_title: Cub Scout Pack 209
+hero_subtitle: Welcome to the Adventure
+hero_description: A Scouting America pack for all youth in <span
+  class="font-semibold">kindergarten through 5th grade</span> in Silver Spring,
+  MD. New families are always welcome.
 why_bullets:
-  - emoji: "🌲"
-    text: "Campouts and hikes in every season"
-  - emoji: "🧪"
-    text: "Pinewood Derby, monthly pack meetings, and hands-on projects with dens"
-  - emoji: "🤝"
-    text: "Den friendships that carry from Kindergarten to 5th grade"
-  - emoji: "✨"
-    text: "Open to every kid and every family — no experience needed"
-
+  - emoji: 🌲
+    text: Campouts and hikes in every season
+  - emoji: 🧪
+    text: Pinewood Derby, monthly pack meetings, and hands-on projects with dens
+  - emoji: 🤝
+    text: Den friendships that carry from Kindergarten to 5th grade
+  - emoji: ✨
+    text: Open to every kid and every family — no experience needed
 activity_cards:
   - image: /assets/images/209_campfire.jpg
-    alt: "Pack 209 Cub Scouts camping trip"
-    title: "Family Camping"
-    description: "Our pack goes on a fall and spring family camping trip out in nature. It's one giant playdate outside with all of your scout's friends"
+    alt: Pack 209 Cub Scouts camping trip
+    title: Family Camping
+    description: Our pack goes on a fall and spring family camping trip out in
+      nature. It's one giant playdate outside with all of your scout's friends
   - image: /assets/images/209_pinewood3.jpg
-    alt: "Pack 209 Cub Scouts racing cars at the Pinewood Derby"
-    title: "Pinewood Derby"
-    description: "Scouts design, build, and race their own wooden car in the classic yearly event."
+    alt: Pack 209 Cub Scouts racing cars at the Pinewood Derby
+    title: Pinewood Derby
+    description: Scouts design, build, and race their own wooden car in the classic
+      yearly event.
   - image: /assets/images/209_sweepthecreek.jpg
-    alt: "Pack 209 Cub Scouts volunteering together"
-    title: "Community Service"
-    description: "Scouting for Food, Sweep the Creek, and other projects that give back."
+    alt: Pack 209 Cub Scouts volunteering together
+    title: Community Service
+    description: Scouting for Food, Sweep the Creek, and other projects that give back.
   - image: /assets/images/209_hike4.jpg
-    alt: "Pack 209 Cub Scouts hiking a local trail"
-    title: "Parades & Hikes"
-    description: "Pack 209 joins the Montgomery County Thanksgiving Parade, goes on local area hikes, and more throughout the year."
-
-cta_paragraph_1: >-
-  New to Scouting? We’ll help you get started. Everyone’s welcome.
-cta_paragraph_2: >-
-  We meet the third Tuesday of the month at 7:00 PM at the Silver Spring United Methods Church on Georgia Ave. Whether you're a parent looking to get involved or a child ready for a new challenge, we welcome you to Pack 209. Together, we build leaders and friends in our community.
+    alt: Pack 209 Cub Scouts hiking a local trail
+    title: Parades & Hikes
+    description: Pack 209 joins the Montgomery County Thanksgiving Parade, goes on
+      local area hikes, and more throughout the year.
+cta_paragraph_1: New to Scouting? We’ll help you get started. Everyone’s welcome.
+cta_paragraph_2: We meet the third Tuesday of the month at 7:00 PM at the Silver
+  Spring United Methodist Church on Georgia Ave. Whether you're a parent looking
+  to get involved or a child ready for a new challenge, we welcome you to Pack
+  209. Together, we build leaders and friends in our community.
+hero_header: true
+navbarText: Silver Spring, MD
 ---
 
 <!-- HERO: full-bleed, breaks out of the max-w-6xl main container. Parallax: bg-fixed keeps the photo in place while the page scrolls over it (same technique as the "Ready to Explore" CTA below). -->
