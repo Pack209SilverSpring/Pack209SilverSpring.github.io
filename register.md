@@ -1,6 +1,7 @@
 ---
 layout: default
-title: Register
+title: "Register for Pack 209 | Cub Scouts in Silver Spring, MD"
+description: "Step-by-step registration for Cub Scout Pack 209 in Silver Spring, MD -- Scouting America dues, pack dues, and uniform info explained."
 hideTitle: true
 hero_header: true
 permalink: /register/

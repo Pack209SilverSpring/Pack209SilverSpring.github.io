@@ -1,6 +1,7 @@
 ---
 layout: default
-title: Join Pack 209
+title: "Join Cub Scout Pack 209 in Silver Spring, MD"
+description: "Ready to join Scouting? Here's how to get started with Pack 209, the Cub Scout pack in Silver Spring, Maryland -- no experience needed."
 permalink: /join/
 hideTitle: true
 

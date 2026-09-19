@@ -1,6 +1,7 @@
 ---
 layout: default
-title: Pack 209 Calendar
+title: "Calendar | Pack 209 Cub Scouts, Silver Spring MD"
+description: "Upcoming Pack 209 Cub Scout meetings, campouts, and events in Silver Spring, Maryland."
 permalink: /calendar/
 navbarText: Silver Spring, MD
 hideTitle: true

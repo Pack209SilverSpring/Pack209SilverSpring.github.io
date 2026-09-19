@@ -108,6 +108,12 @@ collections:
         editor_components: []
         required: false
 
+      - label: "Meta description (for Google search results & social sharing)"
+        name: "description"
+        widget: "text"
+        required: false
+        hint: "Shown under the page title in search results and when the page is shared on social media. Aim for about 150-160 characters. Leave blank to use the hero description instead."
+
       - label: "Sections"
         name: "sections"
         widget: "list"
@@ -132,6 +138,11 @@ collections:
         editor:
           preview: false
         fields:
+          - label: "Meta description (for Google search results & social sharing)"
+            name: "description"
+            widget: "text"
+            required: false
+            hint: "Shown under the page title in search results and when the page is shared on social media. Aim for about 150-160 characters. Leave blank to use a sensible default."
           - label: "Show the announcement banner"
             name: "announcement_visible"
             widget: "boolean"
@@ -233,6 +244,11 @@ collections:
         editor:
           preview: false
         fields:
+          - label: "Meta description (for Google search results & social sharing)"
+            name: "description"
+            widget: "text"
+            required: false
+            hint: "Shown under the page title in search results and when the page is shared on social media. Aim for about 150-160 characters. Leave blank to use a sensible default."
           - { label: "Hero photo", name: "hero_image", widget: "image" }
           - { label: "Hero headline", name: "hero_title", widget: "string" }
           - { label: "Hero subheadline", name: "hero_subtitle", widget: "string" }
@@ -278,6 +294,11 @@ collections:
         editor:
           preview: false
         fields:
+          - label: "Meta description (for Google search results & social sharing)"
+            name: "description"
+            widget: "text"
+            required: false
+            hint: "Shown under the page title in search results and when the page is shared on social media. Aim for about 150-160 characters. Leave blank to use a sensible default."
           - label: "Two cards"
             name: "cards"
             widget: "list"
@@ -307,6 +328,11 @@ collections:
         editor:
           preview: false
         fields:
+          - label: "Meta description (for Google search results & social sharing)"
+            name: "description"
+            widget: "text"
+            required: false
+            hint: "Shown under the page title in search results and when the page is shared on social media. Aim for about 150-160 characters. Leave blank to use a sensible default."
           - { label: "Hero photo", name: "hero_image", widget: "image" }
           - { label: "Hero headline", name: "hero_title", widget: "string" }
           - { label: "Hero subheadline", name: "hero_subtitle", widget: "string" }
@@ -360,6 +386,11 @@ collections:
         editor:
           preview: false
         fields:
+          - label: "Meta description (for Google search results & social sharing)"
+            name: "description"
+            widget: "text"
+            required: false
+            hint: "Shown under the page title in search results and when the page is shared on social media. Aim for about 150-160 characters. Leave blank to use a sensible default."
           - { label: "Hero photo", name: "hero_image", widget: "image" }
           - { label: "Hero headline", name: "hero_title", widget: "string" }
           - { label: "Hero subheadline", name: "hero_subtitle", widget: "string" }
@@ -410,4 +441,10 @@ collections:
           preview: false
         fields:
           - { label: "Title", name: "title", widget: "string" }
+          - label: "Meta description (for Google search results & social sharing)"
+            name: "description"
+            widget: "text"
+            required: false
+            hint: "Shown under the page title in search results and when the page is shared on social media. Aim for about 150-160 characters. Leave blank to use a sensible default."
+
           - { label: "Message", name: "body", widget: "markdown" }
