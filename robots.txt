@@ -4,11 +4,12 @@
 User-agent: *
 Allow: /
 
-# No sitemap file
+Sitemap: https://cubscoutpack209.org/sitemap.xml
 
-# Discourage crawling of calendar API endpoint caches
+# Discourage crawling of calendar API endpoint caches and the CMS admin
 Disallow: /api/
 Disallow: /.git/
 Disallow: /_site/
 Disallow: /_layouts/
 Disallow: /_includes/
+Disallow: /admin/

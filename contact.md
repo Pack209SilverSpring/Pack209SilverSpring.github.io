@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Contact Pack 209
+description: "Get in touch with Cub Scout Pack 209 leaders in Silver Spring, Maryland."
 permalink: /contact/
 ---
 

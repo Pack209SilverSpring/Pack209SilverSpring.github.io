@@ -1,6 +1,7 @@
 ---
 layout: default
-title: About
+title: "About Pack 209 | Cub Scout Pack in Silver Spring, MD"
+description: "Meet the leaders and learn the story behind Pack 209, the Cub Scout pack serving Silver Spring, Maryland families."
 hideTitle: true
 hero_header: true
 permalink: /about/

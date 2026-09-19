@@ -1,6 +1,7 @@
 ---
 layout: default
-title: Family Resources
+title: "Family Resources | Pack 209 Cub Scouts, Silver Spring MD"
+description: "Guides, forms, uniform info, and safety resources for Cub Scout Pack 209 families in Silver Spring, Maryland."
 hideTitle: true
 hero_header: true
 permalink: /resources/

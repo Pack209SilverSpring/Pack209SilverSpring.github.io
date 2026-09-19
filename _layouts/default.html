@@ -3,9 +3,14 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>
-    {% if page.title %}{{ page.title }} · {% endif %}{{ site.title | default: "Cub Scout Pack" }}
-  </title>
+  {%- assign page_description = page.description | default: page.hero_description | default: page.event.description | default: site.description -%}
+  {%- assign page_description = page_description | markdownify | strip_html | strip_newlines | strip | truncate: 160 -%}
+  {%- assign page_title = page.title | default: site.title -%}
+  {%- if page.collection == "generic_pages" or page.layout == "event-public" -%}
+    {%- assign page_title = page_title | append: " | Pack 209" -%}
+  {%- endif -%}
+  {%- assign social_image = page.image | default: page.hero_image | default: "/assets/images/pack209-logo.png" -%}
+  <title>{{ page_title }}</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -17,7 +22,43 @@
   <link rel="icon" type="image/png" sizes="32x32" href="{{ '/assets/icons/favicon-32x32.png' | relative_url }}">
   <link rel="icon" type="image/png" sizes="16x16" href="{{ '/assets/icons/favicon-16x16.png' | relative_url }}">
   <link rel="apple-touch-icon" sizes="180x180" href="{{ '/assets/icons/apple-touch-icon.png' | relative_url }}">
-  <meta name="description" content="{{ page.excerpt | default: site.description | default: 'Scouting adventures, friends, and fun.' | strip_html }}">
+
+  <meta name="description" content="{{ page_description }}">
+  <link rel="canonical" href="{{ page.url | absolute_url }}">
+  {%- if page.noindex %}
+  <meta name="robots" content="noindex, nofollow">
+  {%- endif %}
+
+  <!-- Social sharing previews (Open Graph + Twitter Card) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="{{ site.title }}">
+  <meta property="og:title" content="{{ page_title }}">
+  <meta property="og:description" content="{{ page_description }}">
+  <meta property="og:url" content="{{ page.url | absolute_url }}">
+  <meta property="og:image" content="{{ social_image | absolute_url }}">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ page_title }}">
+  <meta name="twitter:description" content="{{ page_description }}">
+  <meta name="twitter:image" content="{{ social_image | absolute_url }}">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Cub Scout Pack 209",
+    "alternateName": "Pack 209",
+    "url": {{ site.url | append: site.baseurl | append: "/" | jsonify }},
+    "logo": {{ "/assets/images/pack209-logo.png" | absolute_url | jsonify }},
+    "description": {{ site.description | strip_newlines | strip | jsonify }},
+    "email": {{ site.email | jsonify }},
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Silver Spring",
+      "addressRegion": "MD",
+      "addressCountry": "US"
+    }
+  }
+  </script>
 </head>
 <body class="flex flex-col min-h-screen overflow-x-hidden bg-slate-50 text-slate-800">
   <a href="#content"

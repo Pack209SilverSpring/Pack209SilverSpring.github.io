@@ -1,4 +1,6 @@
 ---
+title: "Cub Scout Pack 209 | Silver Spring, MD"
+description: "Pack 209 is an inclusive Cub Scout pack for Silver Spring, MD families with kids in grades K-5 -- camping, Pinewood Derby, and community service."
 announcement_visible: true
 announcement_text: Missed our Join Scouting event on 9/15? <a
   href="mailto:cubmaster@cubscoutpack209.org" class="underline
