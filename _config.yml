@@ -33,6 +33,28 @@ plugins:
   - jekyll-tailwindcss
   - jekyll-google-calendar
 
+# Generic CMS-created pages ("Other Pages" in the admin). Each file in
+# _generic_pages/ becomes its own static page at /<filename>/, built the
+# same as any hand-coded page -- the layout and front matter defaults
+# below are what make that automatic, so a new page created from the CMS
+# doesn't need to set them itself.
+collections:
+  generic_pages:
+    output: true
+    permalink: /:slug/
+
+# hideTitle/hero_header aren't set here: whether a given generic page shows
+# the plain title block or the transparent floating hero header now depends
+# on whether that page has a hero_image, computed in _layouts/default.html
+# (see `has_hero`) -- a blanket default here would force every generic page
+# into hero styling even when it has no hero photo to show.
+defaults:
+  - scope:
+      path: ""
+      type: "generic_pages"
+    values:
+      layout: "generic-page"
+
 # Google Calendar config. The GCALENDAR_KEY_JSON GitHub Actions secret is
 # written out to gcalendar-key.json at build time (see .github/workflows/pages.yml).
 gcalendar:

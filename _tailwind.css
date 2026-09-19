@@ -1,5 +1,16 @@
 @import "tailwindcss";
 
+/* The leader-card ring color (`ring-{{ include.leader.ring_color }}` in
+   _includes/leader-card.html) is picked per-leader from the CMS, so the
+   literal class name never appears in any source file Tailwind scans --
+   only in the rendered HTML output, which Tailwind does not read. Without
+   this, the ring utility is silently never generated. `@source inline()`
+   force-generates exactly the classes below; this list MUST stay in sync
+   with admin/config.yml's `leaders.ring_color` select options -- adding a
+   color to one without the other breaks the CMS's promise that any
+   selectable color actually renders. */
+@source inline("ring-{yellow-400,yellow-700,slate-400,slate-500,slate-800,stone-800,blue-400,blue-600,red-400,green-500,purple-400,orange-400}");
+
 /* Tailwind v4: define reusable design tokens here */
 @theme {
   --font-sans: "Work Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI",
@@ -113,6 +124,20 @@
   }
   .prose-copy hr {
     @apply my-8;
+  }
+}
+@layer components {
+  .announcement-info {
+    @apply bg-blue-100 text-blue-900;
+  }
+  .announcement-warning {
+    @apply bg-yellow-100 text-forest;
+  }
+  .announcement-success {
+    @apply bg-green-100 text-green-900;
+  }
+  .announcement-error {
+    @apply bg-red-100 text-red-900;
   }
 }
 

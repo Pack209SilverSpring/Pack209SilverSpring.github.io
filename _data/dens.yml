@@ -1,22 +1,15 @@
 # Pack 209 Dens
-# One entry per grade-level den. "meeting_day" is edited via the CMS by
-# Den Leaders each fall once schedules are set — shows as "TBD" until then.
+# One entry per grade-level den.
 dens:
   - name: Lions
     grade: Kindergarten
-    meeting_day: "Meeting day TBD"
   - name: Tigers
     grade: 1st Grade
-    meeting_day: "Meeting day TBD"
   - name: Wolves
     grade: 2nd Grade
-    meeting_day: "Meeting day TBD"
   - name: Bears
     grade: 3rd Grade
-    meeting_day: "Meeting day TBD"
   - name: Webelos
     grade: 4th Grade
-    meeting_day: "Meeting day TBD"
   - name: Arrow of Light
     grade: 5th Grade
-    meeting_day: "Meeting day TBD"

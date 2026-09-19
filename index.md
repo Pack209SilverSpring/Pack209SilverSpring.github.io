@@ -1,5 +1,6 @@
 ---
 announcement_visible: true
+announcement_status: warning
 announcement_text: Missed our Join Scouting event on 9/15? <a href="/join"
   class="underline hover:no-underline">Learn more</a> or <a
   href="mailto:cubmaster@cubscoutpack209.org" class="underline
@@ -65,7 +66,7 @@ navbarText: Silver Spring, MD
         </h1>
         <h2 class="mt-2 mb-3 text-xl sm:text-2xl md:text-3xl text-white line-height-sm">{{ page.hero_subtitle }}</h2>
         <p class="text-lg sm:text-xl text-white">
-          {{ page.hero_description }}
+          {{ page.hero_description | markdownify | remove: "<p>" | remove: "</p>" }}
         </p>
         <div class="flex flex-col w-full gap-4 mt-8 sm:w-auto sm:flex-row sm:flex-wrap">
           <a href="/join" class="inline-flex items-center justify-center w-full px-6 py-3 font-bold font-heading transition bg-yellow-400 rounded-[5px] text-blue-900 hover:bg-yellow-600 no-underline sm:w-auto">
@@ -80,10 +81,24 @@ navbarText: Silver Spring, MD
   </div>
 </section>
 
-<!-- ANNOUNCEMENT BANNER: text is a CMS-editable frontmatter field (announcement_text) so leaders can update it without touching code. Set announcement_visible: false in front matter (or via /admin) to hide it. -->
+<!-- ANNOUNCEMENT BANNER: text and status are CMS-editable frontmatter fields
+     (announcement_text, announcement_status) so leaders can update it without
+     touching code. Set announcement_visible: false in front matter (or via
+     /admin) to hide it. Status maps to a fixed `.announcement-<status>`
+     class in _tailwind.css (info/warning/success/error) rather than
+     interpolating a Tailwind utility directly, so it can't hit the same
+     "Tailwind never sees the literal class" bug the leader ring colors had. -->
 {% if page.announcement_visible %}
-<section class="px-4 py-3 text-sm font-medium text-center text-forest bg-yellow-100 relative left-1/2 right-1/2 w-screen -ml-[50vw] -mr-[50vw] mb-6">
-  <span aria-hidden="true">📣</span> {{ page.announcement_text }}
+{% assign status = page.announcement_status | default: "warning" %}
+<section class="announcement-{{ status }} px-4 py-3 text-sm font-medium text-center relative left-1/2 right-1/2 w-screen -ml-[50vw] -mr-[50vw] mb-6">
+  <span aria-hidden="true">
+    {% case status %}
+      {% when "info" %}ℹ️
+      {% when "success" %}✅
+      {% when "error" %}🚨
+      {% else %}📣
+    {% endcase %}
+  </span> {{ page.announcement_text | markdownify | remove: "<p>" | remove: "</p>" }}{% if page.announcement_pdf %} &middot; <a href="{{ page.announcement_pdf | relative_url }}" target="_blank" rel="noopener" class="underline hover:no-underline">{{ page.announcement_pdf_text | default: "Read the flyer (PDF)" }}</a>{% endif %}
 </section>
 {% endif %}
 
@@ -212,7 +227,7 @@ navbarText: Silver Spring, MD
   <div>
     <h2 class="text-3xl font-bold sm:text-4xl text-forest">Why Cub Scouting?</h2>
     <p class="mt-4 text-lg leading-7">
-      {{ page.why_text }}
+      {{ page.why_text | markdownify | remove: "<p>" | remove: "</p>" }}
     </p>
     <ul class="mt-6 space-y-3">
       {% for bullet in page.why_bullets %}
@@ -242,7 +257,7 @@ navbarText: Silver Spring, MD
       <img src="{{ card.image | relative_url }}" alt="{{ card.alt }}" class="object-cover w-full h-40">
       <div class="p-4 pt-2">
         <h3 class="font-bold text-cub-blue mt-1">{{ card.title }}</h3>
-        <p class="mt-1 text-sm text-slate-600">{{ card.description }}</p>
+        <p class="mt-1 text-sm text-slate-600">{{ card.description | markdownify | remove: "<p>" | remove: "</p>" }}</p>
       </div>
     </div>
     {% endfor %}
@@ -290,8 +305,8 @@ navbarText: Silver Spring, MD
     <div class="absolute inset-0 bg-cub-blue/85"></div>
     <div class="relative max-w-6xl mx-auto">
       <h2 class="text-3xl font-bold text-white sm:text-4xl">Ready to Explore?</h2>
-      <p class="mt-3 text-white">{{ page.cta_paragraph_1 }}</p>
-      <p class="mt-3 text-white">{{ page.cta_paragraph_2 }}</p>
+      <p class="mt-3 text-white">{{ page.cta_paragraph_1 | markdownify | remove: "<p>" | remove: "</p>" }}</p>
+      <p class="mt-3 text-white">{{ page.cta_paragraph_2 | markdownify | remove: "<p>" | remove: "</p>" }}</p>
       <div class="mt-6">
         <a href="/join" class="inline-flex items-center justify-center w-full px-6 py-3 font-bold font-heading transition bg-cub-gold rounded-[5px] text-cub-blue hover:bg-yellow-300 no-underline sm:w-auto">
           Join Pack 209

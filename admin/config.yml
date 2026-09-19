@@ -28,8 +28,8 @@ media_folder: "assets/images"
 public_folder: "/assets/images"
 
 collections:
-  - name: "leaders"
-    label: "Pack Leaders"
+  - name: "leaders_and_dens"
+    label: "Leaders & Dens"
     files:
       - label: "Leader Roster"
         name: "leaders"
@@ -53,14 +53,24 @@ collections:
                     multiple: false
               - label: "Ring Color"
                 name: "ring_color"
-                widget: "string"
+                widget: "select"
                 default: "slate-400"
-                hint: "Tailwind color name for the ring around the photo, e.g. yellow-400, slate-500, stone-800"
+                hint: "Color of the ring around the photo."
+                options:
+                  - { label: "Yellow (light)", value: "yellow-400" }
+                  - { label: "Yellow (dark)", value: "yellow-700" }
+                  - { label: "Slate (light)", value: "slate-400" }
+                  - { label: "Slate (medium)", value: "slate-500" }
+                  - { label: "Slate (dark)", value: "slate-800" }
+                  - { label: "Stone (dark)", value: "stone-800" }
+                  - { label: "Blue (light)", value: "blue-400" }
+                  - { label: "Blue (dark)", value: "blue-600" }
+                  - { label: "Red", value: "red-400" }
+                  - { label: "Green", value: "green-500" }
+                  - { label: "Purple", value: "purple-400" }
+                  - { label: "Orange", value: "orange-400" }
 
-  - name: "dens"
-    label: "Dens & Meeting Times"
-    files:
-      - label: "Den Schedule"
+      - label: "Den Roster"
         name: "dens"
         file: "_data/dens.yml"
         editor:
@@ -69,11 +79,49 @@ collections:
           - label: "Dens"
             name: "dens"
             widget: "list"
-            summary: "{{name}} ({{grade}}) — {{meeting_day}}"
+            summary: "{{name}} ({{grade}})"
             fields:
               - { label: "Den Name", name: "name", widget: "string" }
               - { label: "Grade", name: "grade", widget: "string" }
-              - { label: "Meeting Day / Time", name: "meeting_day", widget: "string", default: "Meeting day TBD" }
+
+  - name: "generic_pages"
+    label: "Other Pages"
+    folder: "_generic_pages"
+    create: true
+    delete: true
+    slug: "{{slug}}"
+    extension: "md"
+    editor:
+      preview: false
+    fields:
+      - { label: "Page title", name: "title", widget: "string" }
+      - label: "Hero image"
+        name: "hero_image"
+        widget: "image"
+        required: false
+        hint: "Optional. With a photo, the title and subtitle show over it in gold and white. Without one, the page just gets a plain green title like the rest of the site."
+      - { label: "Hero subtitle", name: "hero_subtitle", widget: "string", required: false }
+      - label: "Hero description"
+        name: "hero_description"
+        widget: "markdown"
+        buttons: ["bold", "italic", "link", "bulleted-list", "numbered-list", "quote"]
+        editor_components: []
+        required: false
+
+      - label: "Sections"
+        name: "sections"
+        widget: "list"
+        label_singular: "Section"
+        summary: "{{title}}"
+        hint: "Add, remove, and reorder the content sections on this page. Each section gets its own heading."
+        fields:
+          - { label: "Section title", name: "title", widget: "string", default: "Section" }
+          - label: "Section content"
+            name: "content"
+            widget: "markdown"
+            buttons: ["bold", "italic", "link", "heading-three", "quote", "bulleted-list", "numbered-list"]
+            editor_components: []
+            hint: "Use the heading button (H) to add a sub-header within this section."
 
   - name: "pages"
     label: "Site Pages"
@@ -91,21 +139,53 @@ collections:
             hint: "Turn off to hide the yellow banner without losing the text underneath."
           - label: "Announcement text"
             name: "announcement_text"
+            widget: "markdown"
+            buttons: ["bold", "italic", "link"]
+            editor_components: []
+            required: false
+            hint: "Shown after the emoji. Keep it short. Only needs a value when the banner above is turned on. Use the toolbar for bold, italics, and links — no HTML needed."
+          - label: "Announcement style"
+            name: "announcement_status"
+            widget: "select"
+            default: "warning"
+            required: false
+            hint: "Controls the banner's color and icon. Info = blue, Warning = yellow, Success = green, Error = red."
+            options:
+              - { label: "Info (blue)", value: "info" }
+              - { label: "Warning (yellow)", value: "warning" }
+              - { label: "Success (green)", value: "success" }
+              - { label: "Error (red)", value: "error" }
+          - label: "Announcement PDF (optional)"
+            name: "announcement_pdf"
+            widget: "file"
+            required: false
+            media_folder: "/assets/documents"
+            public_folder: "/assets/documents"
+            hint: "Upload a PDF (like a flyer) to link to it from the banner. Leave empty for no PDF link."
+          - label: "Announcement PDF link text"
+            name: "announcement_pdf_text"
             widget: "string"
             required: false
-            hint: "Shown after the 📣 emoji, before the 'Learn more' link. Keep it short. Only needs a value when the banner above is turned on."
+            default: "Read the flyer (PDF)"
+            hint: "Only shown when a PDF is uploaded above."
 
           - { label: "Hero photo", name: "hero_image", widget: "image" }
           - { label: "Hero headline", name: "hero_title", widget: "string" }
           - { label: "Hero subheadline", name: "hero_subtitle", widget: "string" }
           - label: "Hero description"
             name: "hero_description"
-            widget: "text"
-            hint: "The paragraph under the subheadline. Basic HTML like <span> or <strong> is OK if it's already there."
+            widget: "markdown"
+            buttons: ["bold", "italic", "link", "bulleted-list", "numbered-list", "quote"]
+            editor_components: []
+            hint: "The paragraph under the subheadline. Use the toolbar for bold, italics, and links — no HTML or markdown needed."
 
           - { label: "\"Why Cub Scouting?\" photo", name: "why_image", widget: "image" }
           - { label: "\"Why Cub Scouting?\" photo alt text (for accessibility)", name: "why_image_alt", widget: "string" }
-          - { label: "\"Why Cub Scouting?\" intro paragraph", name: "why_text", widget: "text" }
+          - label: "\"Why Cub Scouting?\" intro paragraph"
+            name: "why_text"
+            widget: "markdown"
+            buttons: ["bold", "italic", "link", "bulleted-list", "numbered-list", "quote"]
+            editor_components: []
           - label: "\"Why Cub Scouting?\" bullet points"
             name: "why_bullets"
             widget: "list"
@@ -122,10 +202,22 @@ collections:
               - { label: "Photo", name: "image", widget: "image" }
               - { label: "Photo alt text (for accessibility)", name: "alt", widget: "string" }
               - { label: "Title", name: "title", widget: "string" }
-              - { label: "Description", name: "description", widget: "text" }
+              - label: "Description"
+                name: "description"
+                widget: "markdown"
+                buttons: ["bold", "italic", "link", "bulleted-list", "numbered-list", "quote"]
+                editor_components: []
 
-          - { label: "Closing \"Ready to Explore?\" first paragraph", name: "cta_paragraph_1", widget: "text" }
-          - { label: "Closing \"Ready to Explore?\" second paragraph", name: "cta_paragraph_2", widget: "text" }
+          - label: "Closing \"Ready to Explore?\" first paragraph"
+            name: "cta_paragraph_1"
+            widget: "markdown"
+            buttons: ["bold", "italic", "link", "bulleted-list", "numbered-list", "quote"]
+            editor_components: []
+          - label: "Closing \"Ready to Explore?\" second paragraph"
+            name: "cta_paragraph_2"
+            widget: "markdown"
+            buttons: ["bold", "italic", "link", "bulleted-list", "numbered-list", "quote"]
+            editor_components: []
 
           - label: "Page layout (do not edit — controls the rest of the homepage)"
             name: "body"
@@ -149,21 +241,28 @@ collections:
           - { label: "\"Our Pack\" photo alt text (for accessibility)", name: "our_pack_image_alt", widget: "string" }
           - label: "\"Our Pack\" text"
             name: "our_pack_text"
-            widget: "text"
-            hint: "Leave a blank line between paragraphs."
+            widget: "markdown"
+            buttons: ["bold", "italic", "link", "bulleted-list", "numbered-list", "quote"]
+            editor_components: []
 
           - label: "\"Our Story\" text"
             name: "our_story_text"
-            widget: "text"
-            hint: "Leave a blank line between paragraphs."
+            widget: "markdown"
+            buttons: ["bold", "italic", "link", "bulleted-list", "numbered-list", "quote"]
+            editor_components: []
 
           - label: "\"Our Hosts & Leaders\" text"
             name: "hosts_leaders_text"
-            widget: "text"
-            hint: "Leave a blank line between paragraphs."
+            widget: "markdown"
+            buttons: ["bold", "italic", "link", "bulleted-list", "numbered-list", "quote"]
+            editor_components: []
 
           - { label: "Closing section photo", name: "closing_cta_image", widget: "image" }
-          - { label: "Closing section text", name: "closing_cta_text", widget: "text" }
+          - label: "Closing section text"
+            name: "closing_cta_text"
+            widget: "markdown"
+            buttons: ["bold", "italic", "link", "bulleted-list", "numbered-list", "quote"]
+            editor_components: []
 
           - label: "Page layout (do not edit — controls the rest of the About page)"
             name: "body"
@@ -185,8 +284,14 @@ collections:
             summary: "{{title}}"
             fields:
               - { label: "Title", name: "title", widget: "string" }
-              - { label: "Description", name: "description", widget: "text" }
+              - label: "Description"
+                name: "description"
+                widget: "markdown"
+                buttons: ["bold", "italic", "link", "bulleted-list", "numbered-list", "quote"]
+                editor_components: []
               - { label: "Link text", name: "link_text", widget: "string" }
+              - { label: "Card Link", name: "link_url", widget: "string", hint: "Where the whole card links to. Internal pages start with a slash, e.g. /register/. Emails start with mailto:, e.g. mailto:cubmaster@cubscoutpack209.org" }
+              - { label: "Opens in a new tab?", name: "external", widget: "boolean", default: false, hint: "Turn on for links that leave this site, like an email link." }
 
           - label: "Page layout (do not edit — controls the rest of the Join page)"
             name: "body"
@@ -206,27 +311,40 @@ collections:
           - { label: "Hero headline", name: "hero_title", widget: "string" }
           - { label: "Hero subheadline", name: "hero_subtitle", widget: "string" }
 
-          - { label: "Step 1 (Pack dues) amount, numbers only, no $", name: "pack_dues_amount", widget: "string" }
-          - { label: "Step 1 (Pack dues) description", name: "pack_dues_description", widget: "text" }
-
-          - { label: "Step 2 (Scouting America dues) amount, numbers only, no $", name: "national_dues_amount", widget: "string" }
-          - label: "Step 2 (Scouting America dues) description"
+          - { label: "Step 1 (Scouting America dues) amount, numbers only, no $", name: "national_dues_amount", widget: "string" }
+          - label: "Step 1 (Scouting America dues) description"
             name: "national_dues_description"
-            widget: "text"
-            hint: "Basic HTML like <strong> or <em> is OK if it's already there."
-          - label: "Step 2 returning-scouts note"
+            widget: "markdown"
+            buttons: ["bold", "italic", "link", "bulleted-list", "numbered-list", "quote"]
+            editor_components: []
+          - label: "Step 1 returning-scouts note"
             name: "national_dues_returning_note"
-            widget: "text"
-            hint: "Basic HTML like <strong> is OK if it's already there."
+            widget: "markdown"
+            buttons: ["bold", "italic", "link", "bulleted-list", "numbered-list", "quote"]
+            editor_components: []
 
-          - { label: "Step 3 (Scout info form) description", name: "scout_info_description", widget: "text" }
+          - { label: "Step 2 (Pack dues) amount, numbers only, no $", name: "pack_dues_amount", widget: "string" }
+          - label: "Step 2 (Pack dues) description"
+            name: "pack_dues_description"
+            widget: "markdown"
+            buttons: ["bold", "italic", "link", "bulleted-list", "numbered-list", "quote"]
+            editor_components: []
+          - label: "Step 2 \"Pay pack dues\" email"
+            name: "dues_payment_email"
+            widget: "string"
+            hint: "Where families send the Zelle payment. Also shown as the link text."
 
-          - label: "Step 4 (Uniform) description"
+          - label: "Step 3 (Uniform) description"
             name: "uniform_description"
-            widget: "text"
-            hint: "Basic HTML like <strong> or a <a href=...> link is OK if it's already there."
+            widget: "markdown"
+            buttons: ["bold", "italic", "link", "bulleted-list", "numbered-list", "quote"]
+            editor_components: []
 
-          - { label: "Closing \"Stuck on a step?\" text", name: "closing_text", widget: "text" }
+          - label: "Closing \"Stuck on a step?\" text"
+            name: "closing_text"
+            widget: "markdown"
+            buttons: ["bold", "italic", "link", "bulleted-list", "numbered-list", "quote"]
+            editor_components: []
 
           - label: "Page layout (do not edit — controls the rest of the Register page)"
             name: "body"
@@ -245,10 +363,45 @@ collections:
           - { label: "Hero photo", name: "hero_image", widget: "image" }
           - { label: "Hero headline", name: "hero_title", widget: "string" }
           - { label: "Hero subheadline", name: "hero_subtitle", widget: "string" }
-          - label: "Page content"
-            name: "body"
+
+          - label: "Intro text"
+            name: "intro_text"
             widget: "markdown"
-            hint: "This is the full text of the page below the hero photo."
+            buttons: ["bold", "italic", "link", "bulleted-list", "numbered-list", "quote"]
+            editor_components: []
+
+          - label: "Quick Links"
+            name: "quick_links"
+            widget: "list"
+            summary: "{{label}}"
+            fields:
+              - { label: "Link text", name: "label", widget: "string" }
+              - { label: "URL", name: "url", widget: "string", hint: "Internal links start with a slash, e.g. /calendar/. External links start with https://" }
+              - { label: "Opens in a new tab?", name: "external", widget: "boolean", default: true, hint: "Turn off for links to other pages on this site (like /calendar/); leave on for links to other websites." }
+
+          - label: "Sections"
+            name: "sections"
+            widget: "list"
+            label_singular: "Section"
+            summary: "{{title}}"
+            hint: "Add, remove, and reorder the content sections on this page. Each section gets its own heading."
+            fields:
+              - { label: "Section title", name: "title", widget: "string", default: "Section" }
+              - label: "Section content"
+                name: "content"
+                widget: "markdown"
+                buttons: ["bold", "italic", "link", "heading-three", "quote", "bulleted-list", "numbered-list"]
+                editor_components: []
+                hint: "Use the heading button (H) to add a sub-header within this section, e.g. for the two lists in Cub Behavior."
+
+
+          - label: "Page layout (do not edit — controls the rest of the Resources page)"
+            name: "body"
+            widget: "code"
+            default_language: "html"
+            output_code_only: true
+            allow_language_selection: false
+            required: false
 
       - label: "Contact Page"
         name: "contact"

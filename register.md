@@ -12,6 +12,7 @@ hero_subtitle: Everything you need to register for Cub Scout Pack 209
 pack_dues_amount: "115"
 pack_dues_description: >-
   $115 covers Fall and Spring campouts, Pack t-shirts, Pinewood Derby car kits, awards (belt loops, pins, and badges), and other Pack activity costs.
+dues_payment_email: "Treasurer@cubscoutpack209.org"
 
 national_dues_amount: "170"
 national_dues_description: >-
@@ -19,9 +20,6 @@ national_dues_description: >-
 national_dues_returning_note: >-
   <strong class="text-cub-blue">Returning scouts:</strong> Scouting America bills 12 months from your last registration, so you may not owe anything yet. When the renewal does come due, paying it is required to stay in the program.
 
-scout_info_description: >-
-  Emergency contacts, allergies, photo permissions, and what den they're joining — collected through our Annual Scout Information Form.
-  Required every year so we have current info on file.
 
 uniform_description: >-
   Scouts wear two uniforms: the "Class A" blue Cub Scout shirt with neckerchief, slide, and hat (the belt displays earned belt loop awards), and a "Class B" pack t-shirt, whose cost is included in dues. The blue shirt bought in the first year can be worn through 5th grade, so size up. Gently used hand-me-downs may be available in our pack rummage bin. <strong class="text-cub-blue">Any family struggling with the cost of a uniform, registration, or dues should speak privately with the Cubmaster — assistance may be available.</strong> <a href="https://www.scouting.org/programs/cub-scouts/cub-scout-uniform/" rel="noopener" class="text-cub-blue underline decoration-cub-blue/30 underline-offset-2 hover:decoration-cub-blue">See the uniform by rank</a>.
@@ -65,10 +63,10 @@ closing_text: >-
           Register with Scouting America
         </h3>
         <p class="mt-3 text-slate-600">
-          {{ page.national_dues_description }}
+          {{ page.national_dues_description | markdownify | remove: "<p>" | remove: "</p>" }}
         </p>
         <p class="mt-3 text-sm text-slate-500">
-          {{ page.national_dues_returning_note }}
+          {{ page.national_dues_returning_note | markdownify | remove: "<p>" | remove: "</p>" }}
         </p>
         <dl class="mt-5 text-sm text-slate-500 space-y-1">
           <div class="flex gap-2"><dt class="font-semibold text-cub-blue/80 min-w-24">Where:</dt><dd>my.scouting.org<br />(you'll create an account if you don't have one)</dd></div>
@@ -92,7 +90,7 @@ closing_text: >-
           Pay Pack 209 dues
         </h3>
         <p class="mt-3 text-slate-500">
-          {{ page.pack_dues_description }}
+          {{ page.pack_dues_description | markdownify | remove: "<p>" | remove: "</p>" }}
         </p>
         <dl class="mt-5 text-sm text-slate-500 space-y-1">
           <div class="flex gap-2"><dt class="font-semibold text-cub-blue/80 min-w-24">Where:</dt><dd>Zelle or check</dd></div>
@@ -105,8 +103,8 @@ closing_text: >-
           </div>
           <p class="mt-2 text-sm font-semibold text-white">Pay with <span class="text-lg font-extrabold tracking-tight text-white">Zelle&reg;</span></p>
           <p class="mt-1 text-sm text-purple-100">
-            Send $115 to
-            <a href="mailto:Treasurer@cubscoutpack209.org" class="underline text-white decoration-white/60 underline-offset-2 hover:decoration-white">Treasurer@cubscoutpack209.org</a>
+            Send ${{ page.pack_dues_amount }} to
+            <a href="mailto:{{ page.dues_payment_email }}" class="underline text-white decoration-white/60 underline-offset-2 hover:decoration-white">{{ page.dues_payment_email }}</a>
             using Zelle in your banking app.
           </p>
         </div>
@@ -123,7 +121,7 @@ closing_text: >-
           Get a uniform
         </h3>
         <p class="mt-3 text-slate-600">
-          {{ page.uniform_description }}
+          {{ page.uniform_description | markdownify | remove: "<p>" | remove: "</p>" }}
         </p>
         <dl class="mt-5 text-sm text-slate-500 space-y-1">
           <div class="flex gap-2"><dt class="font-semibold text-cub-blue/80 min-w-24">Where:</dt><dd>National Capital Scout Shop <br /> 9190 Rockville Pike, Bethesda, MD 20814 <span class="text-slate-400"><br />(301) 564-1091 <br /> Mon–Fri 9:30am–5pm, Sat 10am–3pm<br />closed Sun</span><br /><span class="text-slate-400">(or <a href="https://www.scoutshop.org/" rel="noopener" class="text-cub-blue/80 underline decoration-cub-blue/30 underline-offset-2 hover:decoration-cub-blue">shop online</a>)</span></dd></div>
@@ -171,7 +169,7 @@ closing_text: >-
         Stuck on a step?
       </h2>
       <p class="mt-3 text-blue-50 max-w-xl mx-auto">
-        {{ page.closing_text }}
+        {{ page.closing_text | markdownify | remove: "<p>" | remove: "</p>" }}
       </p>
       <div class="mt-8">
         <a href="mailto:cubmaster@cubscoutpack209.org?subject=Registration%20help"
