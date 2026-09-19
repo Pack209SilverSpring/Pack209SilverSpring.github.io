@@ -1,22 +1,24 @@
 ---
 announcement_visible: true
-announcement_status: warning
 announcement_text: Missed our Join Scouting event on 9/15? <a href="/join"
   class="underline hover:no-underline">Learn more</a> or <a
   href="mailto:cubmaster@cubscoutpack209.org" class="underline
   hover:no-underline">contact us</a>
+announcement_status: info
+announcement_pdf_text: Download the Join Scouting presentation
 hero_image: /assets/images/209_scoutshikee.jpg
 why_image: /assets/images/209_denmeeting.jpg
-why_image_alt: Pack 209 Cub Scouts on a family camping trip
 why_text: "Pack 209 meets in Silver Spring, MD, and is open to any kid in
   kindergarten through fifth grade who want to get outside, learn new skills,
   and make new friends. Here's what a typical year looks like:"
 layout: default
+announcement_pdf: /assets/documents/pack-209-deck-2026.pdf
 hero_title: Cub Scout Pack 209
 hero_subtitle: Welcome to the Adventure
 hero_description: A Scouting America pack for all youth in <span
   class="font-semibold">kindergarten through 5th grade</span> in Silver Spring,
   MD. New families are always welcome.
+why_image_alt: Pack 209 Cub Scouts on a family camping trip
 why_bullets:
   - emoji: 🌲
     text: Campouts and hikes in every season
