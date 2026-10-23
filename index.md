@@ -1,11 +1,13 @@
 ---
-title: "Cub Scout Pack 209 | Silver Spring, MD"
-description: "Pack 209 is an inclusive Cub Scout pack for Silver Spring, MD families with kids in grades K-5 -- camping, Pinewood Derby, and community service."
+description: Pack 209 is an inclusive Cub Scout pack for Silver Spring, MD
+  families with kids in grades K-5 -- camping, Pinewood Derby, and community
+  service.
 announcement_visible: true
 announcement_text: Missed our Join Scouting event on 9/15? <a
   href="mailto:cubmaster@cubscoutpack209.org" class="underline
   hover:no-underline">Contact us</a> or
 announcement_status: info
+announcement_pdf: /assets/documents/pack-209-deck-2026.pdf
 announcement_pdf_text: Download the Join Scouting presentation
 hero_image: /assets/images/209_scoutshikee.jpg
 why_image: /assets/images/209_denmeeting.jpg
@@ -13,7 +15,6 @@ why_text: "Pack 209 meets in Silver Spring, MD, and is open to any kid in
   kindergarten through fifth grade who want to get outside, learn new skills,
   and make new friends. Here's what a typical year looks like:"
 layout: default
-announcement_pdf: /assets/documents/pack-209-deck-2026.pdf
 hero_title: Cub Scout Pack 209
 hero_subtitle: Welcome to the Adventure
 hero_description: A Scouting America pack for all youth in <span
@@ -55,6 +56,7 @@ cta_paragraph_2: We meet the third Tuesday of the month at 7:00 PM at the Silver
   to get involved or a child ready for a new challenge, we welcome you to Pack
   209. Together, we build leaders and friends in our community.
 hero_header: true
+title: Cub Scout Pack 209 | Silver Spring, MD
 navbarText: Silver Spring, MD
 ---
 
@@ -277,7 +279,7 @@ navbarText: Silver Spring, MD
     <!-- Den Finder / Schedule -->
     <div>
       <h2>Find Your Den</h2>
-      <p class="mt-3">Meetings tailored to grade/age. New families welcome—jump in anytime. Pack meetings are
+      <p class="mt-3">Meetings tailored to grade/age. Pack meetings are
       hosted at Silver Spring United Methodist Church (8900 Georgia Ave), in Fellowship Hall.</p>
       <div class="mt-6 divide-y divide-slate-200">
         {% for den in site.data.dens.dens %}
