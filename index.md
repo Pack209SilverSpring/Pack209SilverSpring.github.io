@@ -19,7 +19,7 @@ hero_title: Cub Scout Pack 209
 hero_subtitle: Welcome to the Adventure
 hero_description: A Scouting America pack for all youth in <span
   class="font-semibold">kindergarten through 5th grade</span> in Silver Spring,
-  MD. New families are always welcome.
+  MD. New families are welcome.
 why_image_alt: Pack 209 Cub Scouts on a family camping trip
 why_bullets:
   - emoji: 🌲
@@ -50,7 +50,7 @@ activity_cards:
     title: Parades & Hikes
     description: Pack 209 joins the Montgomery County Thanksgiving Parade, goes on
       local area hikes, and more throughout the year.
-cta_paragraph_1: New to Scouting? We’ll help you get started. Everyone’s welcome.
+cta_paragraph_1: New to Scouting? We’ll help you get started. Everyone is welcome.
 cta_paragraph_2: We meet the third Tuesday of the month at 7:00 PM at the Silver
   Spring United Methodist Church on Georgia Ave. Whether you're a parent looking
   to get involved or a child ready for a new challenge, we welcome you to Pack
