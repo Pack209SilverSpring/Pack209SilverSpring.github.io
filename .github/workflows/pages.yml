@@ -5,9 +5,10 @@ on:
     branches: ["main"]
   workflow_dispatch:
   schedule:
-    # Run every 15 minutes to keep Google Calendar events in sync
-    # This ensures newly added calendar events appear on the site without manual rebuilds
-    - cron: '*/15 * * * *'
+    # Rebuild twice a day to pick up new Google Calendar events.
+    # Cron is in UTC: 11:17 and 23:17 UTC = about 6:17am and 6:17pm Eastern
+    # (an hour later during daylight saving time).
+    - cron: '17 11,23 * * *'
 
 permissions:
   contents: read
@@ -21,6 +22,8 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    # A hung build holds the "pages" lock and blocks every run behind it
+    timeout-minutes: 15
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -48,9 +51,6 @@ jobs:
           bundler-cache: true
           ruby-version: '3.4.5'
 
-      - name: Install dependencies
-        run: bundle install --without development
-
       - name: Build site
         run: bundle exec jekyll build --trace
         env:
@@ -72,6 +72,7 @@ jobs:
   deploy:
     needs: build
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
